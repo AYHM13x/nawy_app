@@ -1,0 +1,4 @@
+enum RegistrationStatus {
+  registered,
+  notRegistered,
+}

@@ -1,0 +1,4 @@
+enum AdminRoleType {
+  superAdmin,
+  admin,
+}

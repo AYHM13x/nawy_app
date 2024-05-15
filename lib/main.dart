@@ -20,16 +20,21 @@ class NawyApp extends StatelessWidget {
   }
 }
 
-class HomeViewBody extends StatelessWidget {
+class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
 
+  @override
+  State<HomeViewBody> createState() => _HomeViewBodyState();
+}
+
+class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return FlutterMap(
       options: const MapOptions(
-          //initialCenter: LatLng(33.30, 36.17),
-          //initialZoom: 8,
-          ),
+        initialCenter: LatLng(33.30, 36.17),
+        initialZoom: 10,
+      ),
       children: [
         TileLayer(
           urlTemplate:
@@ -37,10 +42,20 @@ class HomeViewBody extends StatelessWidget {
           // urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
           // userAgentPackageName: 'com.example.app',
           additionalOptions: const {
-            "accessToken":
-                "pk.eyJ1IjoiYXlobTEzeCIsImEiOiJjbHc2MXkzNTcxaDhvMmttcTV0NzQ2M3h3In0.rja3psgBxQyRZs0JqCQwqg",
-            "id": "mapbox.mapbox-streets-v8",
+            'accessToken':
+                'pk.eyJ1IjoiYXlobTEzeCIsImEiOiJjbHc2MXkzNTcxaDhvMmttcTV0NzQ2M3h3In0.rja3psgBxQyRZs0JqCQwqg',
+            'id': 'mapbox.mapbox-streets-v8',
           },
+        ),
+        const MarkerLayer(
+          markers: [
+            Marker(
+              point: LatLng(33.30, 36.17),
+              child: Icon(
+                Icons.pin_drop,
+              ),
+            ),
+          ],
         ),
       ],
     );

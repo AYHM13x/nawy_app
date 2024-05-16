@@ -32,21 +32,21 @@ dependencies:
   dio: ^5.4.3+1
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_map: ^6.1.0
+  gap: ^3.0.1
   latlong2: ^0.9.1
-  table_calendar: ^3.1.1
-  # url_launcher: ^6.1.14
 
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
-# dependency_overrides:
-#     flutter_map:
-#         git:
-#             url: https://github.com/fleaflet/flutter_map.git
-            # ref: main (custom branch/commit)
+    # dependency_overrides:
+    #     flutter_map:
+    #         git:
+    #             url: https://github.com/fleaflet/flutter_map.git
+    # ref: main (custom branch/commit)
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
@@ -58,7 +58,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images
+    - assets/images/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -81,3 +81,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

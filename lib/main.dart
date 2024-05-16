@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:nawy_app/core/utlis/assets/app_font_families.dart';
 
 void main() {
   runApp(const NawyApp());
@@ -11,9 +12,12 @@ class NawyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      theme: ThemeData(
+        fontFamily: AppFontFamilies.cairoFont,
+      ),
+      home: const Scaffold(
         body: HomeViewBody(),
       ),
     );

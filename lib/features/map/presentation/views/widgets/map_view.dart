@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nawy_app/core/utlis/assets/app_images.dart';
 
 class MapView extends StatelessWidget {
   const MapView({
@@ -26,13 +28,15 @@ class MapView extends StatelessWidget {
           //   'id': 'mapbox.mapbox-streets-v8',
           // },
         ),
-        const MarkerLayer(
+        MarkerLayer(
           markers: [
             Marker(
-              point: LatLng(33.30, 36.17),
-              child: Icon(
-                Icons.pin_drop,
-              ),
+              point: const LatLng(33.30, 36.17),
+              child: SvgPicture.asset(AppImages.markerImage),
+            ),
+            Marker(
+              point: const LatLng(33.50, 36.30),
+              child: SvgPicture.asset(AppImages.markerImage),
             ),
           ],
         ),

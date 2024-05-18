@@ -59,6 +59,46 @@ class S {
       args: [],
     );
   }
+
+  /// `All`
+  String get all {
+    return Intl.message(
+      'All',
+      name: 'all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Houses`
+  String get houses {
+    return Intl.message(
+      'Houses',
+      name: 'houses',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Villas`
+  String get villas {
+    return Intl.message(
+      'Villas',
+      name: 'villas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apartments`
+  String get apartments {
+    return Intl.message(
+      'Apartments',
+      name: 'apartments',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

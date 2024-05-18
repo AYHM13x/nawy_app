@@ -1,3 +1,7 @@
 {
-    "title":"Nawy App"
+    "title" : "Nawy App",
+    "all": "All",
+    "houses":"Houses",
+    "villas":"Villas",
+    "apartments":"Apartments"
 }

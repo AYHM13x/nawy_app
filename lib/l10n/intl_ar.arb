@@ -3,11 +3,9 @@
     "all": "الكل",
     "houses":"بيوت",
     "villas":"ڤلل",
-<<<<<<< HEAD
     "apartments":"شقق",
-    "dollar": "دولار"
-=======
-    "apartments":"شقق"
-    "startnew":"ابدأ الان"
->>>>>>> 1f85545e87510a6a6ba2dff44b98c8e629f33c76
+    "dollar": "دولار",
+    "startnow":"إبدأ الأن",
+    "next":"التالي",
+    "skip":"تخطي"
 }

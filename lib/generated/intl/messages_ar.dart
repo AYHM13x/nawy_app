@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "apartments": MessageLookupByLibrary.simpleMessage("شقق"),
         "dollar": MessageLookupByLibrary.simpleMessage("دولار"),
         "houses": MessageLookupByLibrary.simpleMessage("بيوت"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "startnow": MessageLookupByLibrary.simpleMessage("إبدأ الأن"),
         "title": MessageLookupByLibrary.simpleMessage("تطبيق ناوي"),
         "villas": MessageLookupByLibrary.simpleMessage("ڤلل")
       };

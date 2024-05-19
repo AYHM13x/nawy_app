@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "apartments": MessageLookupByLibrary.simpleMessage("Apartments"),
         "dollar": MessageLookupByLibrary.simpleMessage("\$"),
         "houses": MessageLookupByLibrary.simpleMessage("Houses"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "startnow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "title": MessageLookupByLibrary.simpleMessage("Nawy App"),
         "villas": MessageLookupByLibrary.simpleMessage("Villas")
       };

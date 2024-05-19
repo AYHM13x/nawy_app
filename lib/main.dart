@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:nawy_app/features/map/presentation/views/deleled_home_view.dart';
 import 'core/utlis/assets/app_font_families.dart';
-import 'features/map/presentation/views/home_view.dart';
+import 'features/_2_home/presentation/views/home_view.dart';
 import 'generated/l10n.dart';
 
 void main() {

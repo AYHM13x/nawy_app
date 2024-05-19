@@ -30,6 +30,13 @@ class NawyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: AppFontFamilies.cairoFont,
       ),
+
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => SplaseView(),
+      //   '/navitagationView': (context) => navitagationView(),
+      // },
+
       home: const SplaseView(),
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/generated/l10n.dart';
 
 abstract class AppColors {
   static const redColor = Color(0xff990033);

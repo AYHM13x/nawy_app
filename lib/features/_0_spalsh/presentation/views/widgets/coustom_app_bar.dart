@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
-import 'package:nawy_app/features/spalshe_and%20welcom_view/spalshe_view.dart';
 
-class coustomAppar extends StatelessWidget {
-  const coustomAppar({super.key});
+import '../splash_view.dart';
+
+class CustomAppar extends StatelessWidget {
+  const CustomAppar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +13,14 @@ class coustomAppar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SplaseView()),
-              );
-            },
-            icon: Icon(Icons.arrow_back)),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SplashView()),
+            );
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
         SvgPicture.asset(
           AppImages.splashLogo2Image,
         ),

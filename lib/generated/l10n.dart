@@ -111,10 +111,10 @@ class S {
   }
 
   /// `Start Now`
-  String get startnow {
+  String get startNow {
     return Intl.message(
       'Start Now',
-      name: 'startnow',
+      name: 'startNow',
       desc: '',
       args: [],
     );
@@ -135,6 +135,56 @@ class S {
     return Intl.message(
       'Skip',
       name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Map`
+  String get map {
+    return Intl.message(
+      'Map',
+      name: 'map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Orders`
+  String get myOrders {
+    return Intl.message(
+      'My Orders',
+      name: 'myOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chats`
+  String get chats {
+    return Intl.message(
+      'Chats',
+      name: 'chats',
       desc: '',
       args: [],
     );

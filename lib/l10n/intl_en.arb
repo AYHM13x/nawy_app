@@ -5,7 +5,12 @@
     "villas":"Villas",
     "apartments":"Apartments",
     "dollar": "$",
-    "startnow":"Start Now",
+    "startNow":"Start Now",
     "next":"Next",
-    "skip":"Skip"
+    "skip":"Skip",
+    "home":"Home",
+    "map":"Map",
+    "add":"Add",
+    "myOrders":"My Orders",
+    "chats":"Chats"
 }

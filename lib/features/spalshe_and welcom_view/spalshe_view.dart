@@ -5,6 +5,7 @@ import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/features/map/presentation/views/home_view.dart';
 import 'package:nawy_app/features/navication/navication.dart';
+import 'package:nawy_app/features/spalshe_and%20welcom_view/welcom_1_view.dart';
 
 class SplaseView extends StatelessWidget {
   const SplaseView({super.key});
@@ -25,7 +26,7 @@ class SplaseView extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => navitagationView()),
+                  MaterialPageRoute(builder: (context) => WelcomOneView()),
                 );
               },
               style: const ButtonStyle(

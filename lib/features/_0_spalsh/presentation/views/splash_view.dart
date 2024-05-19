@@ -3,6 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
+<<<<<<< HEAD:lib/features/_0_spalsh/presentation/views/splash_view.dart
+=======
+import 'package:nawy_app/features/spalshe_and%20welcom_view/welcom_1_view.dart';
+>>>>>>> f566b63da5cf201e168ba5cf6269d980d1c8528e:lib/features/spalshe_and welcom_view/spalshe_view.dart
 
 import 'welcom_one_view.dart';
 

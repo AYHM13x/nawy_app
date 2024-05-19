@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nawy_app/features/map/presentation/views/home_view.dart';
-import 'package:nawy_app/features/navication/navication.dart';
 import 'package:nawy_app/features/spalshe_and%20welcom_view/spalshe_view.dart';
 import 'core/utlis/assets/app_font_families.dart';
 import 'generated/l10n.dart';
@@ -30,12 +29,6 @@ class NawyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: AppFontFamilies.cairoFont,
       ),
-
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => SplaseView(),
-      //   '/navitagationView': (context) => navitagationView(),
-      // },
 
       home: const SplaseView(),
     );

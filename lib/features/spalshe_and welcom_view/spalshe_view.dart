@@ -15,14 +15,20 @@ class SplaseView extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
+          const Expanded(flex: 1, child: SizedBox()),
           SvgPicture.asset(AppImages.splashLogo),
-          const Expanded(child: SizedBox()),
+          const Expanded(flex: 1, child: SizedBox()),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Navigation.of
+            },
             style: const ButtonStyle(
                 backgroundColor:
                     MaterialStatePropertyAll(AppColors.yellowColor)),
-            child: const Text("ابدأ الان"),
+            child: Text(
+              "ابدأ الان",
+              style: FontStyles.textStyle18Reg.copyWith(color: Colors.white),
+            ),
           ),
           SizedBox(
             height: 46,
@@ -36,6 +42,9 @@ class SplaseView extends StatelessWidget {
             "v.1.0",
             style: FontStyles.textStyle18Bold.copyWith(color: Colors.white),
           ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );

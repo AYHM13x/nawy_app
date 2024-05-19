@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/map/presentation/views/bodies/home_view_body.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodies/home_view_body.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({
@@ -37,7 +37,7 @@ class _HomeViewState extends State<HomeView> {
           BottomNavigationBarItem(icon: Icon(Icons.task), label: "")
         ],
       ),
-      body: listWidgets[selected],
+      body: listWidgets[0],
     );
   }
 }

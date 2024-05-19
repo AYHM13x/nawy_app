@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+<<<<<<< HEAD
+import 'core/utlis/assets/app_font_families.dart';
+import 'features/_2_home/presentation/views/home_view.dart';
+=======
 import 'package:nawy_app/features/map/presentation/views/home_view.dart';
 import 'package:nawy_app/features/spalshe_and%20welcom_view/spalshe_view.dart';
 import 'core/utlis/assets/app_font_families.dart';
+>>>>>>> 1f85545e87510a6a6ba2dff44b98c8e629f33c76
 import 'generated/l10n.dart';
 
 void main() {

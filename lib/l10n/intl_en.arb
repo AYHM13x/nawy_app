@@ -3,6 +3,11 @@
     "all": "All",
     "houses":"Houses",
     "villas":"Villas",
+<<<<<<< HEAD
+    "apartments":"Apartments",
+    "dollar": "$"
+=======
     "apartments":"Apartments"
     "startnew":"startnew"
+>>>>>>> 1f85545e87510a6a6ba2dff44b98c8e629f33c76
 }

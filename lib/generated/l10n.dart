@@ -99,6 +99,16 @@ class S {
       args: [],
     );
   }
+
+  /// `$`
+  String get dollar {
+    return Intl.message(
+      '\$',
+      name: 'dollar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

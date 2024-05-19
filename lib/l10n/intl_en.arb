@@ -3,5 +3,6 @@
     "all": "All",
     "houses":"Houses",
     "villas":"Villas",
-    "apartments":"Apartments"
+    "apartments":"Apartments",
+    "dollar": "$"
 }

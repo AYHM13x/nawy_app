@@ -11,6 +11,9 @@ class coustomAppar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        SvgPicture.asset(
+          AppImages.splashLogo2Image,
+        ),
         IconButton(
             onPressed: () {
               Navigator.push(
@@ -19,9 +22,6 @@ class coustomAppar extends StatelessWidget {
               );
             },
             icon: Icon(Icons.arrow_back)),
-        SvgPicture.asset(
-          AppImages.splashLogo2Image,
-        ),
       ],
     );
   }

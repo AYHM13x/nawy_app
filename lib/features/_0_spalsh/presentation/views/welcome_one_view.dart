@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/coustom_app_bar.dart';
+import 'appbars/coustom_app_bar.dart';
+import 'widgets/custom_row_elevated.dart';
 
-class WelcomOneView extends StatelessWidget {
-  const WelcomOneView({super.key});
+class WelcomeOneView extends StatelessWidget {
+  const WelcomeOneView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,8 @@ class WelcomOneView extends StatelessWidget {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              CustomAppar(),
+              CustomAppBar(),
+              coustomRowElevatedBottom(),
             ],
           ),
         ),

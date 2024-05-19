@@ -20,22 +20,24 @@ class CustomMarkerView extends StatelessWidget {
       children: [
         SvgPicture.asset(
           AppImages.markerImage,
-          fit: BoxFit.fill,
+          // fit: BoxFit.fill,
         ),
         Positioned(
-          left: 33,
+          left: 7,
           child: Container(
             height: 30,
-            width: 100,
+            width: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: AppColors.redColor,
             ),
             alignment: Alignment.center,
-            child: Text(
-              "$price ${S.of(context).dollar}",
-              style: FontStyles.textStyle18Reg.copyWith(
-                color: Colors.white,
+            child: Center(
+              child: Text(
+                "$price ${S.of(context).dollar}",
+                style: FontStyles.textStyle18Reg.copyWith(
+                  color: Colors.white,
+                ),
               ),
             ),
           ),

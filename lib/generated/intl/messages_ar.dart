@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dollar": MessageLookupByLibrary.simpleMessage("دولار"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "houses": MessageLookupByLibrary.simpleMessage("بيوت"),
+        "list": MessageLookupByLibrary.simpleMessage("قائمة"),
         "map": MessageLookupByLibrary.simpleMessage("الخريطة"),
         "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),

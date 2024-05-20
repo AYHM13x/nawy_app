@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dollar": MessageLookupByLibrary.simpleMessage("\$"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "houses": MessageLookupByLibrary.simpleMessage("Houses"),
+        "list": MessageLookupByLibrary.simpleMessage("List"),
         "map": MessageLookupByLibrary.simpleMessage("Map"),
         "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),

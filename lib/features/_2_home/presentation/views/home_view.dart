@@ -26,6 +26,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
         selectedLabelStyle: FontStyles.textStyle14Reg.copyWith(
           fontSize: 11,
@@ -55,14 +56,14 @@ class _HomeViewState extends State<HomeView> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: const CustomSvgPicAsset(
-              image: AppImages.homeIcon,
-              color: Colors.black,
-            ),
-            label: S.of(context).home,
-            activeIcon: CustomSvgPicAsset(
+            icon: CustomSvgPicAsset(
               image: AppImages.homeIcon,
               color: Colors.black.withOpacity(0.5),
+            ),
+            label: S.of(context).home,
+            activeIcon: const CustomSvgPicAsset(
+              image: AppImages.homeIcon,
+              color: Colors.black,
             ),
           ),
           BottomNavigationBarItem(

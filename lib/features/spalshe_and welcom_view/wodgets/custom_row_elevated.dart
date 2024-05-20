@@ -34,12 +34,12 @@ class coustomRowElevatedBottom extends StatelessWidget {
         Container(
             height: 60,
             width: 150,
-            child: const customElevatedBotton(
-                data: "التالي", AppColors.yellowColor)),
+            child: customElevatedBotton(
+                onPressed: () {}, data: "التالي", AppColors.yellowColor)),
         const SizedBox(
           height: 30,
         ),
-        customElevatedBotton(data: "تخطي", Colors.white)
+        customElevatedBotton(onPressed: () {}, data: "تخطي", Colors.white)
       ],
     );
   }

@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "searchEstate": MessageLookupByLibrary.simpleMessage("Search Estate"),
+        "searchLocation":
+            MessageLookupByLibrary.simpleMessage("Search Location"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "title": MessageLookupByLibrary.simpleMessage("Nawy App"),

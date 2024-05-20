@@ -209,6 +209,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Search Location`
+  String get searchLocation {
+    return Intl.message(
+      'Search Location',
+      name: 'searchLocation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

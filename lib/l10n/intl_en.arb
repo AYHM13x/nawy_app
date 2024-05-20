@@ -14,5 +14,6 @@
     "myOrders":"My Orders",
     "chats":"Chats",
     "searchEstate":"Search Estate",
-    "list":"List"
+    "list":"List",
+    "searchLocation":"Search Location"
 }

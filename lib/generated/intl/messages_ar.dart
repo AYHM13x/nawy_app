@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "searchEstate": MessageLookupByLibrary.simpleMessage("ابحث عن عقار"),
+        "searchLocation": MessageLookupByLibrary.simpleMessage("ابحث عن مكان"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "title": MessageLookupByLibrary.simpleMessage("تطبيق ناوي"),
         "villas": MessageLookupByLibrary.simpleMessage("ڤلل")

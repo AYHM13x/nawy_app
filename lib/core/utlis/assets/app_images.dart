@@ -10,4 +10,9 @@ abstract class AppImages {
   static const myOrdersIcon = "$_basePath/my_orders_icon.svg";
   static const chatsIcon = "$_basePath/chats_icon.svg";
   static const listIcon = "$_basePath/list_icon.svg";
+  static const mapLayersIcon = "$_basePath/map_layers_icon.svg";
+  static const gpsIcon = "$_basePath/gps_icon.svg";
+  static const filterIcon = "$_basePath/filter_icon.svg";
+  static const cameraIcon = "$_basePath/camera_icon.svg";
+  static const micIcon = "$_basePath/mic_icon.svg";
 }

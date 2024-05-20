@@ -12,18 +12,17 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SplashView()),
-            );
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
         SvgPicture.asset(
           AppImages.splashLogo2Image,
         ),
+        IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SplashView()),
+              );
+            },
+            icon: const Icon(Icons.arrow_back_ios)),
       ],
     );
   }

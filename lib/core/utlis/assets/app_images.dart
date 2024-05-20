@@ -19,4 +19,5 @@ abstract class AppImages {
   static const micIcon = "$_basePath/mic_icon.svg";
   static const WelcomTow = "$_basePath/cuate.svg";
   static const signin = "$_basePath/log_in.svg";
+  static const Sign_up = "$_basePath/Sign_up.svg";
 }

@@ -46,29 +46,15 @@ class SignInBody extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const customRowSlider()
+                customRowtextlogin(
+                  data: "اليس لديك حساب؟ ",
+                  datatext: "سجل الان",
+                )
               ],
             ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class customRowSlider extends StatelessWidget {
-  const customRowSlider({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Divider(),
-        Text(
-          "او",
-          style: FontStyles.textStyle14Reg,
-        ),
-      ],
     );
   }
 }

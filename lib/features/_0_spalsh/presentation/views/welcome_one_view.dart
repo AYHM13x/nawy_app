@@ -27,9 +27,18 @@ class WelcomeOneView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                const Text(
-                  "ابحث عن افضل السيارات وارقامها للشراء او للايجار او كوسيط بافضل الاسعار",
-                  style: FontStyles.textStyle16Bold,
+                RichText(
+                  text: TextSpan(children: <TextSpan>[
+                    TextSpan(
+                        text:
+                            ("ابحث عن افضل السيارات وارقامها للشراءاو للايجار او كوسيط\n"),
+                        style: FontStyles.textStyle18Reg
+                            .copyWith(color: Colors.black)),
+                    TextSpan(
+                        text: ("بأفضل الأسعار"),
+                        style: FontStyles.textStyle14Reg
+                            .copyWith(color: Colors.blue))
+                  ]),
                 ),
                 const SizedBox(
                   height: 40,
@@ -57,7 +66,7 @@ class WelcomeOneView extends StatelessWidget {
                     );
                   }, AppColors.yellowColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(

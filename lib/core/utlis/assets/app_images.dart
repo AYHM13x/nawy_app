@@ -18,4 +18,5 @@ abstract class AppImages {
   static const cameraIcon = "$_basePath/camera_icon.svg";
   static const micIcon = "$_basePath/mic_icon.svg";
   static const WelcomTow = "$_basePath/cuate.svg";
+  static const signin = "$_basePath/log_in.svg";
 }

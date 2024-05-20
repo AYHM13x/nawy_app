@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/intl.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/generated/l10n.dart';
@@ -45,7 +46,12 @@ class CustomMarkerView extends StatelessWidget {
       ],
     );
   }
+
+  bool isArabic() {
+    return Intl.getCurrentLocale() == "ar";
+  }
 }
 
 
-//  ${S.of(context).dollar}
+//    left: isArabic() ? -7 : -40,
+//    right: isArabic() ? 0 : 20,

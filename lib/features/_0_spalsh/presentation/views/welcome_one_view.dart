@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
+import 'package:nawy_app/features/_0_spalsh/presentation/views/welcom_tow_view.dart';
 
 import 'appbars/coustom_app_bar.dart';
 import 'widgets/custom_row_elevated.dart';
@@ -40,12 +41,21 @@ class WelcomeOneView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                coustomRowElevatedBottom(),
+                const coustomRowElevatedBottom(
+                  opacity2: .1,
+                  opacity: 1,
+                ),
                 Container(
                   width: 150,
                   height: 60,
-                  child: customElevatedBotton(
-                      data: "التالي ", onPressed: () {}, AppColors.yellowColor),
+                  child: customElevatedBotton(data: "التالي ", onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WelcometowView(),
+                      ),
+                    );
+                  }, AppColors.yellowColor),
                 ),
                 SizedBox(
                   height: 20,

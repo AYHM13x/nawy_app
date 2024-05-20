@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 abstract class AppImages {
   static const _basePath = "assets/images";
   static const splashLogo = "$_basePath/splash_logo.svg";
@@ -15,4 +17,5 @@ abstract class AppImages {
   static const filterIcon = "$_basePath/filter_icon.svg";
   static const cameraIcon = "$_basePath/camera_icon.svg";
   static const micIcon = "$_basePath/mic_icon.svg";
+  static const WelcomTow = "$_basePath/cuate.svg";
 }

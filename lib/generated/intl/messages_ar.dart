@@ -22,10 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add": MessageLookupByLibrary.simpleMessage("إضافة"),
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
         "apartments": MessageLookupByLibrary.simpleMessage("شقق"),
+        "chats": MessageLookupByLibrary.simpleMessage("المحادثات"),
         "dollar": MessageLookupByLibrary.simpleMessage("دولار"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "houses": MessageLookupByLibrary.simpleMessage("بيوت"),
+        "list": MessageLookupByLibrary.simpleMessage("قائمة"),
+        "map": MessageLookupByLibrary.simpleMessage("الخريطة"),
+        "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "searchEstate": MessageLookupByLibrary.simpleMessage("ابحث عن عقار"),
+        "searchLocation": MessageLookupByLibrary.simpleMessage("ابحث عن مكان"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "title": MessageLookupByLibrary.simpleMessage("تطبيق ناوي"),
         "villas": MessageLookupByLibrary.simpleMessage("ڤلل")
       };

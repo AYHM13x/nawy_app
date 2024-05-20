@@ -109,6 +109,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Start Now`
+  String get startNow {
+    return Intl.message(
+      'Start Now',
+      name: 'startNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Map`
+  String get map {
+    return Intl.message(
+      'Map',
+      name: 'map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Orders`
+  String get myOrders {
+    return Intl.message(
+      'My Orders',
+      name: 'myOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chats`
+  String get chats {
+    return Intl.message(
+      'Chats',
+      name: 'chats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search Estate`
+  String get searchEstate {
+    return Intl.message(
+      'Search Estate',
+      name: 'searchEstate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `List`
+  String get list {
+    return Intl.message(
+      'List',
+      name: 'list',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search Location`
+  String get searchLocation {
+    return Intl.message(
+      'Search Location',
+      name: 'searchLocation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

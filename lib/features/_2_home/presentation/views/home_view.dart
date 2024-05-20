@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/home_view_body.dart';
+
+import '../../../../core/utlis/assets/app_images.dart';
+import '../../../../core/utlis/assets/font_styles.dart';
+import '../../../../generated/l10n.dart';
+import 'bodies/map_view_body.dart';
+import 'widgets/custom_svg_pic_asset.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({
@@ -13,7 +18,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   int selected = 0;
   List<Widget> listWidgets = const [
-    HomeViewBody(),
+    MapViewBody(),
     // TasksView(),
     // ProfileView(),
     // EditProfileView(),
@@ -21,7 +26,26 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
+        selectedLabelStyle: FontStyles.textStyle14Reg.copyWith(
+          fontSize: 11,
+        ),
+        unselectedLabelStyle: FontStyles.textStyle14Reg.copyWith(
+          fontSize: 11,
+        ),
+        selectedIconTheme: const IconThemeData(
+          color: Colors.black,
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: Colors.black.withOpacity(0.5),
+        ),
+        selectedFontSize: 11,
+        unselectedFontSize: 11,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black.withOpacity(0.5),
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
         currentIndex: selected,
@@ -30,11 +54,62 @@ class _HomeViewState extends State<HomeView> {
             selected = value;
           });
         },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.task), label: "")
+        items: [
+          BottomNavigationBarItem(
+            icon: CustomSvgPicAsset(
+              image: AppImages.homeIcon,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            label: S.of(context).home,
+            activeIcon: const CustomSvgPicAsset(
+              image: AppImages.homeIcon,
+              color: Colors.black,
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: CustomSvgPicAsset(
+              image: AppImages.mapIcon,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            label: S.of(context).map,
+            activeIcon: const CustomSvgPicAsset(
+              image: AppImages.mapIcon,
+              color: Colors.black,
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: CustomSvgPicAsset(
+              image: AppImages.addIcon,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            label: S.of(context).add,
+            activeIcon: const CustomSvgPicAsset(
+              image: AppImages.addIcon,
+              color: Colors.black,
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: CustomSvgPicAsset(
+              image: AppImages.myOrdersIcon,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            label: S.of(context).myOrders,
+            activeIcon: const CustomSvgPicAsset(
+              image: AppImages.myOrdersIcon,
+              color: Colors.black,
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: CustomSvgPicAsset(
+              image: AppImages.chatsIcon,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            label: S.of(context).chats,
+            activeIcon: const CustomSvgPicAsset(
+              image: AppImages.chatsIcon,
+              color: Colors.black,
+            ),
+          ),
         ],
       ),
       body: listWidgets[0],

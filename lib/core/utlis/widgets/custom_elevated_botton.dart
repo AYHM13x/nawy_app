@@ -2,24 +2,25 @@ import 'package:flutter/material.dart';
 
 class customElevatedBotton extends StatelessWidget {
   const customElevatedBotton(
-    this.color, {
+    this.colorelevated, {
     super.key,
     required this.data,
     required this.onPressed,
-    this.background,
+    this.backgroundtext,
   });
   final String data;
-  final Color color;
+  final Color colorelevated;
   final VoidCallback? onPressed;
-  final Color? background;
+  final Color? backgroundtext;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(color)),
+      style:
+          ButtonStyle(backgroundColor: MaterialStatePropertyAll(colorelevated)),
       onPressed: onPressed,
       child: Text(
         data,
-        style: TextStyle(color: background),
+        style: TextStyle(color: backgroundtext),
       ),
     );
   }

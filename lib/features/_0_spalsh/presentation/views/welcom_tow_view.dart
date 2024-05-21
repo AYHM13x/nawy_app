@@ -60,7 +60,7 @@ class WelcometowView extends StatelessWidget {
                       );
                     },
                     AppColors.yellowColor,
-                    background: Colors.white,
+                    backgroundtext: Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -73,7 +73,7 @@ class WelcometowView extends StatelessWidget {
                     data: "تخطي ",
                     onPressed: () {},
                     Colors.white,
-                    background: Colors.black,
+                    backgroundtext: Colors.black,
                   ),
                 ),
               ],

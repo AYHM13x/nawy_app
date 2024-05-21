@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_chose_bottom.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_head.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_searsh.dart';
 import 'package:nawy_app/features/_3_filter/bodies/filter_view_body.dart';
@@ -17,6 +18,10 @@ class FirstPagebody extends StatelessWidget {
           height: 10,
         ),
         customSearsh(),
+        SizedBox(
+          height: 10,
+        ),
+        customchosebotton()
       ],
     );
   }

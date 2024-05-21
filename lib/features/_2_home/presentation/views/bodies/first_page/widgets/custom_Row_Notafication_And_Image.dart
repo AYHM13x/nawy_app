@@ -17,7 +17,7 @@ class customRowNotaficationAndImage extends StatelessWidget {
             onPressed: () {},
             icon: Icon(Icons.notifications)),
         CircleAvatar(
-          backgroundImage: AssetImage(AppImages.profileheade),
+          backgroundImage: AssetImage("assets/images/profileheade.svg"),
           radius: 25,
         )
       ],

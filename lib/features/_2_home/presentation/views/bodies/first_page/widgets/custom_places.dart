@@ -16,20 +16,17 @@ class CustomPlaces extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.only(left: 10, right: 10),
               child: Container(
-                decoration: BoxDecoration(
-                    color: Color(0xffF5F4F8),
-                    borderRadius: BorderRadius.all(Radius.circular(50))),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Row(
-                    children: [
-                      Image.asset("assets/images/rowplaces.png"),
-                      Text(
-                        "العين",
-                        style: FontStyles.textStyle14Reg,
-                      )
-                    ],
-                  ),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      "assets/images/rowplaces.png",
+                      fit: BoxFit.cover,
+                    ),
+                    Text(
+                      "العين",
+                      style: FontStyles.textStyle14Reg,
+                    )
+                  ],
                 ),
               ),
             );

@@ -219,6 +219,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Filter`
+  String get filter {
+    return Intl.message(
+      'Filter',
+      name: 'filter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get typeEstate {
+    return Intl.message(
+      'Type',
+      name: 'typeEstate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

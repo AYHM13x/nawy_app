@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "apartments": MessageLookupByLibrary.simpleMessage("Apartments"),
         "chats": MessageLookupByLibrary.simpleMessage("Chats"),
         "dollar": MessageLookupByLibrary.simpleMessage("\$"),
+        "filter": MessageLookupByLibrary.simpleMessage("Filter"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "houses": MessageLookupByLibrary.simpleMessage("Houses"),
         "list": MessageLookupByLibrary.simpleMessage("List"),
@@ -39,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "title": MessageLookupByLibrary.simpleMessage("Nawy App"),
+        "typeEstate": MessageLookupByLibrary.simpleMessage("Type"),
         "villas": MessageLookupByLibrary.simpleMessage("Villas")
       };
 }

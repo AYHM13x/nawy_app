@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/add_view_body.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/first_page_body.dart';
 
 import '../../../../core/utlis/assets/app_images.dart';
@@ -22,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
   List<Widget> listWidgets = const [
     FirstPagebody(),
     MapViewBody(),
-
+    AddBodyView(),
     // ProfileView(),
     // EditProfileView(),
   ];
@@ -115,7 +116,7 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body: listWidgets[0],
+      body: listWidgets[2],
     );
   }
 }

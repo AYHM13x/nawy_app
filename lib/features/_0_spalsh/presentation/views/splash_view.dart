@@ -6,6 +6,7 @@ import 'package:nawy_app/core/utlis/assets/app_font_families.dart';
 import '../../../../core/utlis/assets/app_colors.dart';
 import '../../../../core/utlis/assets/app_images.dart';
 import '../../../../core/utlis/assets/font_styles.dart';
+
 import '../../../../generated/l10n.dart';
 import 'welcome_one_view.dart';
 
@@ -15,7 +16,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.pinkColor,
+      backgroundColor: AppColors.darkPinkColor,
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

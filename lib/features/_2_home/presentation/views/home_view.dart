@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/utlis/assets/app_images.dart';
 import '../../../../core/utlis/assets/font_styles.dart';
+
 import '../../../../generated/l10n.dart';
 import 'bodies/map_view_body.dart';
 import 'widgets/custom_svg_pic_asset.dart';

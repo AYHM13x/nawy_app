@@ -15,5 +15,7 @@
     "chats":"Chats",
     "searchEstate":"Search Estate",
     "list":"List",
-    "searchLocation":"Search Location"
+    "searchLocation":"Search Location",
+    "filter":"Filter",
+    "typeEstate":"Type"
 }

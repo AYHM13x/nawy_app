@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "apartments": MessageLookupByLibrary.simpleMessage("شقق"),
         "chats": MessageLookupByLibrary.simpleMessage("المحادثات"),
         "dollar": MessageLookupByLibrary.simpleMessage("دولار"),
+        "filter": MessageLookupByLibrary.simpleMessage("فلترة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "houses": MessageLookupByLibrary.simpleMessage("بيوت"),
         "list": MessageLookupByLibrary.simpleMessage("قائمة"),
@@ -37,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchLocation": MessageLookupByLibrary.simpleMessage("ابحث عن مكان"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "title": MessageLookupByLibrary.simpleMessage("تطبيق ناوي"),
+        "typeEstate": MessageLookupByLibrary.simpleMessage("الفئة"),
         "villas": MessageLookupByLibrary.simpleMessage("ڤلل")
       };
 }

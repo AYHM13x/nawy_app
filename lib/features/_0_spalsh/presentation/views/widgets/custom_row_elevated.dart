@@ -21,7 +21,7 @@ class coustomRowElevatedBottom extends StatelessWidget {
             Opacity(
               opacity: opacity2,
               child: Container(
-                color: AppColors.pinkColor,
+                color: AppColors.darkPinkColor,
                 height: 3,
                 width: 31,
               ),
@@ -29,7 +29,7 @@ class coustomRowElevatedBottom extends StatelessWidget {
             Opacity(
               opacity: opacity,
               child: Container(
-                color: AppColors.pinkColor,
+                color: AppColors.darkPinkColor,
                 height: 3,
                 width: 31,
               ),

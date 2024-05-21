@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 
 import 'core/utlis/assets/app_font_families.dart';
 import 'features/_0_spalsh/presentation/views/splash_view.dart';
+import 'features/_3_filter/filter_view.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -32,7 +32,7 @@ class NawyApp extends StatelessWidget {
         fontFamily: AppFontFamilies.cairoFont,
       ),
 
-      home: const SplashView(),
+      home: const FilterView(),
     );
   }
 }

@@ -15,5 +15,7 @@
     "chats":"المحادثات",
     "searchEstate":"ابحث عن عقار",
     "list":"قائمة",
-    "searchLocation":"ابحث عن مكان"
+    "searchLocation":"ابحث عن مكان",
+    "filter":"فلترة",
+    "typeEstate":"الفئة"
 }

@@ -21,4 +21,6 @@ abstract class AppImages {
   static const signin = "$_basePath/log_in.svg";
   static const Sign_up = "$_basePath/Sign_up.svg";
   static const profileheade = "$_basePath/profileheade.svg";
+  static const homeItem = "$_basePath/homeItem.svg";
+  static const MaskGroup = "$_basePath/Mask Group (4).svg";
 }

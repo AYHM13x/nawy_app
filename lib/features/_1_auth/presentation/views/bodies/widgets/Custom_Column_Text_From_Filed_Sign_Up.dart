@@ -14,6 +14,7 @@ class CustomColumnTextFromFiledSignUp extends StatelessWidget {
             width: 353,
             height: 48,
             child: const customTextformfiled(
+              keyboardType: TextInputType.emailAddress,
               hintText: "البريد الالكتروني",
               icon: Icons.email,
             )),
@@ -25,6 +26,7 @@ class CustomColumnTextFromFiledSignUp extends StatelessWidget {
             width: 353,
             height: 48,
             child: const customTextformfiled(
+              keyboardType: TextInputType.number,
               hintText: "رقم الهاتف",
               icon: Icons.phone,
             )),
@@ -36,6 +38,7 @@ class CustomColumnTextFromFiledSignUp extends StatelessWidget {
             width: 353,
             height: 48,
             child: const customTextformfiled(
+              keyboardType: TextInputType.text,
               hintText: "كلمة المرور",
               icon: Icons.lock,
             )),
@@ -47,6 +50,7 @@ class CustomColumnTextFromFiledSignUp extends StatelessWidget {
             width: 353,
             height: 48,
             child: const customTextformfiled(
+              keyboardType: TextInputType.number,
               hintText: "تأكيد كلمة المرور",
               icon: Icons.lock,
             )),

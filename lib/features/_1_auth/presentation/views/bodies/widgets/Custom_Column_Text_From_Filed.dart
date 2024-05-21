@@ -13,6 +13,7 @@ class CustomColumnTextFromFiled extends StatelessWidget {
             width: 353,
             height: 48,
             child: const customTextformfiled(
+              keyboardType: TextInputType.text,
               hintText: "البريد الالكتروني",
               icon: Icons.email,
             )),
@@ -24,6 +25,7 @@ class CustomColumnTextFromFiled extends StatelessWidget {
             width: 353,
             height: 48,
             child: const customTextformfiled(
+              keyboardType: TextInputType.number,
               hintText: "رقم الهاتف",
               icon: Icons.phone,
             ))

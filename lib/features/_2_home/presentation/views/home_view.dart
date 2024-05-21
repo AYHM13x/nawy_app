@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page.dart';
 
 import '../../../../core/utlis/assets/app_images.dart';
 import '../../../../core/utlis/assets/font_styles.dart';
@@ -20,7 +21,7 @@ class _HomeViewState extends State<HomeView> {
   int selected = 0;
   List<Widget> listWidgets = const [
     MapViewBody(),
-    // TasksView(),
+    FirstPage(),
     // ProfileView(),
     // EditProfileView(),
   ];
@@ -113,7 +114,7 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body: listWidgets[0],
+      body: listWidgets[selected],
     );
   }
 }

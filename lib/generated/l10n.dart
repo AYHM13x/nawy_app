@@ -249,6 +249,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Rooms Number`
+  String get roomsNumber {
+    return Intl.message(
+      'Rooms Number',
+      name: 'roomsNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Area`
+  String get space {
+    return Intl.message(
+      'Area',
+      name: 'space',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

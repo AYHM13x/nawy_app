@@ -18,5 +18,8 @@
     "searchLocation":"Search Location",
     "filter":"Filter",
     "typeEstate":"Type",
-    "priceRange":"Price Range"
+    "priceRange":"Price Range",
+    "roomsNumber":"Rooms Number",
+    "space":"Area",
+    "search":"Search"
 }

@@ -18,5 +18,8 @@
     "searchLocation":"ابحث عن مكان",
     "filter":"فلترة",
     "typeEstate":"الفئة",
-    "priceRange":"مجال السعر"
+    "priceRange":"مجال السعر",
+    "roomsNumber":"عدد الغرف",
+    "space":"المساحة",
+    "search":"بحث"
 }

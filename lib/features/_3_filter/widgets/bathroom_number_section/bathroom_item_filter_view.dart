@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utlis/assets/app_colors.dart';
-import '../../../core/utlis/assets/font_styles.dart';
+import '../../../../core/utlis/assets/app_colors.dart';
+import '../../../../core/utlis/assets/font_styles.dart';
 
-class TypeEstateItemFilterView extends StatelessWidget {
-  const TypeEstateItemFilterView({
+class BathroomItemFilterView extends StatelessWidget {
+  const BathroomItemFilterView({
     super.key,
     required this.text,
     this.isSelected = false,
@@ -14,8 +14,8 @@ class TypeEstateItemFilterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 67,
-      height: 46,
+      width: 45,
+      height: 37,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         color: isSelected ? AppColors.darkPinkColor : Colors.transparent,

@@ -35,9 +35,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "myOrders": MessageLookupByLibrary.simpleMessage("طلباتي"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "priceRange": MessageLookupByLibrary.simpleMessage("مجال السعر"),
+        "roomsNumber": MessageLookupByLibrary.simpleMessage("عدد الغرف"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "searchEstate": MessageLookupByLibrary.simpleMessage("ابحث عن عقار"),
         "searchLocation": MessageLookupByLibrary.simpleMessage("ابحث عن مكان"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "space": MessageLookupByLibrary.simpleMessage("المساحة"),
         "title": MessageLookupByLibrary.simpleMessage("تطبيق ناوي"),
         "typeEstate": MessageLookupByLibrary.simpleMessage("الفئة"),
         "villas": MessageLookupByLibrary.simpleMessage("ڤلل")

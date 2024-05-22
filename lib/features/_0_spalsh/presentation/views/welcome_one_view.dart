@@ -50,11 +50,11 @@ class WelcomeOneView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                const coustomRowElevatedBottom(
+                const CoustomRowElevatedBottom(
                   opacity2: .1,
                   opacity: 1,
                 ),
-                Container(
+                SizedBox(
                   width: 150,
                   height: 60,
                   child: customElevatedBotton(data: "التالي ", onPressed: () {
@@ -69,7 +69,7 @@ class WelcomeOneView extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
+                SizedBox(
                   width: 97,
                   height: 42,
                   child: customElevatedBotton(

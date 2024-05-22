@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/utlis/assets/font_styles.dart';
-import '../../../../generated/l10n.dart';
+import '../../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../generated/l10n.dart';
 import 'space_item_filter_view.dart';
 
 class SpaceSectionFilterView extends StatelessWidget {

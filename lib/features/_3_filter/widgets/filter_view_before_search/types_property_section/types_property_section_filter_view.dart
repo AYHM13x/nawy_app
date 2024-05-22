@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/utlis/assets/font_styles.dart';
-import '../../../../generated/l10n.dart';
-import 'type_estate_item_filter_view.dart';
+import '../../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../generated/l10n.dart';
+import 'type_property_item_filter_view.dart';
 
-class TypesEstateSectionFilterView extends StatelessWidget {
-  const TypesEstateSectionFilterView({
+class TypesPropertySectionFilterView extends StatelessWidget {
+  const TypesPropertySectionFilterView({
     super.key,
   });
 
@@ -16,7 +16,7 @@ class TypesEstateSectionFilterView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          S.of(context).typeEstate,
+          S.of(context).typeProperty,
           style: FontStyles.textStyle14Reg.copyWith(
             fontWeight: FontWeight.w700,
           ),
@@ -25,16 +25,17 @@ class TypesEstateSectionFilterView extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            TypeEstateItemFilterView(
+            TypePropertyItemFilterView(
               text: S.of(context).all,
             ),
-            TypeEstateItemFilterView(
+            TypePropertyItemFilterView(
               text: S.of(context).apartments,
+              // isSelected: true,
             ),
-            TypeEstateItemFilterView(
+            TypePropertyItemFilterView(
               text: S.of(context).villas,
             ),
-            TypeEstateItemFilterView(
+            TypePropertyItemFilterView(
               text: S.of(context).houses,
             ),
           ],

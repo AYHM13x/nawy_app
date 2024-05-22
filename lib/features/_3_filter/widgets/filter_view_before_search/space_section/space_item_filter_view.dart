@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utlis/assets/app_colors.dart';
-import '../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../core/utlis/assets/app_colors.dart';
+import '../../../../../core/utlis/assets/font_styles.dart';
 
-class BathroomItemFilterView extends StatelessWidget {
-  const BathroomItemFilterView({
+class SpaceItemFilterView extends StatelessWidget {
+  const SpaceItemFilterView({
     super.key,
     required this.text,
     this.isSelected = false,
@@ -14,7 +14,7 @@ class BathroomItemFilterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 45,
+      width: 76,
       height: 37,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),

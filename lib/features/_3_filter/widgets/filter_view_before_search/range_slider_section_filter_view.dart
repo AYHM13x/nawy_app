@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-import '../../../core/utlis/assets/app_colors.dart';
-import '../../../core/utlis/assets/font_styles.dart';
-import '../../../generated/l10n.dart';
+import '../../../../core/utlis/assets/app_colors.dart';
+import '../../../../core/utlis/assets/font_styles.dart';
+import '../../../../generated/l10n.dart';
 
 class RangeSliderSectionFilterView extends StatefulWidget {
   const RangeSliderSectionFilterView({

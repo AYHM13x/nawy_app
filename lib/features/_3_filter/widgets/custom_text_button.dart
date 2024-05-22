@@ -10,11 +10,13 @@ class CustomTextButton extends StatelessWidget {
     required this.height,
     required this.radius,
     required this.text,
+    required this.color,
     this.onPressed,
   });
 
   final double width, height, radius;
   final String text;
+  final Color color;
   final void Function()? onPressed;
 
   @override
@@ -25,7 +27,7 @@ class CustomTextButton extends StatelessWidget {
       child: TextButton(
         onPressed: () {},
         style: ButtonStyle(
-          backgroundColor: const WidgetStatePropertyAll(AppColors.goldColor),
+          backgroundColor: WidgetStatePropertyAll(color),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
@@ -35,7 +37,7 @@ class CustomTextButton extends StatelessWidget {
         child: Text(
           text,
           style: FontStyles.textStyle16Bold.copyWith(
-            color: Colors.white,
+            color: color == Colors.white ? Colors.black : Colors.white,
           ),
         ),
       ),

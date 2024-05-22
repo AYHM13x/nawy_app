@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utlis/assets/app_colors.dart';
-import '../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../core/utlis/assets/app_colors.dart';
+import '../../../../../core/utlis/assets/font_styles.dart';
 
 class RoomsNumberItemFilterView extends StatelessWidget {
   const RoomsNumberItemFilterView({

@@ -23,7 +23,9 @@ abstract class AppImages {
   static const profileheade = "$_svgPath/profileheade.svg";
   static const homeItem = "$_svgPath/homeItem.svg";
   static const maskGroupImage = "$_svgPath/Mask Group (4).svg";
-  static const propertyImage = "$_basePath/image_apartment.png";
+  static const propertyImage = "$_pngPath/image_apartment.png";
   static const starIcon = "$_svgPath/star_icon.svg";
   static const pinIcon = "$_svgPath/pin_icon.svg";
+  static const bedIcon = "$_svgPath/bed_icon.svg";
+  static const bathIcon = "$_svgPath/bath_icon.svg";
 }

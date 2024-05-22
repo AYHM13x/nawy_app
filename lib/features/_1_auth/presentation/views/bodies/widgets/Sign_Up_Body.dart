@@ -18,7 +18,7 @@ class SignUpBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 50),
-      child: Container(
+      child: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: SingleChildScrollView(
@@ -26,7 +26,7 @@ class SignUpBody extends StatelessWidget {
             child: Container(
               child: Column(
                 children: [
-                  SvgPicture.asset(AppImages.Sign_up),
+                  SvgPicture.asset(AppImages.signUpImage),
                   const SizedBox(
                     height: 20,
                   ),
@@ -41,7 +41,7 @@ class SignUpBody extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
+                  SizedBox(
                     width: 278,
                     height: 60,
                     child: customElevatedBotton(AppColors.yellowColor,

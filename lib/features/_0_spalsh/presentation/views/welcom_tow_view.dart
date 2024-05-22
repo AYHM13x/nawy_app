@@ -24,7 +24,7 @@ class WelcometowView extends StatelessWidget {
             child: Column(
               children: [
                 const CustomAppBar(),
-                SvgPicture.asset(AppImages.WelcomTow),
+                SvgPicture.asset(AppImages.welcomTowImage),
                 const SizedBox(
                   height: 40,
                 ),

@@ -8,11 +8,12 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     required this.width,
     required this.height,
+    required this.radius,
     required this.text,
     this.onPressed,
   });
 
-  final double width, height;
+  final double width, height, radius;
   final String text;
   final void Function()? onPressed;
 
@@ -27,7 +28,7 @@ class CustomTextButton extends StatelessWidget {
           backgroundColor: const WidgetStatePropertyAll(AppColors.goldColor),
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(55.0),
+              borderRadius: BorderRadius.circular(radius),
             ),
           ),
         ),

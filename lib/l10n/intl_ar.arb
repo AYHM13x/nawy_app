@@ -17,5 +17,6 @@
     "list":"قائمة",
     "searchLocation":"ابحث عن مكان",
     "filter":"فلترة",
-    "typeEstate":"الفئة"
+    "typeEstate":"الفئة",
+    "priceRange":"مجال السعر"
 }

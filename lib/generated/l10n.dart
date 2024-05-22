@@ -239,6 +239,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Price Range`
+  String get priceRange {
+    return Intl.message(
+      'Price Range',
+      name: 'priceRange',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

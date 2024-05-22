@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "map": MessageLookupByLibrary.simpleMessage("Map"),
         "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "priceRange": MessageLookupByLibrary.simpleMessage("Price Range"),
         "searchEstate": MessageLookupByLibrary.simpleMessage("Search Estate"),
         "searchLocation":
             MessageLookupByLibrary.simpleMessage("Search Location"),

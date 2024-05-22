@@ -17,5 +17,6 @@
     "list":"List",
     "searchLocation":"Search Location",
     "filter":"Filter",
-    "typeEstate":"Type"
+    "typeEstate":"Type",
+    "priceRange":"Price Range"
 }

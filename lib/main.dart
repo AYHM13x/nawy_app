@@ -33,7 +33,7 @@ class NawyApp extends StatelessWidget {
         fontFamily: AppFontFamilies.cairoFont,
       ),
 
-      home: const HomeView(),
+      home: const SplashView(),
     );
   }
 }

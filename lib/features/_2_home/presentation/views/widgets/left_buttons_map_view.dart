@@ -24,7 +24,7 @@ class LeftButtonsMapView extends StatelessWidget {
           ),
           LeftButtonItemView(
             child: Text(
-              S.of(context).searchEstate,
+              S.of(context).searchProperty,
               textAlign: TextAlign.center,
               style: FontStyles.textStyle14Reg.copyWith(
                 fontSize: 10,

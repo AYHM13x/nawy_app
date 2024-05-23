@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_text_botton.dart';
-import 'package:nawy_app/generated/l10n.dart';
 
-class coustomRowElevatedBottom extends StatelessWidget {
-  const coustomRowElevatedBottom(
+class CoustomRowElevatedBottom extends StatelessWidget {
+  const CoustomRowElevatedBottom(
       {super.key, required this.opacity, required this.opacity2});
   final double opacity;
   final double opacity2;

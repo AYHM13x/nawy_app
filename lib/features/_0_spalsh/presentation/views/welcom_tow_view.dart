@@ -25,7 +25,7 @@ class WelcometowView extends StatelessWidget {
             child: Column(
               children: [
                 const CustomAppBar(),
-                SvgPicture.asset(AppImages.WelcomTow),
+                SvgPicture.asset(AppImages.welcomTowImage),
                 const SizedBox(
                   height: 40,
                 ),
@@ -55,11 +55,10 @@ class WelcometowView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                coustomRowElevatedBottom(
+                const CoustomRowElevatedBottom(
                   opacity2: 1,
                   opacity: 1,
                 ),
-                Gap(15),
                 Container(
                   width: 150,
                   height: 60,
@@ -77,10 +76,10 @@ class WelcometowView extends StatelessWidget {
                     backgroundtext: Colors.white,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Container(
+                SizedBox(
                   width: 97,
                   height: 42,
                   child: customElevatedBotton(

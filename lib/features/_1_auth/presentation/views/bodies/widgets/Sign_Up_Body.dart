@@ -21,65 +21,56 @@ class SignUpBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 50),
-      child: SingleChildScrollView(
-        child: SafeArea(
-          child: Container(
-            child: Column(
-              children: [
-                SvgPicture.asset(AppImages.Sign_up),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  " تسجيل الان ",
-                  style: FontStyles.textStyle22Bold,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const CustomColumnTextFromFiledSignUp(),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 278,
-                  height: 60,
-                  child: customElevatedBotton(AppColors.yellowColor,
-                      data: "تسجيل الان", onPressed: () {}),
-                ),
-                const CustomRowDivider(),
-                CustomSignUpGoogleAndAplle(),
-                customRowtextlogin(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeView(),
-                      ),
-                    );
-                  },
-                  data: "اليس لديك حساب؟ ",
-                  datatext: "سجل الان",
-                )
-              ],
+      child: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Container(
+              child: Column(
+                children: [
+                  SvgPicture.asset(AppImages.Sign_up),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "تسجيل الدخول ",
+                    style: FontStyles.textStyle22Bold,
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const CustomColumnTextFromFiledSignUp(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    width: 278,
+                    height: 60,
+                    child: customElevatedBotton(AppColors.yellowColor,
+                        data: "تسجيل الان", onPressed: () {}),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  customRowtextlogin(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomeView(),
+                        ),
+                      );
+                    },
+                    data: "اليس لديك حساب؟ ",
+                    datatext: "سجل الان",
+                  )
+                ],
+              ),
             ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class CustomSignUpGoogleAndAplle extends StatelessWidget {
-  const CustomSignUpGoogleAndAplle({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-            onPressed: () {}, icon: SvgPicture.asset(AppImages.googleIcon))
-      ],
     );
   }
 }

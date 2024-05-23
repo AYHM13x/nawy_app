@@ -130,6 +130,16 @@ class S {
     );
   }
 
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Skip`
   String get skip {
     return Intl.message(
@@ -190,11 +200,11 @@ class S {
     );
   }
 
-  /// `Search Estate`
-  String get searchEstate {
+  /// `Search Property`
+  String get searchProperty {
     return Intl.message(
-      'Search Estate',
-      name: 'searchEstate',
+      'Search Property',
+      name: 'searchProperty',
       desc: '',
       args: [],
     );
@@ -231,10 +241,90 @@ class S {
   }
 
   /// `Type`
-  String get typeEstate {
+  String get typeProperty {
     return Intl.message(
       'Type',
-      name: 'typeEstate',
+      name: 'typeProperty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price Range`
+  String get priceRange {
+    return Intl.message(
+      'Price Range',
+      name: 'priceRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rooms Number`
+  String get roomsNumber {
+    return Intl.message(
+      'Rooms Number',
+      name: 'roomsNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Area`
+  String get space {
+    return Intl.message(
+      'Area',
+      name: 'space',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Licensed`
+  String get licensed {
+    return Intl.message(
+      'Licensed',
+      name: 'licensed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlicensed`
+  String get unLicensed {
+    return Intl.message(
+      'Unlicensed',
+      name: 'unLicensed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rooms`
+  String get rooms {
+    return Intl.message(
+      'Rooms',
+      name: 'rooms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bath`
+  String get bath {
+    return Intl.message(
+      'Bath',
+      name: 'bath',
       desc: '',
       args: [],
     );

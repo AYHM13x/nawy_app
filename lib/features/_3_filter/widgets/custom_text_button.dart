@@ -27,13 +27,13 @@ class CustomTextButton extends StatelessWidget {
       child: TextButton(
         onPressed: () {},
         style: ButtonStyle(
-          backgroundColor: WidgetStatePropertyAll(color),
-          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(radius),
+            // backgroundColor: WidgetStatePropertyAll(color),
+            // shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+            //   RoundedRectangleBorder(
+            //     borderRadius: BorderRadius.circular(radius),
+            //   ),
+            // ),
             ),
-          ),
-        ),
         child: Text(
           text,
           style: FontStyles.textStyle16Bold.copyWith(

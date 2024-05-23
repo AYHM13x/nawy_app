@@ -6,7 +6,6 @@ import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/dimensions_of_screen.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_text_botton.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_text_form_filed.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/Custom_Column_Text_From_Filed.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/Custom_Column_Text_From_Filed_Sign_Up.dart';
@@ -29,7 +28,7 @@ class SignUpBody extends StatelessWidget {
             child: Container(
               child: Column(
                 children: [
-                  SvgPicture.asset(AppImages.Sign_up),
+                  SvgPicture.asset(AppImages.signUpImage),
                   const SizedBox(
                     height: 20,
                   ),

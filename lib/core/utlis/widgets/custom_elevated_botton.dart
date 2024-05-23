@@ -16,7 +16,7 @@ class customElevatedBotton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style:
-          ButtonStyle(backgroundColor: MaterialStatePropertyAll(colorelevated)),
+          ButtonStyle(backgroundColor: WidgetStatePropertyAll(colorelevated)),
       onPressed: onPressed,
       child: Text(
         data,

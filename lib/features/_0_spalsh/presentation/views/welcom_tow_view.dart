@@ -59,6 +59,7 @@ class WelcometowView extends StatelessWidget {
                   opacity2: 1,
                   opacity: 1,
                 ),
+                Gap(15),
                 Container(
                   width: 150,
                   height: 60,

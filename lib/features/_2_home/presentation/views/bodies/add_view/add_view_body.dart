@@ -1,7 +1,12 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 import 'package:nawy_app/features/_0_spalsh/presentation/views/appbars/coustom_app_bar.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Add_Map_View.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_Completed.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_Property_type.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_Sale_And_Rent.dart';
@@ -15,6 +20,7 @@ class AddBodyView extends StatelessWidget {
     return Column(
       children: [
         const CustomAppBarAddView(),
+        Gap(29),
         const CustomCompleted(),
         const SizedBox(
           height: 20,
@@ -44,6 +50,19 @@ class AddBodyView extends StatelessWidget {
           height: 10,
         ),
         const CustomPropertytype(),
+        Expanded(child: SizedBox()),
+        customElevatedBotton(
+          AppColors.yellowColor,
+          data: "التالي",
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AddMapView(),
+                ));
+          },
+          backgroundtext: Colors.white,
+        )
       ],
     );
   }

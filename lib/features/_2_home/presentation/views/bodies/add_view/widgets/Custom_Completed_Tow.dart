@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Continer_Slid.dart';
 
-class CustomCompleted extends StatelessWidget {
-  const CustomCompleted({super.key});
+class CustomCompletedTow extends StatelessWidget {
+  const CustomCompletedTow({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class CustomCompleted extends StatelessWidget {
                 opacity: .5,
               ),
               ContinerSlid(
-                opacity: .5,
+                opacity: 1,
               ),
               ContinerSlid(
                 opacity: 1,
@@ -30,7 +29,7 @@ class CustomCompleted extends StatelessWidget {
             ],
           ),
           SizedBox(height: 22, child: Text(" خطوة  ")),
-          SizedBox(height: 22, child: Text(" 1/4  ")),
+          SizedBox(height: 22, child: Text(" 2/4  ")),
         ],
       ),
     );

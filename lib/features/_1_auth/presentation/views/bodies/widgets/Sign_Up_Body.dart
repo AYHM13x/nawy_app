@@ -11,6 +11,7 @@ import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/Cust
 import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/Custom_Column_Text_From_Filed_Sign_Up.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/Custom_Row_Divider.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/custom_Row_text_login.dart';
+import 'package:nawy_app/features/_1_auth/presentation/views/sign_in_view.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 
 class SignUpBody extends StatelessWidget {
@@ -46,8 +47,17 @@ class SignUpBody extends StatelessWidget {
                   Container(
                     width: 278,
                     height: 60,
-                    child: customElevatedBotton(AppColors.yellowColor,
-                        data: "تسجيل الان", onPressed: () {}),
+                    child: customElevatedBotton(
+                        backgroundtext: Colors.white,
+                        AppColors.yellowColor,
+                        data: "تسجيل الان", onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignInView(),
+                        ),
+                      );
+                    }),
                   ),
                   const SizedBox(
                     height: 20,

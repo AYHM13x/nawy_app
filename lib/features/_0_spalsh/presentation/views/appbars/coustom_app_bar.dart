@@ -22,7 +22,8 @@ class CustomAppBar extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const SplashView()),
               );
             },
-            icon: const Icon(Icons.arrow_back_ios)),
+            icon: Transform.flip(
+                flipX: true, child: const Icon(Icons.arrow_back))),
       ],
     );
   }

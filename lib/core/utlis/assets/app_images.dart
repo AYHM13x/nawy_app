@@ -23,4 +23,7 @@ abstract class AppImages {
   static const profileheade = "$_basePath/profileheade.svg";
   static const homeItem = "$_basePath/homeItem.svg";
   static const MaskGroup = "$_basePath/Mask Group (4).svg";
+
+  static const appleIcon = "$_basePath/apple_id.svg";
+  static const googleIcon = "$_basePath/google_icon.svg";
 }

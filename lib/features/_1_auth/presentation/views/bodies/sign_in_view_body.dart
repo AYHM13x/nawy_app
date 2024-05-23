@@ -14,10 +14,16 @@ import 'package:nawy_app/features/_1_auth/presentation/views/bodies/widgets/cust
 import 'package:nawy_app/features/_1_auth/presentation/views/sign_uo.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 
-class SignInBody extends StatelessWidget {
+class SignInBody extends StatefulWidget {
   SignInBody({
     super.key,
   });
+
+  @override
+  State<SignInBody> createState() => _SignInBodyState();
+}
+
+class _SignInBodyState extends State<SignInBody> {
   GlobalKey<FormState> formKey = GlobalKey();
 
   @override
@@ -52,14 +58,18 @@ class SignInBody extends StatelessWidget {
                     Container(
                       width: 278,
                       height: 60,
-                      child: customElevatedBotton(AppColors.yellowColor,
+                      child: customElevatedBotton(
+                          backgroundtext: Colors.white,
+                          AppColors.yellowColor,
                           data: "تسجيل الدخول", onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomeView(),
-                          ),
-                        );
+                        if (formKey.currentState!.validate()) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeView(),
+                            ),
+                          );
+                        }
                       }),
                     ),
                     const SizedBox(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
@@ -28,9 +29,21 @@ class WelcometowView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                const Text(
-                  "ابحث عن اهم الاماكن للاقامة او للايجار او كوسيط بافضل الاسعار",
-                  style: FontStyles.textStyle16Bold,
+                RichText(
+                  text: TextSpan(
+                    children: <TextSpan>[
+                      TextSpan(
+                        text:
+                            " ابحث عن اهم الاماكن للاقامة او للايجار او كوسيط  ",
+                        style: FontStyles.textStyle18Reg
+                            .copyWith(color: Colors.black),
+                      ),
+                      TextSpan(
+                          text: ("   بأفضل الأسعار    "),
+                          style: FontStyles.textStyle14Reg
+                              .copyWith(color: Colors.blue))
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 40,
@@ -46,6 +59,7 @@ class WelcometowView extends StatelessWidget {
                   opacity2: 1,
                   opacity: 1,
                 ),
+                Gap(15),
                 Container(
                   width: 150,
                   height: 60,

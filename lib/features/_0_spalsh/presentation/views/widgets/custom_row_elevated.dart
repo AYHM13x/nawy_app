@@ -12,32 +12,24 @@ class coustomRowElevatedBottom extends StatelessWidget {
   final double opacity2;
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Row(
-          children: [
-            Opacity(
-              opacity: opacity2,
-              child: Container(
-                color: AppColors.darkPinkColor,
-                height: 3,
-                width: 31,
-              ),
-            ),
-            Opacity(
-              opacity: opacity,
-              child: Container(
-                color: AppColors.darkPinkColor,
-                height: 3,
-                width: 31,
-              ),
-            ),
-          ],
+        Opacity(
+          opacity: opacity2,
+          child: Container(
+            color: AppColors.darkPinkColor,
+            height: 3,
+            width: 31,
+          ),
         ),
-        const SizedBox(
-          height: 30,
+        Opacity(
+          opacity: opacity,
+          child: Container(
+            color: AppColors.darkPinkColor,
+            height: 3,
+            width: 31,
+          ),
         ),
       ],
     );

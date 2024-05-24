@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utlis/assets/app_colors.dart';
-import '../../../../../generated/l10n.dart';
-import '../widgets/map_view/search_bar_item_view.dart';
+import '../../../../../../core/utlis/assets/app_colors.dart';
+import '../../../../../../generated/l10n.dart';
+import '../../widgets/map_view/search_bar_item_view.dart';
 
 class CustomSearchBarView extends StatelessWidget {
   const CustomSearchBarView({

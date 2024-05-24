@@ -1,16 +1,14 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:nawy_app/core/utlis/assets/app_colors.dart';
-import 'package:nawy_app/core/utlis/assets/font_styles.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
-import 'package:nawy_app/features/_0_spalsh/presentation/views/appbars/coustom_app_bar.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Add_Map_View.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_Completed.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_Property_type.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_Sale_And_Rent.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Custom_app_bar.dart';
+
+import '../../../../../../core/utlis/assets/app_colors.dart';
+import '../../../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../../core/utlis/widgets/custom_elevated_botton.dart';
+import '../../appbars/add_view_appbar/custom_app_bar.dart';
+import '../../widgets/add_view/custom_completed.dart';
+import '../../widgets/add_view/custom_property_type.dart';
+import '../../widgets/add_view/custom_sale_and_rent.dart';
+import '../../widgets/add_view/add_map_view.dart';
 
 class AddBodyView extends StatelessWidget {
   const AddBodyView({super.key});
@@ -20,7 +18,7 @@ class AddBodyView extends StatelessWidget {
     return Column(
       children: [
         const CustomAppBarAddView(),
-        Gap(29),
+        const Gap(29),
         const CustomCompleted(),
         const SizedBox(
           height: 20,
@@ -50,7 +48,7 @@ class AddBodyView extends StatelessWidget {
           height: 10,
         ),
         const CustomPropertytype(),
-        Expanded(child: SizedBox()),
+        const Expanded(child: SizedBox()),
         customElevatedBotton(
           AppColors.yellowColor,
           data: "التالي",
@@ -58,7 +56,7 @@ class AddBodyView extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AddMapView(),
+                  builder: (context) => const AddMapView(),
                 ));
           },
           backgroundtext: Colors.white,

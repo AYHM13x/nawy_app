@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomMapChose extends StatelessWidget {
-  const CustomMapChose({super.key});
+class CustomMapChoose extends StatelessWidget {
+  const CustomMapChoose({super.key});
 
   @override
   Widget build(BuildContext context) {

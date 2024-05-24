@@ -4,9 +4,8 @@ import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/f
 
 import '../../../../core/utlis/assets/app_images.dart';
 import '../../../../core/utlis/assets/font_styles.dart';
-
 import '../../../../generated/l10n.dart';
-import 'bodies/map_view_body.dart';
+import 'bodies/map_view/map_view_body.dart';
 import 'widgets/map_view/custom_svg_pic_asset.dart';
 
 class HomeView extends StatefulWidget {
@@ -21,7 +20,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   int selected = 0;
   List<Widget> listWidgets = const [
-    FirstPagebody(),
+    MainViewBody(),
     MapViewBody(),
     AddBodyView(),
     // ProfileView(),

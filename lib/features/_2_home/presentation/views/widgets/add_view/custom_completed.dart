@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Continer_Slid.dart';
 
-class CustomCompletedThree extends StatelessWidget {
-  const CustomCompletedThree({super.key});
+import 'continer_slide.dart';
+
+class CustomCompleted extends StatelessWidget {
+  const CustomCompleted({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +15,22 @@ class CustomCompletedThree extends StatelessWidget {
         children: [
           Row(
             children: [
-              ContinerSlid(
+              ContinerSlide(
                 opacity: .5,
               ),
-              ContinerSlid(
-                opacity: 1,
+              ContinerSlide(
+                opacity: .5,
               ),
-              ContinerSlid(
-                opacity: 1,
+              ContinerSlide(
+                opacity: .5,
               ),
-              ContinerSlid(
+              ContinerSlide(
                 opacity: 1,
               ),
             ],
           ),
           SizedBox(height: 22, child: Text(" خطوة  ")),
-          SizedBox(height: 22, child: Text(" 3/4  ")),
+          SizedBox(height: 22, child: Text(" 1/4  ")),
         ],
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Continer_Slid.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/widgets/add_view/continer_slide.dart';
 
-class CustomCompletedTow extends StatelessWidget {
-  const CustomCompletedTow({super.key});
+class CustomCompletedThree extends StatelessWidget {
+  const CustomCompletedThree({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +14,22 @@ class CustomCompletedTow extends StatelessWidget {
         children: [
           Row(
             children: [
-              ContinerSlid(
+              ContinerSlide(
                 opacity: .5,
               ),
-              ContinerSlid(
-                opacity: .5,
-              ),
-              ContinerSlid(
+              ContinerSlide(
                 opacity: 1,
               ),
-              ContinerSlid(
+              ContinerSlide(
+                opacity: 1,
+              ),
+              ContinerSlide(
                 opacity: 1,
               ),
             ],
           ),
           SizedBox(height: 22, child: Text(" خطوة  ")),
-          SizedBox(height: 22, child: Text(" 2/4  ")),
+          SizedBox(height: 22, child: Text(" 3/4  ")),
         ],
       ),
     );

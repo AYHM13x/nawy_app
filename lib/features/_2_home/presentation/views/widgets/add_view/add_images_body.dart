@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../core/utlis/assets/font_styles.dart';
-import '../../appbars/add_view_appbar/custom_app_bar.dart';
+import '../../appbars/add_view/custom_app_bar.dart';
 import 'Custom_Completed_Three.dart';
 
 class AddImagesBody extends StatelessWidget {

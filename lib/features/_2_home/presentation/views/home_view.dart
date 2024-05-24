@@ -5,8 +5,10 @@ import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/f
 import '../../../../core/utlis/assets/app_images.dart';
 import '../../../../core/utlis/assets/font_styles.dart';
 import '../../../../generated/l10n.dart';
+import 'bodies/chat_view/chat_view_body.dart';
 import 'bodies/map_view/map_view_body.dart';
-import 'widgets/map_view/custom_svg_pic_asset.dart';
+import 'bodies/my_orders/my_order_view_body.dart';
+import '../../../../core/utlis/widgets/custom_svg_pic_asset.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({
@@ -23,8 +25,8 @@ class _HomeViewState extends State<HomeView> {
     MainViewBody(),
     MapViewBody(),
     AddBodyView(),
-    // ProfileView(),
-    // EditProfileView(),
+    MyOrderViewBody(),
+    ChatViewBody(),
   ];
   @override
   Widget build(BuildContext context) {

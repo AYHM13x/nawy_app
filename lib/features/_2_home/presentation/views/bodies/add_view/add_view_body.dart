@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import '../../../../../../core/utlis/assets/app_colors.dart';
 import '../../../../../../core/utlis/assets/font_styles.dart';
 import '../../../../../../core/utlis/widgets/custom_elevated_botton.dart';
-import '../../appbars/add_view_appbar/custom_app_bar.dart';
+import '../../appbars/add_view/custom_app_bar.dart';
 import '../../widgets/add_view/custom_completed.dart';
 import '../../widgets/add_view/custom_property_type.dart';
 import '../../widgets/add_view/custom_sale_and_rent.dart';

@@ -28,4 +28,7 @@ abstract class AppImages {
   static const pinIcon = "$_svgPath/pin_icon.svg";
   static const bedIcon = "$_svgPath/bed_icon.svg";
   static const bathIcon = "$_svgPath/bath_icon.svg";
+  static const accountImageProfile = "$_pngPath/account_image_profile.png";
+  static const infoIconChat = "$_svgPath/info_icon_chat.svg";
+  static const phoneIcon = "$_svgPath/phone_icon.svg";
 }

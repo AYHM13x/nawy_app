@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import '../../../../../../core/utlis/assets/app_colors.dart';
 import '../../../../../../core/utlis/assets/font_styles.dart';
 import '../../../../../../core/utlis/widgets/custom_elevated_botton.dart';
-import '../../appbars/add_view_appbar/custom_app_bar.dart';
+import '../../appbars/add_view/custom_app_bar.dart';
 import 'add_images_view.dart';
 import 'Custom_Completed_Tow.dart';
 import 'custom_map_choose.dart';

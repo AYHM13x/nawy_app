@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
-import 'package:nawy_app/features/_0_spalsh/presentation/views/welcom_tow_view.dart';
+import 'package:nawy_app/features/_0_spalsh/presentation/views/welcome_tow_view.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/sign_in_view.dart';
 
-import 'appbars/coustom_app_bar.dart';
+import 'appbars/custom_app_bar.dart';
 import 'widgets/custom_row_elevated.dart';
 
 class WelcomeOneView extends StatelessWidget {
@@ -55,7 +55,7 @@ class WelcomeOneView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                const CoustomRowElevatedBottom(
+                const CustomRowElevatedBottom(
                   opacity2: .1,
                   opacity: 1,
                 ),

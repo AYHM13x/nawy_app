@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:nawy_app/core/utlis/assets/font_styles.dart';
+
+import '../../../../../../core/utlis/assets/font_styles.dart';
 
 class Customspecifications extends StatelessWidget {
   const Customspecifications({super.key});
@@ -39,10 +39,10 @@ class RowWidgetItem extends StatelessWidget {
           data,
           style: FontStyles.textStyle14Reg,
         ),
-        SizedBox(
+        const SizedBox(
           width: 15,
         ),
-        Container(
+        SizedBox(
           height: 12,
           width: 12,
           child: Icon(

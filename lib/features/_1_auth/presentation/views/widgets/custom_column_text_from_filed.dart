@@ -18,11 +18,11 @@ class _CustomColumnTextFromFiledState extends State<CustomColumnTextFromFiled> {
       children: [
         Container(
             decoration: BoxDecoration(
-                color: Color(0xffF5F4F8),
+                color: const Color(0xffF5F4F8),
                 borderRadius: BorderRadius.circular(25)),
             width: 353,
             height: 48,
-            child: const customTextformfiled(
+            child: const CustomTextformfiled(
               keyboardType: TextInputType.text,
               hintText: "البريد الالكتروني",
               icon: Icons.email,
@@ -32,11 +32,11 @@ class _CustomColumnTextFromFiledState extends State<CustomColumnTextFromFiled> {
         ),
         Container(
             decoration: BoxDecoration(
-                color: Color(0xffF5F4F8),
+                color: const Color(0xffF5F4F8),
                 borderRadius: BorderRadius.circular(25)),
             width: 353,
             height: 48,
-            child: customTextformfiled(
+            child: CustomTextformfiled(
                 isPassword: isShowPassword ? false : true,
                 keyboardType: TextInputType.number,
                 hintText: " كلمة السر",
@@ -48,8 +48,8 @@ class _CustomColumnTextFromFiledState extends State<CustomColumnTextFromFiled> {
                       });
                     },
                     icon: isShowPassword
-                        ? Icon(Icons.visibility)
-                        : Icon(Icons.visibility_off))))
+                        ? const Icon(Icons.visibility)
+                        : const Icon(Icons.visibility_off))))
       ],
     );
   }

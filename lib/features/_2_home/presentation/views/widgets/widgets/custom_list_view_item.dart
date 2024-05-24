@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utlis/assets/font_styles.dart';
-import 'custom_row_pecifications.dart';
-import 'custom_Row_item.dart';
-import 'custom_row_street.dart';
+import '../main_view/custom_Row_item.dart';
+import '../main_view/custom_row_pecifications.dart';
+import '../main_view/custom_row_street.dart';
 
 class CustomListViewItem extends StatelessWidget {
   const CustomListViewItem({super.key});

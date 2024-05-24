@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utlis/assets/app_colors.dart';
-import 'custom_Row_Notafication_And_Image.dart';
+import 'custom_row_notafication_and_image.dart';
 import 'custom_row_city.dart';
 
 class CustomHead extends StatelessWidget {
@@ -23,11 +23,11 @@ class CustomHead extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            customRowNotaficationAndImage(),
+            CustomRowNotaficationAndImage(),
             SizedBox(
               width: 50,
             ),
-            customRowCity(),
+            CustomRowCity(),
           ],
         ),
       ),

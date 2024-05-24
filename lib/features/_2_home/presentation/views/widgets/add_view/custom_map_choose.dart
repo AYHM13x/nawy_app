@@ -11,10 +11,10 @@ class CustomMapChoose extends StatelessWidget {
         width: 327,
         height: 356,
       ),
-      Container(
+      SizedBox(
           width: 327,
-          child:
-              ElevatedButton(onPressed: () {}, child: Text("اختر على الخريطة")))
+          child: ElevatedButton(
+              onPressed: () {}, child: const Text("اختر على الخريطة")))
     ]);
   }
 }

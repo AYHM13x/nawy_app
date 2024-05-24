@@ -14,14 +14,14 @@ class _CustomPropertytypeState extends State<CustomPropertytype> {
   late int isSelected = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         width: 247,
         height: 138,
         child: Column(
           children: [
             Row(
               children: [
-                customElevatedBotton(
+                CustomElevatedBotton(
                   backgroundtext: isSelected == 0 ? Colors.white : Colors.black,
                   onPressed: () {
                     setState(() {
@@ -31,7 +31,7 @@ class _CustomPropertytypeState extends State<CustomPropertytype> {
                   isSelected == 0 ? AppColors.pickColor : Colors.white,
                   data: "كوخ",
                 ),
-                customElevatedBotton(
+                CustomElevatedBotton(
                   backgroundtext: isSelected == 1 ? Colors.white : Colors.black,
                   onPressed: () {
                     setState(() {
@@ -41,7 +41,7 @@ class _CustomPropertytypeState extends State<CustomPropertytype> {
                   isSelected == 1 ? AppColors.pickColor : Colors.white,
                   data: "فيلا",
                 ),
-                customElevatedBotton(
+                CustomElevatedBotton(
                   backgroundtext: isSelected == 2 ? Colors.white : Colors.black,
                   onPressed: () {
                     setState(() {
@@ -53,11 +53,11 @@ class _CustomPropertytypeState extends State<CustomPropertytype> {
                 ),
               ],
             ),
-            Gap(16),
+            const Gap(16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                customElevatedBotton(
+                CustomElevatedBotton(
                   backgroundtext: isSelected == 3 ? Colors.white : Colors.black,
                   onPressed: () {
                     setState(() {
@@ -67,7 +67,7 @@ class _CustomPropertytypeState extends State<CustomPropertytype> {
                   isSelected == 3 ? AppColors.pickColor : Colors.white,
                   data: "شقة",
                 ),
-                customElevatedBotton(
+                CustomElevatedBotton(
                   backgroundtext: isSelected == 4 ? Colors.white : Colors.black,
                   onPressed: () {
                     setState(() {

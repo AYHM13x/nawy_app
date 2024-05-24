@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:nawy_app/core/utlis/dimensions_of_screen.dart';
-import 'package:nawy_app/features/_3_filter/bodies/filter_view_before_search.dart';
-import 'package:nawy_app/features/_3_filter/widgets/custom_text_button.dart';
-import 'package:nawy_app/generated/l10n.dart';
 
+import '../../../core/utlis/dimensions_of_screen.dart';
+import '../../../generated/l10n.dart';
 import '../appbars/filter_view_appbar.dart';
+import '../widgets/custom_text_button.dart';
 import '../widgets/filter_view_before_search/types_property_section/types_property_section_filter_view.dart';
 import 'fliter_view_after_search.dart';
 

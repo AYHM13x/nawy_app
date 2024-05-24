@@ -59,13 +59,13 @@ class WelcomeOneView extends StatelessWidget {
                   opacity2: .1,
                   opacity: 1,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Container(
+                SizedBox(
                   width: 150,
                   height: 60,
-                  child: customElevatedBotton(
+                  child: CustomElevatedBotton(
                     data: "التالي ",
                     onPressed: () {
                       Navigator.push(
@@ -85,9 +85,11 @@ class WelcomeOneView extends StatelessWidget {
                 SizedBox(
                   width: 97,
                   height: 42,
-                  child: customElevatedBotton(data: "تخطي ", onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignInView()));
+                  child: CustomElevatedBotton(data: "تخطي ", onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignInView()));
                   }, Colors.white),
                 ),
               ],

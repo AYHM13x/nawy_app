@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class customTextformfiled extends StatefulWidget {
-  const customTextformfiled({
+class CustomTextformfiled extends StatefulWidget {
+  const CustomTextformfiled({
     super.key,
     required this.hintText,
     required this.icon,
@@ -16,10 +16,10 @@ class customTextformfiled extends StatefulWidget {
   final Widget? suffixIcon;
 
   @override
-  State<customTextformfiled> createState() => _customTextformfiledState();
+  State<CustomTextformfiled> createState() => _CustomTextformfiledState();
 }
 
-class _customTextformfiledState extends State<customTextformfiled> {
+class _CustomTextformfiledState extends State<CustomTextformfiled> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -28,6 +28,8 @@ class _customTextformfiledState extends State<customTextformfiled> {
       validator: (value) {
         if (value!.isEmpty) {
           return "field is required";
+        } else {
+          return "";
         }
       },
       decoration: InputDecoration(

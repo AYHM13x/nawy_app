@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
-class customRowStreet extends StatelessWidget {
-  const customRowStreet({super.key});
+class CustomRowStreet extends StatelessWidget {
+  const CustomRowStreet({super.key});
 
   @override
   Widget build(BuildContext context) {

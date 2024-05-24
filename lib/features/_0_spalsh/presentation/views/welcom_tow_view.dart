@@ -59,11 +59,11 @@ class WelcometowView extends StatelessWidget {
                   opacity2: 1,
                   opacity: 1,
                 ),
-                Gap(15),
-                Container(
+                const Gap(15),
+                SizedBox(
                   width: 150,
                   height: 60,
-                  child: customElevatedBotton(
+                  child: CustomElevatedBotton(
                     data: "التالي ",
                     onPressed: () {
                       Navigator.push(
@@ -83,7 +83,7 @@ class WelcometowView extends StatelessWidget {
                 SizedBox(
                   width: 97,
                   height: 42,
-                  child: customElevatedBotton(
+                  child: CustomElevatedBotton(
                     data: "تخطي ",
                     onPressed: () {},
                     Colors.white,

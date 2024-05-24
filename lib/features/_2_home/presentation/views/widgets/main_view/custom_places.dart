@@ -6,7 +6,7 @@ class CustomPlaces extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 56,
       child: ListView.builder(
@@ -15,19 +15,17 @@ class CustomPlaces extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(left: 10, right: 10),
-              child: Container(
-                child: Row(
-                  children: [
-                    Image.asset(
-                      "assets/images/rowplaces.png",
-                      fit: BoxFit.cover,
-                    ),
-                    Text(
-                      "العين",
-                      style: FontStyles.textStyle14Reg,
-                    )
-                  ],
-                ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    "assets/images/rowplaces.png",
+                    fit: BoxFit.cover,
+                  ),
+                  const Text(
+                    "العين",
+                    style: FontStyles.textStyle14Reg,
+                  )
+                ],
               ),
             );
           }),

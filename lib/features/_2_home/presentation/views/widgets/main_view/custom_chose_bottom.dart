@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/core/utlis/assets/app_colors.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 
-class customchosebotton extends StatefulWidget {
-  const customchosebotton({super.key});
+import '../../../../../../core/utlis/assets/app_colors.dart';
+import '../../../../../../core/utlis/widgets/custom_elevated_botton.dart';
+
+class Customchosebotton extends StatefulWidget {
+  const Customchosebotton({super.key});
 
   @override
-  State<customchosebotton> createState() => _customchosebottonState();
+  State<Customchosebotton> createState() => _CustomchosebottonState();
 }
 
-class _customchosebottonState extends State<customchosebotton> {
+class _CustomchosebottonState extends State<Customchosebotton> {
   late int isSelected = 0;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        customElevatedBotton(
+        CustomElevatedBotton(
           data: 'الكل',
           onPressed: () {
             setState(() {
@@ -27,7 +28,7 @@ class _customchosebottonState extends State<customchosebotton> {
               isSelected == 0 ? Colors.white : AppColors.darkPinkColor,
           isSelected == 0 ? AppColors.darkPinkColor : Colors.white,
         ),
-        customElevatedBotton(
+        CustomElevatedBotton(
           data: 'بيوت',
           onPressed: () {
             setState(() {
@@ -38,7 +39,7 @@ class _customchosebottonState extends State<customchosebotton> {
               isSelected == 1 ? Colors.white : AppColors.darkPinkColor,
           isSelected == 1 ? AppColors.darkPinkColor : Colors.white,
         ),
-        customElevatedBotton(
+        CustomElevatedBotton(
           data: 'فلل',
           onPressed: () {
             setState(() {
@@ -49,7 +50,7 @@ class _customchosebottonState extends State<customchosebotton> {
           backgroundtext:
               isSelected == 2 ? Colors.white : AppColors.darkPinkColor,
         ),
-        customElevatedBotton(
+        CustomElevatedBotton(
           data: 'شقق',
           onPressed: () {
             setState(() {

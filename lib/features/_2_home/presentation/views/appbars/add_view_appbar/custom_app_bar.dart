@@ -23,10 +23,10 @@ class CustomAppBarAddView extends StatelessWidget {
                       FontStyles.textStyle18Bold.copyWith(color: Colors.white),
                 ),
                 IconButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(Colors.white)),
+                  style: const ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Colors.white)),
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.chevron_right,
                     color: Colors.black,
                   ),

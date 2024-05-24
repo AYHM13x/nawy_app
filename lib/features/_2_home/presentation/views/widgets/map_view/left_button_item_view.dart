@@ -21,8 +21,8 @@ class LeftButtonItemView extends StatelessWidget {
         onPressed: onPressed,
         style: ButtonStyle(
           backgroundColor:
-              const MaterialStatePropertyAll(AppColors.lightYellowColor),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              const WidgetStatePropertyAll(AppColors.lightYellowColor),
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               side: const BorderSide(
                 color: AppColors.goldColor, // your color here

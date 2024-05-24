@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class customRowNotaficationAndImage extends StatelessWidget {
-  const customRowNotaficationAndImage({super.key});
+class CustomRowNotaficationAndImage extends StatelessWidget {
+  const CustomRowNotaficationAndImage({super.key});
 
   @override
   Widget build(BuildContext context) {

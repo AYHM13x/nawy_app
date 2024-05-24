@@ -35,8 +35,8 @@ class SplashView extends StatelessWidget {
               },
               style: ButtonStyle(
                 backgroundColor:
-                    const MaterialStatePropertyAll(AppColors.yellowColor),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    const WidgetStatePropertyAll(AppColors.yellowColor),
+                shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),
                   ),

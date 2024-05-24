@@ -31,7 +31,7 @@ class AddMapViewBody extends StatelessWidget {
           const Gap(24),
           const CustomMapChoose(),
           const Gap(60),
-          customElevatedBotton(
+          CustomElevatedBotton(
             AppColors.yellowColor,
             data: "التالي",
             onPressed: () {

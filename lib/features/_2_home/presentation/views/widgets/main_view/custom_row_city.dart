@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class customRowCity extends StatefulWidget {
-  const customRowCity({super.key});
+class CustomRowCity extends StatefulWidget {
+  const CustomRowCity({super.key});
 
   @override
-  State<customRowCity> createState() => _customRowCityState();
+  State<CustomRowCity> createState() => _CustomRowCityState();
 }
 
-class _customRowCityState extends State<customRowCity> {
+class _CustomRowCityState extends State<CustomRowCity> {
   String selectedMethod = " الامارات";
   List<DropdownMenuItem> ffff = const [
     DropdownMenuItem(value: "السعودية", child: Text("السعودية")),
@@ -18,16 +18,16 @@ class _customRowCityState extends State<customRowCity> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(25))),
       child: Row(
         children: [
-          Container(
+          SizedBox(
             width: 140,
             height: 48,
             child: DropdownButtonFormField(
-                hint: Text("اختر البلد"),
+                hint: const Text("اختر البلد"),
                 // value: selectedMethod,
                 items: ffff,
                 onChanged: (val) {
@@ -36,7 +36,7 @@ class _customRowCityState extends State<customRowCity> {
                   });
                 }),
           ),
-          Icon(Icons.location_on),
+          const Icon(Icons.location_on),
         ],
       ),
     );

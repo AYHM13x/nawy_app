@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utlis/assets/app_colors.dart';
 import '../../../core/utlis/assets/font_styles.dart';
 
 class CustomTextButton extends StatelessWidget {
@@ -26,7 +25,7 @@ class CustomTextButton extends StatelessWidget {
       height: height,
       child: TextButton(
         onPressed: () {},
-        style: ButtonStyle(
+        style: const ButtonStyle(
             // backgroundColor: WidgetStatePropertyAll(color),
             // shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             //   RoundedRectangleBorder(

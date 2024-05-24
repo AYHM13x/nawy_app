@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
-class customRowitem extends StatelessWidget {
-  const customRowitem({super.key});
+class CustomRowitem extends StatelessWidget {
+  const CustomRowitem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
+        const Text(
           "شقة للايجار",
           style: FontStyles.textStyle14Reg,
         ),
-        SizedBox(
+        const SizedBox(
           width: 40,
         ),
         Row(
@@ -23,7 +23,7 @@ class customRowitem extends StatelessWidget {
               style: FontStyles.textStyle18Bold
                   .copyWith(color: AppColors.pickColor),
             ),
-            Text(
+            const Text(
               "شهر",
               style: FontStyles.textStyle14Reg,
             ),

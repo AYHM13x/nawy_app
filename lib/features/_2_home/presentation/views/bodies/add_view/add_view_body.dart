@@ -49,7 +49,7 @@ class AddBodyView extends StatelessWidget {
         ),
         const CustomPropertytype(),
         const Expanded(child: SizedBox()),
-        customElevatedBotton(
+        CustomElevatedBotton(
           AppColors.yellowColor,
           data: "التالي",
           onPressed: () {

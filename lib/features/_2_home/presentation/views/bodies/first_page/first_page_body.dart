@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utlis/assets/font_styles.dart';
-import '../../widgets/main_view/Custom_Influencers.dart';
-import '../../widgets/main_view/Custom_List_View_Item.dart';
+import '../../widgets/main_view/custom_influencers.dart';
+import '../../widgets/main_view/custom_list_view_item.dart';
 import '../../widgets/main_view/custom_chose_bottom.dart';
 import '../../widgets/main_view/custom_head.dart';
 import '../../widgets/main_view/custom_places.dart';
@@ -24,7 +24,7 @@ class MainViewBody extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          customchosebotton(),
+          Customchosebotton(),
           CustomListViewItem(),
           SizedBox(
             height: 20,

@@ -15,7 +15,7 @@ class _CustomSaleAndRentState extends State<CustomSaleAndRent> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        customElevatedBotton(
+        CustomElevatedBotton(
           backgroundtext: isSelected == 0 ? Colors.white : Colors.black,
           onPressed: () {
             setState(() {
@@ -25,7 +25,7 @@ class _CustomSaleAndRentState extends State<CustomSaleAndRent> {
           isSelected == 0 ? AppColors.pickColor : Colors.white,
           data: "بيع",
         ),
-        customElevatedBotton(
+        CustomElevatedBotton(
           backgroundtext: isSelected == 1 ? Colors.white : Colors.black,
           onPressed: () {
             setState(() {

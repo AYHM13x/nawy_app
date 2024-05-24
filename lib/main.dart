@@ -25,12 +25,10 @@ class NawyApp extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       onGenerateTitle: (BuildContext context) => S.of(context).title,
-      // title: S.of(c
-      // ontext).title,
+      // title: S.of(context).title,
       theme: ThemeData(
         fontFamily: AppFontFamilies.cairoFont,
       ),
-
       home: const HomeView(),
     );
   }

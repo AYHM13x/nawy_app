@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../../core/utlis/assets/app_colors.dart';
+
 class RightButtonItemView extends StatelessWidget {
   const RightButtonItemView({
     super.key,
@@ -13,7 +15,7 @@ class RightButtonItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: const Color(0xffD9D9D9),
+      backgroundColor: AppColors.backgroundGrayColor,
       child: IconButton(
         onPressed: onPressed,
         icon: SvgPicture.asset(

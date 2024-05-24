@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_text_field_view.dart';
+import '../widgets/map_view/custom_text_field_view.dart';
 
 class CustomEnabledSearchBarView extends StatelessWidget {
   const CustomEnabledSearchBarView({

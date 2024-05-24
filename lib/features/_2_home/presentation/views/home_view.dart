@@ -7,7 +7,7 @@ import '../../../../core/utlis/assets/font_styles.dart';
 
 import '../../../../generated/l10n.dart';
 import 'bodies/map_view_body.dart';
-import 'widgets/custom_svg_pic_asset.dart';
+import 'widgets/map_view/custom_svg_pic_asset.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({

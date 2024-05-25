@@ -26,7 +26,7 @@ class CustomHead extends StatelessWidget {
             SizedBox(
               width: 50,
             ),
-            customRowCity(),
+            CustomRowCity(),
           ],
         ),
       ),

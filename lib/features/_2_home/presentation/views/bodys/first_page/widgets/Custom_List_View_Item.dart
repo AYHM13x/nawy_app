@@ -26,8 +26,8 @@ class CustomListViewItem extends StatelessWidget {
                 children: [
                   Image.asset(
                       "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png"),
-                  const customRowitem(),
-                  const customRowStreet(),
+                  const CustomRowitem(),
+                  const CustomRowStreet(),
                   const Text(
                     "انقر لعرض التفاصيل0",
                     style: FontStyles.textStyle9Reg,

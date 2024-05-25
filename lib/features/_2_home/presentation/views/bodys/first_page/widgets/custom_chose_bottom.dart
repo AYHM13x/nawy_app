@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../../core/utlis/assets/app_colors.dart';
-import '../../../../../../core/utlis/widgets/custom_elevated_botton.dart';
+import 'package:nawy_app/core/utlis/assets/app_colors.dart';
+import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 
 class Customchosebotton extends StatefulWidget {
   const Customchosebotton({super.key});

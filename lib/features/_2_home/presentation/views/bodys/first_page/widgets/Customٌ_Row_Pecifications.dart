@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../../core/utlis/assets/font_styles.dart';
+import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
 class Customspecifications extends StatelessWidget {
   const Customspecifications({super.key});

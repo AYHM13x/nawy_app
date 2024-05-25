@@ -14,16 +14,16 @@ class CustomCompletedTow extends StatelessWidget {
         children: [
           Row(
             children: [
-              ContinerSlid(
+              ContinerSlide(
                 opacity: .5,
               ),
-              ContinerSlid(
+              ContinerSlide(
                 opacity: .5,
               ),
-              ContinerSlid(
+              ContinerSlide(
                 opacity: 1,
               ),
-              ContinerSlid(
+              ContinerSlide(
                 opacity: 1,
               ),
             ],

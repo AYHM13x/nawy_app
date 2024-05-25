@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/Custom_Influencers.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/Custom_List_View_Item.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_chose_bottom.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_head.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_places.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_searsh.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/Custom_Influencers.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/Custom_List_View_Item.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/custom_chose_bottom.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/custom_head.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/custom_places.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/custom_searsh.dart';
+
 import 'package:nawy_app/features/_3_filter/bodies/filter_view_body.dart';
 import 'package:nawy_app/features/_3_filter/filter_view.dart';
 

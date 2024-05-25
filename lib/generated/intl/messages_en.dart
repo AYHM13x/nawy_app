@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "space": MessageLookupByLibrary.simpleMessage("Area"),
         "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "title": MessageLookupByLibrary.simpleMessage("Nawy App"),
+        "typeHere": MessageLookupByLibrary.simpleMessage("Type Here"),
         "typeProperty": MessageLookupByLibrary.simpleMessage("Type"),
         "unLicensed": MessageLookupByLibrary.simpleMessage("Unlicensed"),
         "villas": MessageLookupByLibrary.simpleMessage("Villas")

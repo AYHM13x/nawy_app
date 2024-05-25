@@ -26,5 +26,6 @@
     "licensed":"مرخص",
     "unLicensed":"غير مرخص",
     "rooms":"غرف",
-    "bath":"حمام"
+    "bath":"حمام",
+    "typeHere":"اكتب هنا"
 }

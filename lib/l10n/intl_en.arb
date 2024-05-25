@@ -26,5 +26,6 @@
     "licensed":"Licensed",
     "unLicensed":"Unlicensed",
     "rooms":"Rooms",
-    "bath":"Bath"
+    "bath":"Bath",
+    "typeHere":"Type Here"
 }

@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "space": MessageLookupByLibrary.simpleMessage("المساحة"),
         "title": MessageLookupByLibrary.simpleMessage("تطبيق ناوي"),
+        "typeHere": MessageLookupByLibrary.simpleMessage("اكتب هنا"),
         "typeProperty": MessageLookupByLibrary.simpleMessage("الفئة"),
         "unLicensed": MessageLookupByLibrary.simpleMessage("غير مرخص"),
         "villas": MessageLookupByLibrary.simpleMessage("ڤلل")

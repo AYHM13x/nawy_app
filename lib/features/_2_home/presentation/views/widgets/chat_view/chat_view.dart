@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:nawy_app/core/utlis/dimensions_of_screen.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/widgets/chat_view/chat_list_view.dart';
 
+import '../../../../../../core/utlis/dimensions_of_screen.dart';
 import 'account_info_view.dart';
+import 'chat_view_two.dart';
 
 class ChatView extends StatelessWidget {
   const ChatView({super.key});
@@ -21,7 +21,7 @@ class ChatView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 21),
                 child: SizedBox(
                   height: DimensionsOfScreen.dimensionsOfHeight(context, 62),
-                  child: const ChatListView(),
+                  child: const ChatViewTwo(),
                 ),
               ),
             ],

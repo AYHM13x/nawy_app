@@ -329,6 +329,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Type Here`
+  String get typeHere {
+    return Intl.message(
+      'Type Here',
+      name: 'typeHere',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

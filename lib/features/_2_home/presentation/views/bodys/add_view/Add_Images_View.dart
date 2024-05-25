@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Add_Images_Body.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Add_Images_Body.dart';
 
 class AddImagesView extends StatelessWidget {
   const AddImagesView({super.key});

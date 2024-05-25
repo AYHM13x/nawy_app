@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/add_view_body.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/first_page_body.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/add_view_body.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page_body.dart';
 
 import '../../../../core/utlis/assets/app_images.dart';
 import '../../../../core/utlis/assets/font_styles.dart';
 
 import '../../../../generated/l10n.dart';
-import 'bodies/map_view_body.dart';
+import 'bodys/map_view_body.dart';
 import 'widgets/custom_svg_pic_asset.dart';
 
 class HomeView extends StatefulWidget {

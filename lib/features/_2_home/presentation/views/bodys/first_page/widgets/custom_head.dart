@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_Row_Notafication_And_Image.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/first_page/widgets/custom_row_city.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/custom_Row_Notafication_And_Image.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/widgets/custom_row_city.dart';
 
 class CustomHead extends StatelessWidget {
   const CustomHead({super.key});

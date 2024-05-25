@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodies/add_view/widgets/Continer_Slid.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Continer_Slid.dart';
 
 class CustomCompletedThree extends StatelessWidget {
   const CustomCompletedThree({super.key});

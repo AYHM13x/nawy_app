@@ -31,4 +31,5 @@ abstract class AppImages {
   static const accountImageProfile = "$_pngPath/account_image_profile.png";
   static const infoIconChat = "$_svgPath/info_icon_chat.svg";
   static const phoneIcon = "$_svgPath/phone_icon.svg";
+  static const BadRoom = "$_svgPath/Text.svg";
 }

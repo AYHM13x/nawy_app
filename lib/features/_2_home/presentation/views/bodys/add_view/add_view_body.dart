@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:nawy_app/core/utlis/assets/app_colors.dart';
+import 'package:nawy_app/core/utlis/assets/font_styles.dart';
+import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 
-import '../../../../../../core/utlis/assets/app_colors.dart';
-import '../../../../../../core/utlis/assets/font_styles.dart';
-import '../../../../../../core/utlis/widgets/custom_elevated_botton.dart';
-import '../../appbars/add_view/custom_app_bar.dart';
-import '../../widgets/add_view/custom_completed.dart';
-import '../../widgets/add_view/custom_property_type.dart';
-import '../../widgets/add_view/custom_sale_and_rent.dart';
-import '../../widgets/add_view/add_map_view.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Add_Map_View.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Custom_Completed.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Custom_Property_type.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Custom_Sale_And_Rent.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Custom_app_bar.dart';
 
 class AddBodyView extends StatelessWidget {
   const AddBodyView({super.key});

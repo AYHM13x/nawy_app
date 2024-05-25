@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/utlis/assets/app_images.dart';
-import '../../../../../core/utlis/assets/font_styles.dart';
-import '../../../../../core/utlis/dimensions_of_screen.dart';
-import '../../../../../generated/l10n.dart';
+import '../../../../../../core/utlis/assets/app_images.dart';
+import '../../../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../../core/utlis/dimensions_of_screen.dart';
+import '../../../../../../generated/l10n.dart';
 import 'left_button_item_view.dart';
 
 class LeftButtonsMapView extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/utlis/assets/app_images.dart';
-import '../../../../../core/utlis/dimensions_of_screen.dart';
+import '../../../../../../core/utlis/assets/app_images.dart';
+import '../../../../../../core/utlis/dimensions_of_screen.dart';
 import 'right_button_item_view.dart';
 
 class RightButtonsMapView extends StatelessWidget {

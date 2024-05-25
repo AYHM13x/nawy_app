@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:nawy_app/core/utlis/dimensions_of_screen.dart';
-import 'package:nawy_app/features/_3_filter/widgets/filter_view_after_search/image_preperty_item.dart';
-
 import '../widgets/filter_view_after_search/details_property_item.dart';
+import '../widgets/filter_view_after_search/image_preperty_item.dart';
 
 class FliterViewAfterSearch extends StatelessWidget {
   const FliterViewAfterSearch({super.key});

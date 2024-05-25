@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../../core/utlis/assets/app_colors.dart';
-import '../../../../../core/utlis/assets/app_images.dart';
-import '../../../../../core/utlis/assets/font_styles.dart';
+import '../../../../../../core/utlis/assets/app_colors.dart';
+import '../../../../../../core/utlis/assets/app_images.dart';
+import '../../../../../../core/utlis/assets/font_styles.dart';
 
-import '../../../../../generated/l10n.dart';
-import 'custom_svg_pic_asset.dart';
+import '../../../../../../generated/l10n.dart';
+import '../../../../../../core/utlis/widgets/custom_svg_pic_asset.dart';
 
 class CustomTextFieldView extends StatelessWidget {
   const CustomTextFieldView({

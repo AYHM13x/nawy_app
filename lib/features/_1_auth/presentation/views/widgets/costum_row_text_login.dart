@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nawy_app/core/utlis/assets/font_styles.dart';
-import 'package:nawy_app/features/_0_spalsh/presentation/views/splash_view.dart';
-import 'package:nawy_app/features/_1_auth/presentation/views/sign_uo.dart';
 
-class customRowtextlogin extends StatelessWidget {
-  const customRowtextlogin({
+import '../../../../../core/utlis/assets/font_styles.dart';
+
+class CustomRowtextlogin extends StatelessWidget {
+  const CustomRowtextlogin({
     super.key,
     required this.data,
     required this.datatext,

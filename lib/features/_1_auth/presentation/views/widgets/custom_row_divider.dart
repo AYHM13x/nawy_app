@@ -11,12 +11,12 @@ class CustomRowDivider extends StatelessWidget {
       children: [
         SizedBox(
           width: DimensionsOfScreen.dimensionsOfWidth(context, 40),
-          child: Divider(),
+          child: const Divider(),
         ),
         const Text("او"),
         SizedBox(
           width: DimensionsOfScreen.dimensionsOfWidth(context, 40),
-          child: Divider(),
+          child: const Divider(),
         ),
       ],
     );

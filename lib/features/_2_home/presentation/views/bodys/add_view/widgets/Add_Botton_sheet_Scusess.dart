@@ -22,14 +22,17 @@ class _AddBottonsheetScusessState extends State<AddBottonsheetScusess> {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: EdgeInsets.only(bottom: 20, top: 10),
             child: Divider(
-              thickness: 10,
+              color: Color.fromARGB(255, 57, 52, 52),
+              endIndent: 175,
+              indent: 170,
+              thickness: 5,
               height: 10,
             ),
           ),
           Image.asset("assets/images/pngs/Alert - Success.png"),
-          Gap(30),
+          Gap(20),
           const Text(
             "سيتم نشر رحلتك لدى الاخرين ",
             style: TextStyle(color: Colors.black),

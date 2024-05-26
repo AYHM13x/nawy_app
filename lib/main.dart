@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page_body.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/first_page_body.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 
 import 'core/utlis/assets/app_font_families.dart';

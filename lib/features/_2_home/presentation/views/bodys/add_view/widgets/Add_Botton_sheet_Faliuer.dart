@@ -22,9 +22,12 @@ class _AddBottonsheetFaliuerState extends State<AddBottonsheetFaliuer> {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: EdgeInsets.only(bottom: 20, top: 10),
             child: Divider(
-              thickness: 10,
+              color: Color.fromARGB(255, 57, 52, 52),
+              endIndent: 175,
+              indent: 170,
+              thickness: 5,
               height: 10,
             ),
           ),

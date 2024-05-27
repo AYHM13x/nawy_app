@@ -7,7 +7,7 @@ import 'bodies/chat_view/chat_view_body.dart';
 import 'bodies/map_view/map_view_body.dart';
 import 'bodies/my_orders/my_order_view_body.dart';
 import 'bodys/add_view/add_view_body.dart';
-import 'bodys/first_page/first_page_body.dart';
+import 'bodys/first_page/first_page/first_page_body.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({

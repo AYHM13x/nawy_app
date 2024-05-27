@@ -32,4 +32,6 @@ abstract class AppImages {
   static const resiverImageProfile = "$_pngPath/reciver_profile_image.png";
   static const infoIconChat = "$_svgPath/info_icon_chat.svg";
   static const phoneIcon = "$_svgPath/phone_icon.svg";
+
+  static const unsplash_y3_AHHrxUBY = "$_svgPath/unsplash_y3_AHHrxUBY.svg";
 }

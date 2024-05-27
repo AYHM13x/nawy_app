@@ -15,8 +15,9 @@ class CustomElevatedBotton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style:
-          ButtonStyle(backgroundColor: WidgetStatePropertyAll(colorelevated)),
+      style: ButtonStyle(
+        backgroundColor: WidgetStatePropertyAll(colorelevated),
+      ),
       onPressed: onPressed,
       child: Text(
         data,

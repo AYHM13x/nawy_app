@@ -9,14 +9,12 @@ class ContinerChose extends StatelessWidget {
       required this.onTap});
   final String data;
   final Color color;
-  final Function onTap;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        onTap;
-      },
+      onTap: onTap,
       child: Container(
         height: 50,
         decoration: BoxDecoration(

@@ -36,18 +36,23 @@ class ItemViewBody extends StatelessWidget {
           Text("حي الملك سلمان _ الرياض "),
           Gap(15),
           CustomRowChoseImagesOrdescriptionOrSimilar(),
-          Padding(
-            padding: EdgeInsets.only(right: 20, left: 20),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: 400,
-                  height: 500,
-                  child: FliterViewAfterSearch(),
-                ),
-              ],
-            ),
-          ),
+          //القسم الخاص بالصور
+          Column(
+            children: [
+              CustomlenthImage(
+                data: "صور",
+                textNumbeer: "(6)",
+              ),
+              CustomVedioGridViewBuild(),
+              Divider(),
+              CustomlenthImage(
+                data: "فديو",
+                textNumbeer: "(6)",
+              ),
+              CustomVedioGridViewBuild(),
+              CustomRowCallWithUser()
+            ],
+          )
         ],
       ),
     );
@@ -87,6 +92,24 @@ class ItemViewBody extends StatelessWidget {
 //                 data: "فديو",
 //                 textNumbeer: "(6)",
 //               ),
-//               CustomVedioGridViewBuild()
+//               CustomVedioGridViewBuild()و
+    //  CustomRowCallWithUser()
 //             ],
 //           )
+
+
+
+
+//القسم الخاص بالمشابهة
+//  Padding(
+//             padding: EdgeInsets.only(right: 20, left: 20),
+//             child: Column(
+//               children: [
+//                 SizedBox(
+//                   width: 400,
+//                   height: 500,
+//                   child: FliterViewAfterSearch(),
+//                 ),
+//               ],
+//             ),
+//           ),

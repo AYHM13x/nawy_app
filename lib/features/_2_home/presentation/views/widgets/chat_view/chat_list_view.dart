@@ -7,20 +7,19 @@ class ChatListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: 20,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(
-              bottom: 30,
-            ),
-            child: BubbleChatItem(
-              isSender: index % 2 == 0 ? false : true,
-            ),
-          );
-        },
-      ),
+    return ListView.builder(
+      // physics: const NeverScrollableScrollPhysics(),
+      itemCount: 20,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(
+            bottom: 30,
+          ),
+          child: BubbleChatItem(
+            isSender: index % 2 == 0 ? false : true,
+          ),
+        );
+      },
     );
   }
 }

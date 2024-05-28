@@ -8,7 +8,9 @@ class ChatListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      // physics: const NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      // clipBehavior: Clip.none,
       itemCount: 20,
       itemBuilder: (context, index) {
         return Padding(

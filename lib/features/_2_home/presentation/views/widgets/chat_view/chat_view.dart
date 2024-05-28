@@ -16,18 +16,28 @@ class ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Column(
       children: [
-        SingleChildScrollView(
-          child: Column(
-            children: [
-              const AccountInfoView(),
-              const Gap(8),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 21),
-                child: SizedBox(
-                  height: DimensionsOfScreen.dimensionsOfHeight(context, 56),
-                  child: const ChatListView(),
+        SizedBox(
+          height: DimensionsOfScreen.dimensionsOfHeight(context, 75) -
+              mediaQueryData.viewInsets.bottom,
+          child: const CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Center(
+                  child: AccountInfoView(),
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Column(
+                  children: [
+                    Gap(8),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 21),
+                      child: ChatListView(),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -54,7 +64,7 @@ class ChatView extends StatelessWidget {
                     },
                     child: CustomSvgPicAsset(
                       image: AppImages.cameraIcon,
-                      color: Colors.black.withOpacity(0.7),
+                      color: Colors.black.withOpacity(0.4),
                     ),
                   ),
                   const Gap(8),
@@ -105,6 +115,33 @@ class ChatView extends StatelessWidget {
       borderSide: const BorderSide(
         color: Colors.transparent,
       ),
+    );
+  }
+}
+
+class tt extends StatelessWidget {
+  const tt({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: Column(
+            children: [
+              const AccountInfoView(),
+              const Gap(8),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 21),
+                child: SizedBox(
+                  height: DimensionsOfScreen.dimensionsOfHeight(context, 56),
+                  child: const ChatListView(),
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }

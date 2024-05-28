@@ -12,13 +12,17 @@ class ChatViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Column(
-        children: [
-          ChatViewAppbar(),
-          Gap(11),
-          ChatView(),
-        ],
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    return SafeArea(
+      child: Padding(
+        padding: EdgeInsets.only(bottom: mediaQueryData.viewInsets.bottom),
+        child: const Column(
+          children: [
+            ChatViewAppbar(),
+            Gap(11),
+            ChatView(),
+          ],
+        ),
       ),
     );
   }

@@ -15,6 +15,7 @@ class _CustomchosebottonState extends State<Customchosebotton> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         CustomElevatedBotton(
           data: 'الكل',
@@ -59,6 +60,17 @@ class _CustomchosebottonState extends State<Customchosebotton> {
           isSelected == 3 ? AppColors.darkPinkColor : Colors.white,
           backgroundtext:
               isSelected == 3 ? Colors.white : AppColors.darkPinkColor,
+        ),
+        CustomElevatedBotton(
+          data: 'سيارات',
+          onPressed: () {
+            setState(() {
+              isSelected = 4;
+            });
+          },
+          isSelected == 4 ? AppColors.darkPinkColor : Colors.white,
+          backgroundtext:
+              isSelected == 4 ? Colors.white : AppColors.darkPinkColor,
         ),
       ],
     );

@@ -21,23 +21,26 @@ class _CustomRowCityState extends State<CustomRowCity> {
       decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(25))),
-      child: Row(
-        children: [
-          SizedBox(
-            width: 140,
-            height: 48,
-            child: DropdownButtonFormField(
-                hint: const Text("اختر البلد"),
-                // value: selectedMethod,
-                items: ffff,
-                onChanged: (val) {
-                  setState(() {
-                    selectedMethod = val;
-                  });
-                }),
-          ),
-          const Icon(Icons.location_on),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10),
+        child: Row(
+          children: [
+            SizedBox(
+              width: 140,
+              height: 48,
+              child: DropdownButtonFormField(
+                  hint: const Text("اختر البلد"),
+                  // value: selectedMethod,
+                  items: ffff,
+                  onChanged: (val) {
+                    setState(() {
+                      selectedMethod = val;
+                    });
+                  }),
+            ),
+            const Icon(Icons.location_on),
+          ],
+        ),
       ),
     );
   }

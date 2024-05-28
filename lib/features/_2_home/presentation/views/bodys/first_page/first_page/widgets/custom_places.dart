@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
 class CustomPlaces extends StatelessWidget {
-  const CustomPlaces({super.key});
-
+  const CustomPlaces({super.key, required this.name});
+  final String name;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,7 +18,7 @@ class CustomPlaces extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(
-                    "assets/images/rowplaces.png",
+                    name,
                     fit: BoxFit.cover,
                   ),
                   const Text(

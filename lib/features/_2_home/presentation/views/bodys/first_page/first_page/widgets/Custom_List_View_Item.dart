@@ -8,8 +8,8 @@ import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/fi
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/item_view/item_view.dart';
 
 class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({super.key});
-
+  const CustomListViewItem({super.key, required this.name});
+  final String name;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,8 +30,7 @@ class CustomListViewItem extends StatelessWidget {
                 decoration: BoxDecoration(border: Border.all()),
                 child: Column(
                   children: [
-                    Image.asset(
-                        "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png"),
+                    Image.asset(name),
                     const CustomRowitem(),
                     const CustomRowStreet(),
                     const Text(

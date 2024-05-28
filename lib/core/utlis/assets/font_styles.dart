@@ -30,3 +30,9 @@ abstract class FontStyles {
     fontWeight: FontWeight.w700,
   );
 }
+// الخطوة الاولى لعمل responsiv
+
+// scaleFactor      
+// responsive font size
+// (min , max ) Fontsize
+// double getResponsiveFontSize({required double fontSize}) {}

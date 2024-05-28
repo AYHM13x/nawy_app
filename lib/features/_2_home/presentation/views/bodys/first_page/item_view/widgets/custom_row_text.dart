@@ -7,18 +7,22 @@ class CustomRowText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          "شقة للاجار(عمارة)",
-          style: FontStyles.textStyle18Reg,
-        ),
-        Text(
-          "منذ شهرين",
-          style: FontStyles.textStyle14Reg.copyWith(color: AppColors.pickColor),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "شقة للاجار(عمارة)",
+            style: FontStyles.textStyle18Reg,
+          ),
+          Text(
+            "منذ شهرين",
+            style:
+                FontStyles.textStyle14Reg.copyWith(color: AppColors.pickColor),
+          )
+        ],
+      ),
     );
   }
 }

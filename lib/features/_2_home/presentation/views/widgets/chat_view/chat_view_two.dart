@@ -1,13 +1,14 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:bubble/bubble.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:voice_message_package/voice_message_package.dart';
-import 'package:uuid/uuid.dart';
-import 'package:file_picker/file_picker.dart';
+
 import 'package:mime/mime.dart';
+import 'package:uuid/uuid.dart';
+import 'package:voice_message_package/voice_message_package.dart';
 
 import '../../../../../../core/utlis/assets/app_colors.dart';
 import '../../../../../../core/utlis/assets/app_images.dart';

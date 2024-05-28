@@ -44,6 +44,7 @@ class _ChatViewTwoState extends State<ChatViewTwo> {
       onAttachmentPressed: _handleAttachmentPressed,
       bubbleBuilder: _bubbleBuilder,
       audioMessageBuilder: _audioMessageBuilder,
+      // customBottomWidget: ,
       user: _user,
       showUserAvatars: true,
       theme: DefaultChatTheme(
@@ -60,7 +61,7 @@ class _ChatViewTwoState extends State<ChatViewTwo> {
         sentMessageBodyTextStyle: FontStyles.textStyle14Reg,
         receivedMessageBodyTextStyle: FontStyles.textStyle14Reg,
         inputPadding: const EdgeInsets.all(8),
-        attachmentButtonIcon: SvgPicture.asset(AppImages.cameraIcon),
+        attachmentButtonIcon: const Icon(Icons.attach_file),
       ),
     );
   }

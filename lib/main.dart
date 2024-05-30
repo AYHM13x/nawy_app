@@ -52,16 +52,16 @@ import 'package:nawy_app/generated/l10n.dart';
 import 'core/utlis/assets/app_font_families.dart';
 
 void main() {
-  runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => const NawyApp(),
-    ),
-  );
+  runApp(const NawyApp()
+      // DevicePreview(
+      //   // enabled: !kReleaseMode,
+      //   builder: (context) => const NawyApp(),
+      // ),
+      );
 }
 
 class NawyApp extends StatelessWidget {
-  const NawyApp({Key? key}) : super(key: key);
+  const NawyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

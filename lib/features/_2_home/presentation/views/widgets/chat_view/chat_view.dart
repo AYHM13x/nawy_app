@@ -62,7 +62,13 @@ class _ChatViewState extends State<ChatView> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  if (text.isNotEmpty) {
+                    sendTextMessage(text);
+                  }
+                });
+              },
               icon: SvgPicture.asset(AppImages.sendIcon),
             ),
             Container(
@@ -83,14 +89,14 @@ class _ChatViewState extends State<ChatView> {
                   const Gap(8),
                   GestureDetector(
                     child: CustomSvgPicAsset(
-                      image: AppImages.bedIcon,
+                      image: AppImages.recordIcon,
                       color: Colors.black.withOpacity(0.7),
                     ),
                   ),
                   const Gap(8),
                   GestureDetector(
                     child: CustomSvgPicAsset(
-                      image: AppImages.bedIcon,
+                      image: AppImages.paperClipIcon,
                       color: Colors.black.withOpacity(0.7),
                     ),
                   ),
@@ -104,11 +110,10 @@ class _ChatViewState extends State<ChatView> {
                       },
                       onSubmitted: (value) {
                         setState(() {
-                          text = value;
-                          messages.add(value);
-                          _textEditingController.clear();
-                          _scrollController.jumpTo(
-                              _scrollController.position.maxScrollExtent);
+                          if (text.isNotEmpty) {
+                            text = value;
+                            sendTextMessage(value);
+                          }
                         });
                       },
                       decoration: InputDecoration(
@@ -121,7 +126,7 @@ class _ChatViewState extends State<ChatView> {
                         errorBorder: border(),
                         suffixIcon: IconButton(
                           onPressed: () {},
-                          icon: SvgPicture.asset(AppImages.bedIcon),
+                          icon: SvgPicture.asset(AppImages.emojiIcon),
                         ),
                       ),
                     ),
@@ -133,6 +138,13 @@ class _ChatViewState extends State<ChatView> {
         )
       ],
     );
+  }
+
+  void sendTextMessage(String value) {
+    messages.add(value);
+    _textEditingController.clear();
+    _scrollController.jumpTo(_scrollController.position.maxScrollExtent + 50);
+    text = "";
   }
 
   OutlineInputBorder border() {

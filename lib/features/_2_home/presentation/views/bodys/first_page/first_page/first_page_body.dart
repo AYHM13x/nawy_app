@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_List_View_Item.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_chose_bottom.dart';
@@ -24,24 +25,24 @@ class FirstPagebody extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Customchosebotton(),
+          const Customchosebotton(),
           Column(
             children: [
               Text(
                 "الأكثر شيوعا :",
                 style: FontStyles.textStyle16Bold,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CustomPlaces(
-                name: "assets/images/rowplaces.png",
+              const CustomPlaces(
+                name: AppImages.rowPlace,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CustomListViewItem(
-                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+              const CustomListViewItem(
+                name: AppImages.dillon,
               ),
             ],
           )

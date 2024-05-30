@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
+import '../../../../../../core/utlis/assets/app_images.dart';
+
 class CustomPlaces extends StatelessWidget {
   const CustomPlaces({super.key});
 
@@ -18,7 +20,7 @@ class CustomPlaces extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(
-                    "assets/images/rowplaces.png",
+                    AppImages.rowPlace,
                     fit: BoxFit.cover,
                   ),
                   const Text(

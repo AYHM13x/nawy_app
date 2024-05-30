@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../../core/utlis/assets/app_images.dart';
 import '../../../../../../core/utlis/assets/font_styles.dart';
 
 class CustomInfluencers extends StatelessWidget {
@@ -18,7 +19,7 @@ class CustomInfluencers extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10, right: 10),
             child: Column(
               children: [
-                Image.asset("assets/images/rowplaces.png"),
+                Image.asset(AppImages.rowPlace),
 
                 const Text(
                   "نها احمد",

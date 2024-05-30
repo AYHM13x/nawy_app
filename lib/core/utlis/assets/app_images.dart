@@ -41,4 +41,6 @@ abstract class AppImages {
   static const appleIcon = "$_svgPath/apple_id.svg";
   static const pushimage = "$_svgPath/pushimage.svg";
   static const Vector = "$_svgPath/Vector.svg";
+  static const rowPlace = "$_pngPath/rowplaces.png";
+  static const dillon = "$_pngPath/dillon-kydd-XGvwt544g8k-unsplash 1.png";
 }

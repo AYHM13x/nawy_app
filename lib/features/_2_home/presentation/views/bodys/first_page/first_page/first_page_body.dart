@@ -11,6 +11,8 @@ import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/fi
 import 'package:nawy_app/features/_3_filter/bodies/filter_view_body.dart';
 import 'package:nawy_app/features/_3_filter/filter_view.dart';
 
+import '../../../../../../../core/utlis/assets/app_images.dart';
+
 class FirstPagebody extends StatelessWidget {
   const FirstPagebody({super.key});
 
@@ -38,13 +40,13 @@ class FirstPagebody extends StatelessWidget {
                 height: 20,
               ),
               CustomPlaces(
-                name: "assets/images/rowplaces.png",
+                name: AppImages.rowPlace,
               ),
               SizedBox(
                 height: 20,
               ),
               CustomListViewItem(
-                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+                name: AppImages.dillon,
               ),
             ],
           )
@@ -68,7 +70,7 @@ class FirstPagebody extends StatelessWidget {
   //             SizedBox(
   //               height: 20,
   //             ),
-      //         CustomPlaces(name: "assets/images/rowplaces.png",),
+      //         CustomPlaces(name: AppImages.rowPlace,),
   //             SizedBox(
   //               height: 20,
   //             ),
@@ -90,7 +92,7 @@ class FirstPagebody extends StatelessWidget {
   //             SizedBox(
   //               height: 20,
   //             ),
-  //             CustomListViewItem(name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",),
+  //             CustomListViewItem(name: AppImages.dillon,),
   //             SizedBox(
   //               height: 20,
   //             ),

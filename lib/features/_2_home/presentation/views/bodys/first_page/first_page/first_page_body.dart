@@ -21,32 +21,32 @@ class FirstPagebody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          CustomHead(),
-          SizedBox(
+          const CustomHead(),
+          const SizedBox(
             height: 10,
           ),
-          customSearsh(),
-          SizedBox(
+          const customSearsh(),
+          const SizedBox(
             height: 10,
           ),
-          Customchosebotton(),
+          const Customchosebotton(),
           Column(
             children: [
               Text(
                 "الأكثر شيوعا :",
                 style: FontStyles.textStyle16Bold,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CustomPlaces(
-                name: "assets/images/rowplaces.png",
+              const CustomPlaces(
+                name: AppImages.rowPlace,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CustomListViewItem(
-                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+              const CustomListViewItem(
+                name: AppImages.dillon,
               ),
             ],
           )
@@ -70,7 +70,7 @@ class FirstPagebody extends StatelessWidget {
   //             SizedBox(
   //               height: 20,
   //             ),
-      //         CustomPlaces(name: "assets/images/rowplaces.png",),
+      //         CustomPlaces(name: AppImages.rowPlace,),
   //             SizedBox(
   //               height: 20,
   //             ),
@@ -92,7 +92,7 @@ class FirstPagebody extends StatelessWidget {
   //             SizedBox(
   //               height: 20,
   //             ),
-  //             CustomListViewItem(name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",),
+  //             CustomListViewItem(name: AppImages.dillon,),
   //             SizedBox(
   //               height: 20,
   //             ),

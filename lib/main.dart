@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/first_page_body.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 
@@ -17,22 +18,26 @@ class NawyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      locale: const Locale("ar"),
-      localizationsDelegates: const [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      debugShowCheckedModeBanner: false,
-      onGenerateTitle: (BuildContext context) => S.of(context).title,
-      // title: S.of(context).title,
-      theme: ThemeData(
-        fontFamily: AppFontFamilies.cairoFont,
+    return ScreenUtilInit(
+      designSize: Size(375, 812), // التصميم الأصلي للمشروع
+      minTextAdapt: true, // تكيف النصوص تلقائيًا
+      builder: (context, child) => MaterialApp(
+        locale: const Locale("ar"),
+        localizationsDelegates: const [
+          S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
+        debugShowCheckedModeBanner: false,
+        onGenerateTitle: (BuildContext context) => S.of(context).title,
+        // title: S.of(context).title,
+        theme: ThemeData(
+          fontFamily: AppFontFamilies.cairoFont,
+        ),
+        home: const HomeView(),
       ),
-      home: const HomeView(),
     );
   }
 }

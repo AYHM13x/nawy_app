@@ -48,7 +48,7 @@ class WelcometowView extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                const Text(
+                Text(
                   "شارك ممتلكاتك وروج لها عن طريق تطبيقنا وعن طريق المسوقين",
                   style: FontStyles.textStyle14Reg,
                 ),

@@ -6,7 +6,7 @@ class CustomRowStreet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Icon(Icons.location_off),

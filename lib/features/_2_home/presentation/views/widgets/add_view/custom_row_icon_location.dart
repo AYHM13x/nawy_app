@@ -17,7 +17,7 @@ class CustomRowIconLocation extends StatelessWidget {
             child: const Icon(
               Icons.picture_in_picture_alt,
             )),
-        const Text(
+        Text(
           "قم بتحديد موقع العقار المراد بيعه/اجاره على الخريطة\n لتتمكن من عرضه للمهتمين  ",
           style: FontStyles.textStyle14Reg,
         ),

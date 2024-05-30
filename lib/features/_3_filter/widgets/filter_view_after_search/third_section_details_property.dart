@@ -12,6 +12,7 @@ class ThirdSectionDetailsProperty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      // mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         SvgPicture.asset(
           AppImages.bedIcon,
@@ -41,7 +42,7 @@ class ThirdSectionDetailsProperty extends StatelessWidget {
         const Expanded(child: SizedBox()),
         Text(
           " 3500ريال/شهر",
-          style: FontStyles.textStyle18Bold.copyWith(
+          style: FontStyles.textStyle14Reg.copyWith(
             color: const Color(0xff0066FF),
           ),
         )

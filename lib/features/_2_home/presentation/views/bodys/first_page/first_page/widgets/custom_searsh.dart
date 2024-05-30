@@ -6,29 +6,26 @@ class customSearsh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 380,
+      width: double.infinity,
       height: 64,
       decoration: const BoxDecoration(
         border:
             Border.symmetric(horizontal: BorderSide(), vertical: BorderSide()),
-        // boxShadow: [
-        // BoxShadow(
-        //   color: Colors.white,
-        //   spreadRadius: 5,
-        //   blurRadius: 7,
-        //   offset: Offset(3, 7), // changes position of shadow
-        // ),
-        // ],
         borderRadius: BorderRadius.all(Radius.circular(32)),
       ),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 10),
+      child: Expanded(
         child: Row(
           children: [
             GestureDetector(
               child: const Icon(Icons.search),
             ),
-            const SizedBox(width: 250, child: TextField()),
+            const SizedBox(
+                width: 250,
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.transparent))),
+                )),
             GestureDetector(
               child: const Icon(Icons.photo),
             ),

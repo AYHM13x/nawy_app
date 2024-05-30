@@ -9,7 +9,7 @@ class CustomRowCode extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           "لم تتلقى الكود؟",
           style: FontStyles.textStyle14Reg,
         ),

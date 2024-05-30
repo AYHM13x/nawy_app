@@ -33,7 +33,7 @@ class CustomListViewItem extends StatelessWidget {
                     Image.asset(name),
                     const CustomRowitem(),
                     const CustomRowStreet(),
-                    const Text(
+                    Text(
                       "انقر لعرض التفاصيل0",
                       style: FontStyles.textStyle9Reg,
                     ),

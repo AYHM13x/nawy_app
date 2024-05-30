@@ -23,12 +23,12 @@ class FinishPusheViewBody extends StatelessWidget {
           Gap(26),
           SvgPicture.asset(AppImages.pushimage),
           Gap(19),
-          const Text(
+          Text(
             "ادخل كود التحقيق",
             style: FontStyles.textStyle18Reg,
           ),
           Gap(32),
-          const Text(
+          Text(
             "ادخل الكود المكون من 4 ارقام",
             style: FontStyles.textStyle14Reg,
           ),

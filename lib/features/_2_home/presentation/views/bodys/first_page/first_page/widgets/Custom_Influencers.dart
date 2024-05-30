@@ -24,7 +24,7 @@ class CustomInfluencers extends StatelessWidget {
               children: [
                 Image.asset("assets/images/rowplaces.png"),
 
-                const Text(
+                Text(
                   "نها احمد",
                   style: FontStyles.textStyle14Reg,
                 ),

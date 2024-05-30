@@ -21,7 +21,7 @@ class CustomPlaces extends StatelessWidget {
                     "assets/images/rowplaces.png",
                     fit: BoxFit.cover,
                   ),
-                  const Text(
+                  Text(
                     "العين",
                     style: FontStyles.textStyle14Reg,
                   )

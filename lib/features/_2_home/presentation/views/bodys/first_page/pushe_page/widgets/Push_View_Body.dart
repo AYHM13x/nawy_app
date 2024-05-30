@@ -20,7 +20,7 @@ class PushViewBody extends StatelessWidget {
           Gap(26),
           SvgPicture.asset(AppImages.pushimage),
           Gap(19),
-          const Text(
+          Text(
             "قم بملئ البيانات المناسبة",
             style: FontStyles.textStyle18Reg,
           ),

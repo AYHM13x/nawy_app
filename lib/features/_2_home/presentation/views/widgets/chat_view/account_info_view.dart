@@ -29,11 +29,11 @@ class AccountInfoView extends StatelessWidget {
               ),
             ),
             const Gap(8),
-            const Text(
+            Text(
               "مكتب الشاهين",
               style: FontStyles.textStyle18Bold,
             ),
-            const Text(
+            Text(
               "للسياحة والسفر",
               style: FontStyles.textStyle14Reg,
             ),

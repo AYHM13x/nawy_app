@@ -24,7 +24,7 @@ class AddBodyView extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Text(
+          Text(
             "مرحبا محمد, قم بملئ تفاصيل عقارك",
             style: FontStyles.textStyle18Reg,
           ),

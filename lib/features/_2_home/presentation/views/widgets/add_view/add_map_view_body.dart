@@ -22,7 +22,7 @@ class AddMapViewBody extends StatelessWidget {
           const Gap(29),
           const CustomCompletedTow(),
           const Gap(11),
-          const Text(
+          Text(
             "حدد موقع العقار",
             style: FontStyles.textStyle18Reg,
           ),

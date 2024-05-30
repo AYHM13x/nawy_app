@@ -9,7 +9,7 @@ class CustomSaleAndRecent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text(
+        Text(
           "سعر البيع",
           style: FontStyles.textStyle14Reg,
         ),
@@ -22,7 +22,7 @@ class CustomSaleAndRecent extends StatelessWidget {
               icon: Icons.attach_money,
               keyboardType: TextInputType.number),
         ),
-        const Text(
+        Text(
           "سعر الاجار",
           style: FontStyles.textStyle14Reg,
         ),

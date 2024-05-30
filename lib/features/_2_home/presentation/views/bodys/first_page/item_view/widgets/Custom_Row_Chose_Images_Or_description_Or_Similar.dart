@@ -47,6 +47,7 @@ class _CustomRowChoseImagesOrdescriptionOrSimilarState
               onTap: () {
                 setState(() {
                   isSelected = 0;
+                  _buildSelectedContent();
                 });
               },
               color: isSelected == 0 ? AppColors.darkPinkColor : Colors.white,

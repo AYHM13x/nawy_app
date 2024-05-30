@@ -40,7 +40,7 @@ class _SignInBodyState extends State<SignInBody> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
+                  Text(
                     "تسجيل الدخول ",
                     style: FontStyles.textStyle22Bold,
                   ),

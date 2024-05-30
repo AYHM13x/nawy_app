@@ -48,7 +48,7 @@ class ChatView extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset(AppImages.sendIcon),
+              icon: SvgPicture.asset(AppImages.bedIcon),
             ),
             Container(
               decoration: BoxDecoration(
@@ -70,14 +70,14 @@ class ChatView extends StatelessWidget {
                   const Gap(8),
                   GestureDetector(
                     child: CustomSvgPicAsset(
-                      image: AppImages.recordIcon,
+                      image: AppImages.bedIcon,
                       color: Colors.black.withOpacity(0.7),
                     ),
                   ),
                   const Gap(8),
                   GestureDetector(
                     child: CustomSvgPicAsset(
-                      image: AppImages.paperClipIcon,
+                      image: AppImages.bedIcon,
                       color: Colors.black.withOpacity(0.7),
                     ),
                   ),
@@ -95,7 +95,7 @@ class ChatView extends StatelessWidget {
                         errorBorder: border(),
                         suffixIcon: IconButton(
                           onPressed: () {},
-                          icon: SvgPicture.asset(AppImages.emojiIcon),
+                          icon: SvgPicture.asset(AppImages.bedIcon),
                         ),
                       ),
                     ),

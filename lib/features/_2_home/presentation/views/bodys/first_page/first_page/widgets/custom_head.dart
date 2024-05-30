@@ -15,17 +15,14 @@ class CustomHead extends StatelessWidget {
             bottomRight: Radius.circular(100)),
         color: AppColors.pickColor,
       ),
-      width: 411,
+      // width: 411,
       height: 150,
       child: const Padding(
-        padding: EdgeInsets.only(top: 50),
+        padding: EdgeInsets.only(top: 50, left: 30, right: 30),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             customRowNotaficationAndImage(),
-            SizedBox(
-              width: 50,
-            ),
             CustomRowCity(),
           ],
         ),

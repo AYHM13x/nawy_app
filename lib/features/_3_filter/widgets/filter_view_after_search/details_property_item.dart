@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:nawy_app/core/utlis/dimensions_of_screen.dart';
 
 import 'first_section_details_property.dart';
 import 'second_section_details_property.dart';
@@ -11,8 +12,8 @@ class DetailsPropertyItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      width: 235,
+    return SizedBox(
+      width: DimensionsOfScreen.dimensionsOfWidth(context, 65),
       child: Column(
         children: [
           Gap(12),

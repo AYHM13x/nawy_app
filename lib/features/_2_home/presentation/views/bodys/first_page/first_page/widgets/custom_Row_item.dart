@@ -9,7 +9,7 @@ class CustomRowitem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+        Text(
           "شقة للايجار",
           style: FontStyles.textStyle14Reg,
         ),
@@ -23,7 +23,7 @@ class CustomRowitem extends StatelessWidget {
               style: FontStyles.textStyle18Bold
                   .copyWith(color: AppColors.pickColor),
             ),
-            const Text(
+            Text(
               "شهر",
               style: FontStyles.textStyle14Reg,
             ),

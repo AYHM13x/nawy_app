@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
@@ -7,14 +8,14 @@ class CustomRowitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: Size(360, 690));
     return Row(
       children: [
-        Text(
-          "شقة للايجار",
-          style: FontStyles.textStyle14Reg,
-        ),
-        const SizedBox(
-          width: 40,
+        Text("شقة للايجار", style: FontStyles.textStyle14Reg
+            //  FontStyles.textStyle14Reg,
+            ),
+        SizedBox(
+          width: ScreenUtil().setWidth(20),
         ),
         Row(
           children: [

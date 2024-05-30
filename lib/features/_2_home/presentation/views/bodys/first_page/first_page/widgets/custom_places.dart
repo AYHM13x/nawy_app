@@ -19,7 +19,6 @@ class CustomPlaces extends StatelessWidget {
                 children: [
                   Image.asset(
                     name,
-                    fit: BoxFit.cover,
                   ),
                   Text(
                     "العين",

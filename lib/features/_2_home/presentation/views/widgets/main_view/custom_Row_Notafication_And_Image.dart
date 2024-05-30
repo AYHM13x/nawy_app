@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../../core/utlis/assets/app_images.dart';
+
 class CustomRowNotaficationAndImage extends StatelessWidget {
   const CustomRowNotaficationAndImage({super.key});
 
@@ -13,7 +15,7 @@ class CustomRowNotaficationAndImage extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(Icons.notifications)),
         const CircleAvatar(
-          backgroundImage: AssetImage("assets/images/profileheade.svg"),
+          backgroundImage: AssetImage(AppImages.profileheade),
           radius: 25,
         )
       ],

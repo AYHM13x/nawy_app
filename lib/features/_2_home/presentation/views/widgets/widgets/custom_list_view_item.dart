@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../../core/utlis/assets/app_images.dart';
 import '../../../../../../core/utlis/assets/font_styles.dart';
 import '../main_view/custom_Row_item.dart';
 import '../main_view/custom_row_pecifications.dart';
@@ -23,8 +24,7 @@ class CustomListViewItem extends StatelessWidget {
               decoration: BoxDecoration(border: Border.all()),
               child: Column(
                 children: [
-                  Image.asset(
-                      "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png"),
+                  Image.asset(AppImages.dillon),
                   const CustomRowitem(),
                   const CustomRowStreet(),
                   Text(

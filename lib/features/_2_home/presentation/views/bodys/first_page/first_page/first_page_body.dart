@@ -11,6 +11,8 @@ import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/fi
 import 'package:nawy_app/features/_3_filter/bodies/filter_view_body.dart';
 import 'package:nawy_app/features/_3_filter/filter_view.dart';
 
+import '../../../../../../../core/utlis/assets/app_images.dart';
+
 class FirstPagebody extends StatelessWidget {
   const FirstPagebody({super.key});
 
@@ -28,155 +30,72 @@ class FirstPagebody extends StatelessWidget {
             height: 10,
           ),
           Customchosebotton(),
-          Description()
+          Column(
+            children: [
+              Text(
+                "الأكثر شيوعا :",
+                style: FontStyles.textStyle16Bold,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomPlaces(
+                name: "assets/images/rowplaces.png",
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomListViewItem(
+                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+              ),
+            ],
+          )
         ],
       ),
     );
   }
 }
-
-//القسم التالت
-//           Column(
-//             children: [
-//               CustomListViewItem(
-//                 name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               Text(
-//                 "اهم الاماكن :",
-//                 style: FontStyles.textStyle16Bold,
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               CustomPlaces(
-//                 name: "assets/images/rowplaces.png",
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               Text(
-//                 "اهم المؤثرين :",
-//                 style: FontStyles.textStyle16Bold,
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               CustomInfluencers(),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               Text(
-//                 "اهم العقارات القريبة :",
-//                 style: FontStyles.textStyle16Bold,
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               CustomListViewItem(
-//                 name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//             ],
-//           )
-
-// Column(
-//           children: [
-//             Text(
-//               "الأكثر شيوعا :",
-//               style: FontStyles.textStyle16Bold,
-//             ),
-//             const SizedBox(
-//               height: 20,
-//             ),
-//             const CustomPlaces(
-//               name: "assets/images/rowplaces.png",
-//             ),
-//             const SizedBox(
-//               height: 20,
-//             ),
-//             const CustomListViewItem(
-//               name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-//             ),
-//           ],
-//         )
-
-// Column(
-//             children: [
-//               Text(
-//                 "الأكثر شيوعا :",
-//                 style: FontStyles.textStyle16Bold,
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               CustomPlaces(
-//                 name: "assets/images/rowplaces.png",
-//               ),
-//               SizedBox(
-//                 height: 20,
-//               ),
-//               CustomListViewItem(
-//                 name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-//               ),
-//             ],
-//           )
-
-class Description extends StatelessWidget {
-  const Description({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CustomListViewItem(
-          name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        Text(
-          "اهم الاماكن :",
-          style: FontStyles.textStyle16Bold,
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const CustomPlaces(
-          name: "assets/images/rowplaces.png",
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        Text(
-          "اهم المؤثرين :",
-          style: FontStyles.textStyle16Bold,
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const CustomInfluencers(),
-        const SizedBox(
-          height: 20,
-        ),
-        Text(
-          "اهم العقارات القريبة :",
-          style: FontStyles.textStyle16Bold,
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const CustomListViewItem(
-          name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-      ],
-    );
-  }
-}
+ 
+// القسم الاول 
+  // Column(
+  //           children: [
+  //             CustomListViewItem(),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+  //             Text(
+  //               "اهم الاماكن :",
+  //               style: FontStyles.textStyle16Bold,
+  //             ),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+      //         CustomPlaces(name: "assets/images/rowplaces.png",),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+  //             Text(
+  //               "اهم المؤثرين :",
+  //               style: FontStyles.textStyle16Bold,
+  //             ),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+  //             CustomInfluencers(),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+  //             Text(
+  //               "اهم العقارات القريبة :",
+  //               style: FontStyles.textStyle16Bold,
+  //             ),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+  //             CustomListViewItem(name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",),
+  //             SizedBox(
+  //               height: 20,
+  //             ),
+  //           ],
+  //         )
+        

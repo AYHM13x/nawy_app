@@ -13,11 +13,11 @@ class customRowNotaficationAndImage extends StatelessWidget {
       children: [
         IconButton(
             style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(Colors.white)),
+                backgroundColor: WidgetStatePropertyAll(Colors.white)),
             onPressed: () {},
-            icon: Icon(Icons.notifications)),
-        CircleAvatar(
-          backgroundImage: AssetImage("assets/images/profileheade.svg"),
+            icon: const Icon(Icons.notifications)),
+        const CircleAvatar(
+          backgroundImage: AssetImage(AppImages.profileheade),
           radius: 25,
         )
       ],

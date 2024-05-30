@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
+import 'package:nawy_app/generated/intl/messages_ar.dart';
 
 import '../../../../../../core/utlis/assets/app_images.dart';
 import '../../../../../../core/utlis/dimensions_of_screen.dart';
@@ -11,20 +12,32 @@ import '../../../../../../core/utlis/widgets/custom_svg_pic_asset.dart';
 import 'account_info_view.dart';
 import 'chat_list_view.dart';
 
-class ChatView extends StatelessWidget {
+class ChatView extends StatefulWidget {
   const ChatView({super.key});
+
+  @override
+  State<ChatView> createState() => _ChatViewState();
+}
+
+class _ChatViewState extends State<ChatView> {
+  final ScrollController _scrollController = ScrollController();
+  final TextEditingController _textEditingController = TextEditingController();
+  List<String> messages = [];
+  String text = "";
 
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
+
     return Column(
       children: [
         SizedBox(
           height: DimensionsOfScreen.dimensionsOfHeight(context, 75) -
               mediaQueryData.viewInsets.bottom,
-          child: const CustomScrollView(
+          child: CustomScrollView(
+            controller: _scrollController,
             slivers: [
-              SliverToBoxAdapter(
+              const SliverToBoxAdapter(
                 child: Center(
                   child: AccountInfoView(),
                 ),
@@ -32,10 +45,12 @@ class ChatView extends StatelessWidget {
               SliverToBoxAdapter(
                 child: Column(
                   children: [
-                    Gap(8),
+                    const Gap(8),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 21),
-                      child: ChatListView(),
+                      padding: const EdgeInsets.symmetric(horizontal: 21),
+                      child: ChatListView(
+                        messages: messages,
+                      ),
                     ),
                   ],
                 ),
@@ -48,7 +63,7 @@ class ChatView extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset(AppImages.bedIcon),
+              icon: SvgPicture.asset(AppImages.sendIcon),
             ),
             Container(
               decoration: BoxDecoration(
@@ -59,9 +74,7 @@ class ChatView extends StatelessWidget {
                 children: [
                   const Gap(8),
                   GestureDetector(
-                    onTap: () {
-                      log("haha");
-                    },
+                    onTap: () {},
                     child: CustomSvgPicAsset(
                       image: AppImages.cameraIcon,
                       color: Colors.black.withOpacity(0.4),
@@ -85,6 +98,19 @@ class ChatView extends StatelessWidget {
                   SizedBox(
                     width: DimensionsOfScreen.dimensionsOfWidth(context, 67),
                     child: TextField(
+                      controller: _textEditingController,
+                      onChanged: (value) {
+                        text = value;
+                      },
+                      onSubmitted: (value) {
+                        setState(() {
+                          text = value;
+                          messages.add(value);
+                          _textEditingController.clear();
+                          _scrollController.jumpTo(
+                              _scrollController.position.maxScrollExtent);
+                        });
+                      },
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
@@ -119,32 +145,32 @@ class ChatView extends StatelessWidget {
   }
 }
 
-class tt extends StatelessWidget {
-  const tt({super.key});
+// class tt extends StatelessWidget {
+//   const tt({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverFillRemaining(
-          child: Column(
-            children: [
-              const AccountInfoView(),
-              const Gap(8),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 21),
-                child: SizedBox(
-                  height: DimensionsOfScreen.dimensionsOfHeight(context, 56),
-                  child: const ChatListView(),
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return CustomScrollView(
+//       slivers: [
+//         SliverFillRemaining(
+//           child: Column(
+//             children: [
+//               const AccountInfoView(),
+//               const Gap(8),
+//               Padding(
+//                 padding: const EdgeInsets.symmetric(horizontal: 21),
+//                 child: SizedBox(
+//                   height: DimensionsOfScreen.dimensionsOfHeight(context, 56),
+//                   child: const ChatListView(),
+//                 ),
+//               ),
+//             ],
+//           ),
+//         )
+//       ],
+//     );
+//   }
+// }
 
 //new
 // SizedBox(

@@ -25,7 +25,7 @@ class _CustomChoseBottomsheetPushState
       color: Colors.white,
       child: Column(
         children: [
-          Gap(35),
+          const Gap(35),
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
@@ -35,45 +35,15 @@ class _CustomChoseBottomsheetPushState
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Icon(Icons.close)),
+                icon: const Icon(Icons.close)),
           ),
-          Gap(14),
+          const Gap(14),
           Text(
             "حدد طريقة الدفع المستخدمة",
             style:
                 FontStyles.textStyle14Reg.copyWith(fontWeight: FontWeight.w800),
           ),
-          Gap(34),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => PusheView()));
-            },
-            child: Container(
-              width: 250,
-              height: 48,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  color: Color(0xffC3C3C3)),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Google pay",
-                      style: FontStyles.textStyle16Bold,
-                    ),
-                    SvgPicture.asset(
-                      AppImages.GoogleImage,
-                      height: 26,
-                      width: 26,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Gap(22),
+          const Gap(34),
           GestureDetector(
             onTap: () {
               Navigator.push(context,
@@ -84,17 +54,47 @@ class _CustomChoseBottomsheetPushState
               height: 48,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(24),
-                  color: Color(0xffC3C3C3)),
+                  color: const Color(0xffC3C3C3)),
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
+                      "Google pay",
+                      style: FontStyles.textStyle16Bold,
+                    ),
+                    SvgPicture.asset(
+                      AppImages.googleIcon,
+                      height: 26,
+                      width: 26,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const Gap(22),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const PusheView()));
+            },
+            child: Container(
+              width: 250,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(24),
+                  color: const Color(0xffC3C3C3)),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
                       "Apple pay",
                       style: FontStyles.textStyle16Bold,
                     ),
                     SvgPicture.asset(
-                      AppImages.Appleimage,
+                      AppImages.appleIcon,
                       height: 26,
                       width: 26,
                     ),

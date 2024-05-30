@@ -9,9 +9,13 @@ import 'profile_images_bubble_chat.dart';
 class BubbleChatItem extends StatelessWidget {
   const BubbleChatItem({
     super.key,
+    required this.text,
     required this.isSender,
   });
+
+  final String text;
   final bool isSender;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -24,8 +28,7 @@ class BubbleChatItem extends StatelessWidget {
               )
             : const SizedBox(),
         BubbleSpecialTwo(
-          text:
-              "أهلا وسهلا بك في مكتب الشاهين لقد تم تسجيل طلبك للاشتراك بالرحلة",
+          text: text,
           isSender: isSender,
           color: AppColors.backgroundGrayColor,
           textStyle: FontStyles.textStyle14Reg,

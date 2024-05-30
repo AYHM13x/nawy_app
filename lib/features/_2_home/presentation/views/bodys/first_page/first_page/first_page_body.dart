@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nawy_app/core/utlis/assets/app_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_Influencers.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_List_View_Item.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_chose_bottom.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_head.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_places.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_searsh.dart';
-
-import 'package:nawy_app/features/_3_filter/bodies/filter_view_body.dart';
-import 'package:nawy_app/features/_3_filter/filter_view.dart';
-
-import '../../../../../../../core/utlis/assets/app_images.dart';
+import '../../../widgets/main_view/custom_chose_bottom.dart';
 
 class FirstPagebody extends StatelessWidget {
   const FirstPagebody({super.key});
@@ -29,24 +24,24 @@ class FirstPagebody extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Customchosebotton(),
+          Customchosebotton(),
           Column(
             children: [
               Text(
                 "الأكثر شيوعا :",
                 style: FontStyles.textStyle16Bold,
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              const CustomPlaces(
-                name: AppImages.rowPlace,
+              CustomPlaces(
+                name: "assets/images/rowplaces.png",
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              const CustomListViewItem(
-                name: AppImages.dillon,
+              CustomListViewItem(
+                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
               ),
             ],
           )
@@ -70,7 +65,7 @@ class FirstPagebody extends StatelessWidget {
   //             SizedBox(
   //               height: 20,
   //             ),
-      //         CustomPlaces(name: AppImages.rowPlace,),
+      //         CustomPlaces(name: "assets/images/rowplaces.png",),
   //             SizedBox(
   //               height: 20,
   //             ),
@@ -92,7 +87,7 @@ class FirstPagebody extends StatelessWidget {
   //             SizedBox(
   //               height: 20,
   //             ),
-  //             CustomListViewItem(name: AppImages.dillon,),
+  //             CustomListViewItem(name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",),
   //             SizedBox(
   //               height: 20,
   //             ),

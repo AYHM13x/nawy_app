@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomRowCity extends StatefulWidget {
   const CustomRowCity({super.key});
@@ -17,17 +18,20 @@ class _CustomRowCityState extends State<CustomRowCity> {
   ];
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: Size(360, 690));
+
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(25))),
+          borderRadius:
+              BorderRadius.all(Radius.circular(ScreenUtil().setWidth(25)))),
       child: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
+        padding: EdgeInsets.symmetric(horizontal: ScreenUtil().setWidth(10)),
         child: Row(
           children: [
             SizedBox(
-              width: 140,
-              height: 48,
+              width: ScreenUtil().setWidth(140), // تحديد العرض بوحدات متناسقة
+              height: ScreenUtil().setHeight(48),
               child: DropdownButtonFormField(
                   hint: const Text("اختر البلد"),
                   // value: selectedMethod,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
 class Customspecifications extends StatelessWidget {
@@ -6,22 +7,25 @@ class Customspecifications extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        RowWidgetItem(
-          data: "5x7 m²",
-          icon: Icons.square,
-        ),
-        RowWidgetItem(
-          data: "2 حمام",
-          icon: Icons.bathroom,
-        ),
-        RowWidgetItem(
-          data: "3 غرف",
-          icon: Icons.bed,
-        ),
-      ],
+    ScreenUtil.init(context, designSize: Size(360, 690));
+    return const Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          RowWidgetItem(
+            data: "5x7 m²",
+            icon: Icons.square,
+          ),
+          RowWidgetItem(
+            data: "2 حمام",
+            icon: Icons.bathroom,
+          ),
+          RowWidgetItem(
+            data: "3 غرف",
+            icon: Icons.bed,
+          ),
+        ],
+      ),
     );
   }
 }
@@ -32,21 +36,23 @@ class RowWidgetItem extends StatelessWidget {
   final IconData icon;
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: Size(360, 690));
     return Row(
       children: [
         Text(
           data,
           style: FontStyles.textStyle14Reg,
         ),
-        const SizedBox(
-          width: 15,
-        ),
+        // SizedBox(
+        //   width: ScreenUtil().setWidth(15),
+        // ),
         SizedBox(
-          height: 12,
-          width: 12,
+          height: ScreenUtil().setHeight(12), // تحديد الارتفاع بوحدات متناسقة
+          width: ScreenUtil().setWidth(12),
           child: Icon(
             icon,
             color: Colors.amber,
+            size: ScreenUtil().setSp(12),
           ),
         )
       ],

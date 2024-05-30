@@ -59,7 +59,7 @@ class _CustomChoseBottomsheetPushState
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       "Google pay",
                       style: FontStyles.textStyle16Bold,
                     ),
@@ -89,7 +89,7 @@ class _CustomChoseBottomsheetPushState
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       "Apple pay",
                       style: FontStyles.textStyle16Bold,
                     ),

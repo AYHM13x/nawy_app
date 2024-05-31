@@ -7,11 +7,14 @@ class EmojiPickerKeyboardView extends StatelessWidget {
     super.key,
     required this.emojiIsShow,
     required this.controller,
+    this.onEmojiSelected,
+    this.onBackspacePressed,
   });
 
   final bool emojiIsShow;
   final TextEditingController controller;
-
+  final Function(Category?, Emoji)? onEmojiSelected;
+  final Function()? onBackspacePressed;
   @override
   Widget build(BuildContext context) {
     return Offstage(
@@ -19,7 +22,8 @@ class EmojiPickerKeyboardView extends StatelessWidget {
       child: EmojiPicker(
         textEditingController: controller,
         // scrollController: scrollController,
-
+        onEmojiSelected: onEmojiSelected,
+        onBackspacePressed: onBackspacePressed,
         config: Config(
           height: 256,
           checkPlatformCompatibility: true,

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -27,6 +28,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
   final TextEditingController _textEditingController = TextEditingController();
   List<String> messages = [];
   String text = "";
+  Emoji emoji = const Emoji("", "");
   bool emojiIsShow = false;
 
   @override
@@ -65,8 +67,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   IconButton(
                     onPressed: () {
                       setState(() {
-                        if (text.isNotEmpty) {
-                          sendTextMessage(text);
+                        if (_textEditingController.text.isNotEmpty) {
+                          sendTextMessage(_textEditingController.text);
                         }
                       });
                     },
@@ -109,13 +111,13 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                       },
                       onChanged: (value) {
                         text = value;
-                        log(value);
+                        inspect(value);
                       },
                       onSubmitted: (value) {
                         setState(() {
-                          if (text.isNotEmpty) {
+                          if (_textEditingController.text.isNotEmpty) {
                             text = value;
-                            sendTextMessage(value);
+                            sendTextMessage(_textEditingController.text);
                           }
                         });
                       },
@@ -153,6 +155,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
             EmojiPickerKeyboardView(
               emojiIsShow: emojiIsShow,
               controller: _textEditingController,
+              // onEmojiSelected: _onEmojiSelected(emoji),
+              onBackspacePressed: _onBackspacePressed,
               // scrollController: _textScrollController,
             ),
           ],
@@ -191,6 +195,20 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     } else {
       return 0;
     }
+  }
+
+  _onEmojiSelected(Emoji emoji) {
+    _textEditingController
+      ..text += emoji.emoji
+      ..selection = TextSelection.fromPosition(
+          TextPosition(offset: _textEditingController.text.length));
+  }
+
+  _onBackspacePressed() {
+    _textEditingController
+      ..text = _textEditingController.text.characters.skipLast(1).toString()
+      ..selection = TextSelection.fromPosition(
+          TextPosition(offset: _textEditingController.text.length));
   }
 }
 

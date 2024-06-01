@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
@@ -15,9 +16,9 @@ class ChatViewAppbar extends StatelessWidget {
       decoration: const BoxDecoration(
         color: AppColors.pickColor,
       ),
-      padding: const EdgeInsets.symmetric(
-        vertical: 8,
-        horizontal: 23,
+      padding: EdgeInsets.symmetric(
+        vertical: 8.h,
+        horizontal: 23.w,
       ),
       child: Row(
         children: [
@@ -29,8 +30,8 @@ class ChatViewAppbar extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 47,
-            height: 47,
+            width: 47.w,
+            height: 47.h,
             child: Container(
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
@@ -42,7 +43,7 @@ class ChatViewAppbar extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(8),
+          Gap(8.w),
           Text(
             "مكتب الشاهين",
             style: FontStyles.textStyle14Reg.copyWith(
@@ -50,11 +51,11 @@ class ChatViewAppbar extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          const Gap(8),
-          const SizedBox(
-            width: 11,
-            height: 11,
-            child: CircleAvatar(
+          Gap(8.w),
+          SizedBox(
+            width: 11.w,
+            height: 11.h,
+            child: const CircleAvatar(
               backgroundColor: AppColors.greenColor,
             ),
           ),

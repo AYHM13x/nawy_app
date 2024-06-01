@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
@@ -17,8 +18,8 @@ class AccountInfoView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: 112,
-              height: 112,
+              width: 112.w,
+              height: 112.h,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.transparent,
@@ -28,7 +29,7 @@ class AccountInfoView extends StatelessWidget {
                 ),
               ),
             ),
-            const Gap(8),
+            Gap(8.h),
             Text(
               "مكتب الشاهين",
               style: FontStyles.textStyle18Bold,
@@ -39,12 +40,12 @@ class AccountInfoView extends StatelessWidget {
             ),
           ],
         ),
-        const Positioned(
-          top: 100,
+        Positioned(
+          top: 100.h,
           child: SizedBox(
-            width: 16,
-            height: 16,
-            child: CircleAvatar(
+            width: 16.w,
+            height: 16.h,
+            child: const CircleAvatar(
               backgroundColor: AppColors.greenColor,
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/utlis/assets/app_images.dart';
 
@@ -9,8 +10,8 @@ class ProfileImageBubbleChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 30,
-      height: 30,
+      width: 30.w,
+      height: 30.h,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.transparent,

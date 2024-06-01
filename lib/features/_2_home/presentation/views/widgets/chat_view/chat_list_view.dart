@@ -6,16 +6,19 @@ class ChatListView extends StatelessWidget {
   const ChatListView({
     super.key,
     required this.messages,
+    required this.scrollController,
   });
 
   final List<String> messages;
+  final ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
+      // physics: const NeverScrollableScrollPhysics(),
+      // shrinkWrap: true,
       // clipBehavior: Clip.none,
+      controller: scrollController,
       itemCount: messages.length,
       itemBuilder: (context, index) {
         return Padding(

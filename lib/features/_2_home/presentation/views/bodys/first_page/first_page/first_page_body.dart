@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_List_View_Item.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_chose_bottom.dart';
@@ -13,30 +14,36 @@ class FirstPagebody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Column(children: [
-      const CustomHead(),
-      const SizedBox(
-        height: 10,
-      ),
-      const customSearsh(),
-      const SizedBox(
-        height: 10,
-      ),
-      const Customchosebotton(),
-      const Gap(16),
-      ListView(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+      child: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.only(right: 23.sp),
-            child: Text("أفضل العقارات  :  ",
-                style:
-                    //FontStyles.textStyle14Reg
-                    TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold)),
+          const CustomHead(),
+          const SizedBox(
+            height: 10,
           ),
-          CustomListViewItem(
-            name: "assets/images/pngs/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+          const customSearsh(),
+          const SizedBox(
+            height: 10,
+          ),
+          Customchosebotton(),
+          Column(
+            children: [
+              Text(
+                "الأكثر شيوعا :",
+                style: FontStyles.textStyle16Bold,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomPlaces(
+                name: "assets/images/rowplaces.png",
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomListViewItem(
+                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+              ),
+            ],
           )
         ],
       ),

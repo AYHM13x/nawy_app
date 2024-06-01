@@ -118,7 +118,7 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body: listWidgets[4],
+      body: listWidgets[selected],
     );
   }
 }

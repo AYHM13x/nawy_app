@@ -43,16 +43,13 @@ class RowWidgetItem extends StatelessWidget {
           data,
           style: FontStyles.textStyle14Reg,
         ),
-        // SizedBox(
-        //   width: ScreenUtil().setWidth(15),
-        // ),
         SizedBox(
-          height: ScreenUtil().setHeight(12), // تحديد الارتفاع بوحدات متناسقة
-          width: ScreenUtil().setWidth(12),
+          height: 12.h, // تحديد الارتفاع بوحدات متناسقة
+          width: 12.w,
           child: Icon(
             icon,
             color: Colors.amber,
-            size: ScreenUtil().setSp(12),
+            size: 12.sp,
           ),
         )
       ],

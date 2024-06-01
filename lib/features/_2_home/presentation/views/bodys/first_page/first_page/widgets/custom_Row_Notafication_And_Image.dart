@@ -22,10 +22,10 @@ class customRowNotaficationAndImage extends StatelessWidget {
               Icons.notifications,
               size: ScreenUtil().setHeight(30),
             )),
-        CircleAvatar(
-          backgroundImage: AssetImage(AppImages.profileheade),
-          radius: ScreenUtil().setHeight(25),
-        )
+        // CircleAvatar(
+        //   backgroundImage: AssetImage(AppImages.profileheade),
+        //   radius: ScreenUtil().setHeight(25),
+        // )
       ],
     );
   }

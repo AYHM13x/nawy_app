@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_Influencers.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_List_View_Item.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_chose_bottom.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_head.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/custom_places.dart';
 import '../../../widgets/main_view/custom_chose_bottom.dart';
 
 class FirstPagebody extends StatelessWidget {
@@ -16,30 +18,25 @@ class FirstPagebody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const CustomHead(),
-          const SizedBox(
-            height: 10,
-          ),
-          const customSearsh(),
-          const SizedBox(
-            height: 10,
-          ),
+          CustomHead(),
+          Gap(10.h),
+          customSearsh(),
+          Gap(10.h),
           Customchosebotton(),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "الأكثر شيوعا :",
+                "أفضل العقارات:",
                 style: FontStyles.textStyle16Bold,
+                // style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 20,
+              Gap(10.h),
+              const CustomListViewItem(
+                name:
+                    "assets/images/pngs/dillon-kydd-XGvwt544g8k-unsplash 1.png",
               ),
-              SizedBox(
-                height: 20,
-              ),
-              CustomListViewItem(
-                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-              ),
+              Gap(20.h),
             ],
           )
         ],
@@ -102,8 +99,6 @@ class FirstPagebody extends StatelessWidget {
 
 
 
-
-
 //الثاني
 // Column(
 //   children: [
@@ -128,26 +123,6 @@ class FirstPagebody extends StatelessWidget {
 
 
 
-// Column(
-//           children: [
-//             Text(
-//               "الأكثر شيوعا :",
-//               style: FontStyles.textStyle16Bold,
-//             ),
-//             const SizedBox(
-//               height: 20,
-//             ),
-//             const CustomPlaces(
-//               name: "assets/images/rowplaces.png",
-//             ),
-//             const SizedBox(
-//               height: 20,
-//             ),
-//             const CustomListViewItem(
-//               name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
-//             ),
-//           ],
-//         )
 
 
 

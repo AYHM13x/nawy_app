@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../../appbars/map_view/custom_enabled_search_bar_view.dart';
@@ -16,20 +17,20 @@ class MapViewBody extends StatefulWidget {
 class _MapViewBodyState extends State<MapViewBody> {
   @override
   Widget build(BuildContext context) {
-    return const Stack(
+    return Stack(
       children: [
-        MapView(),
+        const MapView(),
         Column(
           children: [
-            CustomEnabledSearchBarView(),
+            const CustomEnabledSearchBarView(),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Gap(31),
-                RightButtonsMapView(),
-                Expanded(child: SizedBox()),
-                LeftButtonsMapView(),
-                Gap(21),
+                Gap(31.w),
+                const RightButtonsMapView(),
+                const Expanded(child: SizedBox()),
+                const LeftButtonsMapView(),
+                Gap(21.w),
               ],
             ),
           ],

@@ -26,7 +26,7 @@ class FirstPagebody extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Customchosebotton(),
+          const Customchosebotton(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -34,14 +34,14 @@ class FirstPagebody extends StatelessWidget {
                 "أفضل العقارات:",
                 style: FontStyles.textStyle16Bold,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CustomListViewItem(
-                name: "assets/images/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+              const CustomListViewItem(
+                name: AppImages.dillon,
               ),
               Gap(20.h),
             ],

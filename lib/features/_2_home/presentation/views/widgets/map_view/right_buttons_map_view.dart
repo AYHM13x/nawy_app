@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../core/utlis/assets/app_images.dart';
@@ -11,18 +12,18 @@ class RightButtonsMapView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: DimensionsOfScreen.dimensionsOfHeight(context, 70),
-      child: const Column(
+      height: DimensionsOfScreen.dimensionsOfHeight(context, 70).h,
+      child: Column(
         children: [
           // Gap(390),
-          Expanded(
+          const Expanded(
             flex: 6,
             child: SizedBox(),
           ),
-          RightButtonItemView(icon: AppImages.mapLayersIcon),
-          Gap(3),
-          RightButtonItemView(icon: AppImages.gpsIcon),
-          Expanded(
+          const RightButtonItemView(icon: AppImages.mapLayersIcon),
+          Gap(3.h),
+          const RightButtonItemView(icon: AppImages.gpsIcon),
+          const Expanded(
             flex: 3,
             child: SizedBox(),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/utlis/assets/app_colors.dart';
 import '../../../../../../generated/l10n.dart';
@@ -12,14 +13,14 @@ class CustomSearchBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 60,
-        right: 20,
-        left: 20,
+      padding: EdgeInsets.only(
+        top: 60.h,
+        right: 20.w,
+        left: 20.w,
       ),
       child: Container(
         // width: 100,
-        height: 64,
+        height: 64.h,
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.8),
           borderRadius: BorderRadius.circular(32),
@@ -27,7 +28,6 @@ class CustomSearchBarView extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            // const Gap(16),
             IconButton(
               onPressed: () {},
               icon: const Icon(

@@ -11,7 +11,8 @@ class CustomRowitem extends StatelessWidget {
     ScreenUtil.init(context, designSize: Size(360, 690));
     return Row(
       children: [
-        Text("شقة للايجار", style: FontStyles.textStyle14Reg
+        Text("شقة للايجار", style: TextStyle(fontSize: 14)
+
             //  FontStyles.textStyle14Reg,
             ),
         SizedBox(

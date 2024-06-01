@@ -23,12 +23,11 @@ class CustomListViewItem extends StatelessWidget {
             context, MaterialPageRoute(builder: (context) => const ItemView()));
       },
       child: Container(
-        width: ScreenUtil().setHeight(254),
-        height:
-            ScreenUtil().setHeight(268), // تحديد الارتفاع باستخدام screenutil
+        width: 254.w,
+        height: 268.h, // تحديد الارتفاع باستخدام screenutil
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: 1,
+          itemCount: 5,
           itemBuilder: (context, index) {
             return Padding(
               padding: EdgeInsets.all(
@@ -45,11 +44,10 @@ class CustomListViewItem extends StatelessWidget {
                       style: FontStyles.textStyle9Reg,
                     ),
                     Divider(
-                      endIndent:
-                          ScreenUtil().setWidth(100), // استخدام screenutil
-                      indent: ScreenUtil().setWidth(100), // استخدام screenutil
-                      thickness: ScreenUtil().setWidth(2), // استخدام screenutil
-                      height: ScreenUtil().setHeight(20), // استخدام screenutil
+                      endIndent: 100.w, // استخدام ScreenUtil
+                      indent: 100.w, // استخدام ScreenUtil
+                      thickness: 2.h, // استخدام ScreenUtil
+                      height: 20.h, // استخدام screenutil
                     ),
                     Customspecifications()
                   ],

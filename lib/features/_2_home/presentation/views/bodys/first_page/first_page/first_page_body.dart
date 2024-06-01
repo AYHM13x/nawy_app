@@ -34,9 +34,6 @@ class FirstPagebody extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              CustomPlaces(
-                name: "assets/images/rowplaces.png",
-              ),
               SizedBox(
                 height: 20,
               ),
@@ -47,7 +44,7 @@ class FirstPagebody extends StatelessWidget {
           )
         ],
       ),
-    ]));
+    );
   }
 }
 

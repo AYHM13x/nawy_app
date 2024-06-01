@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 
@@ -41,7 +42,7 @@ class _RangeSliderSectionFilterViewState
             fontWeight: FontWeight.w700,
           ),
         ),
-        const Gap(12),
+        Gap(12.h),
         SfRangeSlider(
           min: 100,
           max: 5000.0,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/dimensions_of_screen.dart';
 
@@ -16,12 +17,12 @@ class DetailsPropertyItem extends StatelessWidget {
       width: DimensionsOfScreen.dimensionsOfWidth(context, 65),
       child: Column(
         children: [
-          Gap(12),
-          FirstSectionDetailsProperty(),
-          Gap(8),
-          SecondSectionDetailsProperty(),
-          Gap(3),
-          ThirdSectionDetailsProperty(),
+          Gap(12.h),
+          const FirstSectionDetailsProperty(),
+          Gap(8.h),
+          const SecondSectionDetailsProperty(),
+          Gap(3.h),
+          const ThirdSectionDetailsProperty(),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../../../core/utlis/dimensions_of_screen.dart';
@@ -16,21 +17,21 @@ class FilterViewBody extends StatelessWidget {
     return Column(
       children: [
         const FilterViewAppBar(),
-        const Gap(7),
-        const Padding(
+        Gap(7.h),
+        Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 29,
+            horizontal: 29.w,
           ),
-          child: TypesPropertySectionFilterView(),
+          child: const TypesPropertySectionFilterView(),
         ),
-        const Gap(20),
+        Gap(20.h),
         SizedBox(
-          height: DimensionsOfScreen.dimensionsOfHeight(context, 68),
-          child: const Padding(
+          height: DimensionsOfScreen.dimensionsOfHeight(context, 68).h,
+          child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: 29,
+              horizontal: 29.w,
             ),
-            child: CustomScrollView(
+            child: const CustomScrollView(
               slivers: [
                 SliverFillRemaining(
                   child: FliterViewAfterSearch(),

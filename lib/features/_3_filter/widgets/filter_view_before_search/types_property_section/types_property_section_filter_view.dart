@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../core/utlis/assets/font_styles.dart';
@@ -21,7 +22,7 @@ class TypesPropertySectionFilterView extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        const Gap(12),
+        Gap(12.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

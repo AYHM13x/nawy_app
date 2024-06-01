@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 
@@ -17,16 +18,16 @@ class FilterViewBeforeSearch extends StatelessWidget {
     return Column(
       children: [
         const RangeSliderSectionFilterView(),
-        const Gap(40),
+        Gap(40.h),
         const RoomsNumberSectionFilterView(),
-        const Gap(40),
+        Gap(40.h),
         const SpaceSectionFilterView(),
-        const Gap(40),
+        Gap(40.h),
         const BathroomsNumberSectionFilterView(),
-        const Gap(48),
+        Gap(48.h),
         CustomTextButton(
-          width: 200,
-          height: 60,
+          width: 200.w,
+          height: 60.h,
           radius: 55,
           text: S.of(context).search,
           color: AppColors.goldColor,

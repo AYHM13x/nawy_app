@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
@@ -22,33 +23,32 @@ class FirstSectionDetailsProperty extends StatelessWidget {
         Text(
           "4.33",
           style: FontStyles.textStyle14Reg.copyWith(
-            fontSize: 12,
+            fontSize: 12.sp,
             fontFamily: AppFontFamilies.poppinsFont,
             color: const Color(0xff8997A9),
           ),
         ),
-        const Gap(5),
+        Gap(5.w),
         SvgPicture.asset(
           AppImages.starIcon,
-          width: 13.87,
-          height: 13,
+          width: 13.87.w,
+          height: 13.h,
         ),
-        const Gap(16),
+        Gap(16.w),
         Container(
           decoration: BoxDecoration(
-            // color: Colors.red,
             color: const Color(0xffEBFCEA),
             borderRadius: BorderRadius.circular(5),
           ),
-          padding: const EdgeInsets.symmetric(
-            horizontal: 6,
-            vertical: 1,
+          padding: EdgeInsets.symmetric(
+            horizontal: 6.w,
+            vertical: 1.h,
           ),
           child: Text(
             S.of(context).licensed,
             style: FontStyles.textStyle14Reg.copyWith(
               color: AppColors.greenColor,
-              fontSize: 11,
+              fontSize: 11.sp,
             ),
           ),
         ),

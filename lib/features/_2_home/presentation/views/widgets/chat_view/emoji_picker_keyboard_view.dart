@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/foundation.dart' as foundation;
 
+import '../../../../../../core/utlis/assets/app_colors.dart';
+
 class EmojiPickerKeyboardView extends StatelessWidget {
   const EmojiPickerKeyboardView({
     super.key,
@@ -39,7 +41,7 @@ class EmojiPickerKeyboardView extends StatelessWidget {
           categoryViewConfig: const CategoryViewConfig(),
           bottomActionBarConfig: const BottomActionBarConfig(
             backgroundColor: Colors.transparent,
-            buttonIconColor: Colors.blue,
+            buttonIconColor: AppColors.yellowColor,
             buttonColor: Colors.transparent,
           ),
           searchViewConfig: const SearchViewConfig(),

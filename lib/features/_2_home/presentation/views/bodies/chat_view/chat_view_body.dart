@@ -1,14 +1,12 @@
 import 'dart:developer';
 
-import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
+import 'package:nawy_app/generated/l10n.dart';
 
 import '../../../../../../core/utlis/assets/app_images.dart';
-import '../../../../../../core/utlis/functions/random_string.dart';
 import '../../../../../../core/utlis/widgets/custom_svg_pic_asset.dart';
 import '../../appbars/chat_view/chat_view_appbar.dart';
 import '../../widgets/chat_view/account_info_view.dart';
@@ -26,9 +24,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
   final ScrollController _listScrollController = ScrollController();
   final ScrollController _textScrollController = ScrollController();
   final TextEditingController _textEditingController = TextEditingController();
-  List<String> messages = [];
-  String text = "";
-  Emoji emoji = const Emoji("", "");
+  List<String> messages = ["mm", "mm", "mm"];
+  // String text = "";
   bool emojiIsShow = false;
 
   @override
@@ -84,6 +81,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   const Gap(8),
                   GestureDetector(
+                    onLongPress: () {},
+                    onLongPressCancel: () {},
                     child: CustomSvgPicAsset(
                       image: AppImages.recordIcon,
                       color: Colors.black.withOpacity(0.7),
@@ -110,13 +109,11 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                         });
                       },
                       onChanged: (value) {
-                        text = value;
-                        inspect(value);
+                        debugPrint(_textEditingController.text);
                       },
                       onSubmitted: (value) {
                         setState(() {
                           if (_textEditingController.text.isNotEmpty) {
-                            text = value;
                             sendTextMessage(_textEditingController.text);
                           }
                         });
@@ -124,6 +121,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
+                        hintText: S.of(context).typeHere,
                         border: border(),
                         enabledBorder: border(),
                         focusedBorder: border(),
@@ -156,7 +154,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
               emojiIsShow: emojiIsShow,
               controller: _textEditingController,
               // onEmojiSelected: _onEmojiSelected(emoji),
-              onBackspacePressed: _onBackspacePressed,
+              // onBackspacePressed: _onBackspacePressed,
               // scrollController: _textScrollController,
             ),
           ],
@@ -170,7 +168,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     _textEditingController.clear();
     _listScrollController
         .jumpTo(_listScrollController.position.maxScrollExtent + 50);
-    text = "";
+    // text = "";
   }
 
   OutlineInputBorder border() {
@@ -195,13 +193,6 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     } else {
       return 0;
     }
-  }
-
-  _onEmojiSelected(Emoji emoji) {
-    _textEditingController
-      ..text += emoji.emoji
-      ..selection = TextSelection.fromPosition(
-          TextPosition(offset: _textEditingController.text.length));
   }
 
   _onBackspacePressed() {

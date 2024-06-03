@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
 class SearchBarItemView extends StatelessWidget {
@@ -14,15 +15,15 @@ class SearchBarItemView extends StatelessWidget {
         borderRadius: BorderRadius.circular(50),
         color: Colors.white,
       ),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 10,
+      padding: EdgeInsets.symmetric(
+        horizontal: 16.w,
+        vertical: 10.h,
       ),
       child: Builder(
         builder: (context) => Text(
           title,
           style: FontStyles.textStyle14Reg.copyWith(
-            fontSize: 12,
+            fontSize: 12.sp,
           ),
         ),
       ),

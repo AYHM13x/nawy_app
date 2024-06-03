@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
@@ -18,21 +19,21 @@ class SecondSectionDetailsProperty extends StatelessWidget {
         Text(
           "شقة سكنية للبيع",
           style: FontStyles.textStyle14Reg.copyWith(
-            fontSize: 15,
+            fontSize: 15.sp,
             color: const Color(0xff122D4D),
           ),
         ),
-        const Gap(3),
+        Gap(3.h),
         Row(
           children: [
             Text(
               "شارع الملك سلمان-الرياض",
               style: FontStyles.textStyle14Reg.copyWith(
-                fontSize: 11,
+                fontSize: 11.sp,
                 color: const Color(0xff415770),
               ),
             ),
-            const Gap(4.5),
+            Gap(4.5.h),
             SvgPicture.asset(
               AppImages.pinIcon,
             )

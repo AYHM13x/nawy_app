@@ -25,14 +25,14 @@ class CustomTextButton extends StatelessWidget {
       height: height,
       child: TextButton(
         onPressed: () {},
-        style: const ButtonStyle(
-            // backgroundColor: WidgetStatePropertyAll(color),
-            // shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-            //   RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(radius),
-            //   ),
-            // ),
+        style: ButtonStyle(
+          backgroundColor: WidgetStatePropertyAll(color),
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(radius),
             ),
+          ),
+        ),
         child: Text(
           text,
           style: FontStyles.textStyle16Bold.copyWith(

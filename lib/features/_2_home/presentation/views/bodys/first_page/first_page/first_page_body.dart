@@ -22,23 +22,30 @@ class FirstPagebody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          CustomHead(),
-          Gap(10.h),
-          customSearsh(),
-          Gap(10.h),
-          Customchosebotton(),
+          const CustomHead(),
+          const SizedBox(
+            height: 10,
+          ),
+          const customSearsh(),
+          const SizedBox(
+            height: 10,
+          ),
+          const Customchosebotton(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "أفضل العقارات:",
                 style: FontStyles.textStyle16Bold,
-                // style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              Gap(10.h),
+              const SizedBox(
+                height: 20,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               const CustomListViewItem(
-                name:
-                    "assets/images/pngs/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+                name: AppImages.dillon,
               ),
               Gap(16.h),
               Text(

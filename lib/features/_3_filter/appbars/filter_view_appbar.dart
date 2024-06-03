@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/generated/l10n.dart';
@@ -16,9 +17,9 @@ class FilterViewAppBar extends StatelessWidget {
         color: AppColors.pickColor,
       ),
       alignment: Alignment.center,
-      padding: const EdgeInsets.only(
-        left: 38,
-        right: 29,
+      padding: EdgeInsets.only(
+        left: 38.w,
+        right: 29.w,
       ),
       child: Row(
         children: [

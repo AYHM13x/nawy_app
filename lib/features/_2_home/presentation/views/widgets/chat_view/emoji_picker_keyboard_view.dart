@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/foundation.dart' as foundation;
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/utlis/assets/app_colors.dart';
 
@@ -27,11 +28,11 @@ class EmojiPickerKeyboardView extends StatelessWidget {
         onEmojiSelected: onEmojiSelected,
         onBackspacePressed: onBackspacePressed,
         config: Config(
-          height: 256,
+          height: 256.h,
           checkPlatformCompatibility: true,
           emojiViewConfig: EmojiViewConfig(
             // Issue: https://github.com/flutter/flutter/issues/28894
-            emojiSizeMax: 28 *
+            emojiSizeMax: 28.sp *
                 (foundation.defaultTargetPlatform == TargetPlatform.iOS
                     ? 1.2
                     : 1.0),

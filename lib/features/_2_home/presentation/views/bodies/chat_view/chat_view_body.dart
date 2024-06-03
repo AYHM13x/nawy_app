@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
@@ -22,7 +23,7 @@ class ChatViewBody extends StatefulWidget {
 
 class _ChatViewBodyState extends State<ChatViewBody> {
   final ScrollController _listScrollController = ScrollController();
-  final ScrollController _textScrollController = ScrollController();
+  // final ScrollController _textScrollController = ScrollController();
   final TextEditingController _textEditingController = TextEditingController();
   List<String> messages = ["mm", "mm", "mm"];
   // String text = "";
@@ -43,11 +44,11 @@ class _ChatViewBodyState extends State<ChatViewBody> {
           mainAxisSize: MainAxisSize.min,
           children: [
             const ChatViewAppbar(),
-            const Gap(11),
+            Gap(11.h),
             const AccountInfoView(),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 21),
+                padding: EdgeInsets.symmetric(horizontal: 21.w),
                 child: ChatListView(
                   messages: messages,
                   scrollController: _listScrollController,
@@ -55,8 +56,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 25,
+              padding: EdgeInsets.symmetric(
+                horizontal: 25.w,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -71,7 +72,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                     },
                     icon: SvgPicture.asset(AppImages.sendIcon),
                   ),
-                  const Gap(8),
+                  Gap(8.w),
                   GestureDetector(
                     onTap: () {},
                     child: CustomSvgPicAsset(
@@ -79,7 +80,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                       color: Colors.black.withOpacity(0.4),
                     ),
                   ),
-                  const Gap(8),
+                  Gap(8.w),
                   GestureDetector(
                     onLongPress: () {},
                     onLongPressCancel: () {},
@@ -88,14 +89,14 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                       color: Colors.black.withOpacity(0.7),
                     ),
                   ),
-                  const Gap(8),
+                  Gap(8.w),
                   GestureDetector(
                     child: CustomSvgPicAsset(
                       image: AppImages.paperClipIcon,
                       color: Colors.black.withOpacity(0.7),
                     ),
                   ),
-                  const Gap(8),
+                  Gap(8.w),
                   Expanded(
                     // width: DimensionsOfScreen.dimensionsOfWidth(context, 67),
                     child: TextField(
@@ -107,9 +108,6 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                             emojiIsShow = false;
                           }
                         });
-                      },
-                      onChanged: (value) {
-                        debugPrint(_textEditingController.text);
                       },
                       onSubmitted: (value) {
                         setState(() {
@@ -167,7 +165,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     messages.add(value);
     _textEditingController.clear();
     _listScrollController
-        .jumpTo(_listScrollController.position.maxScrollExtent + 50);
+        .jumpTo(_listScrollController.position.maxScrollExtent.h + 80);
     // text = "";
   }
 
@@ -193,13 +191,6 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     } else {
       return 0;
     }
-  }
-
-  _onBackspacePressed() {
-    _textEditingController
-      ..text = _textEditingController.text.characters.skipLast(1).toString()
-      ..selection = TextSelection.fromPosition(
-          TextPosition(offset: _textEditingController.text.length));
   }
 }
 

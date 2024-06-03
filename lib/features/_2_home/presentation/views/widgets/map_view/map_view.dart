@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:latlong2/latlong.dart';
 
 import 'custom_marker_view.dart';
@@ -49,20 +50,20 @@ class MapView extends StatelessWidget {
         MarkerLayer(
           markers: [
             Marker(
-              height: height,
-              width: width,
+              height: height.h,
+              width: width.w,
               point: const LatLng(33.30, 36.17),
               child: const CustomMarkerView(),
             ),
             Marker(
-              height: height,
-              width: width,
+              height: height.h,
+              width: width.w,
               point: const LatLng(33.50, 36.30),
               child: const CustomMarkerView(),
             ),
             Marker(
-              height: height,
-              width: width,
+              height: height.h,
+              width: width.w,
               point: const LatLng(33.4833314, 36.3499986),
               child: const CustomMarkerView(),
             ),

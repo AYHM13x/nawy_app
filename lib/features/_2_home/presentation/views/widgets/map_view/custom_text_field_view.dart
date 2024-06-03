@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../../core/utlis/assets/app_colors.dart';
@@ -16,8 +17,8 @@ class CustomTextFieldView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 64,
+      width: double.infinity.w,
+      height: 64.h,
       child: TextField(
         maxLines: 1,
         style: FontStyles.textStyle14Reg,
@@ -33,7 +34,7 @@ class CustomTextFieldView extends StatelessWidget {
             color: AppColors.grayColor,
           ),
           suffixIcon: SizedBox(
-            width: 100,
+            width: 100.w,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -44,21 +45,21 @@ class CustomTextFieldView extends StatelessWidget {
                     color: AppColors.grayColor,
                   ),
                 ),
-                const Gap(10),
+                Gap(10.w),
                 GestureDetector(
                   child: const CustomSvgPicAsset(
                     image: AppImages.cameraIcon,
                     color: AppColors.grayColor,
                   ),
                 ),
-                const Gap(10),
+                Gap(10.w),
                 GestureDetector(
                   child: const CustomSvgPicAsset(
                     image: AppImages.micIcon,
                     color: AppColors.grayColor,
                   ),
                 ),
-                const Gap(10),
+                Gap(10.w),
               ],
             ),
           ),

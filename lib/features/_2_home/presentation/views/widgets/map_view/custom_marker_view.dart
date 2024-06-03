@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../../core/utlis/assets/app_colors.dart';
@@ -23,10 +24,10 @@ class CustomMarkerView extends StatelessWidget {
           // fit: BoxFit.fill,
         ),
         Positioned(
-          left: 7,
+          left: 7.w,
           child: Container(
-            height: 30,
-            width: 150,
+            height: 30.h,
+            width: 150.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: AppColors.redColor,

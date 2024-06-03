@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utlis/assets/app_colors.dart';
 import '../../../../../core/utlis/assets/font_styles.dart';
@@ -14,8 +15,8 @@ class BathroomItemFilterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 45,
-      height: 37,
+      width: 45.w,
+      height: 37.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         color: isSelected ? AppColors.darkPinkColor : Colors.transparent,

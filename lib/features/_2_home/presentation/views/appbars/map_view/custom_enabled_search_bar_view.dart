@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../widgets/map_view/custom_text_field_view.dart';
 
@@ -10,14 +11,14 @@ class CustomEnabledSearchBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 60,
-        right: 20,
-        left: 20,
+      padding: EdgeInsets.only(
+        top: 60.h,
+        right: 20.w,
+        left: 20.w,
       ),
       child: Container(
         decoration: BoxDecoration(
-          boxShadow: <BoxShadow>[
+          boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.4),
               blurRadius: 200,

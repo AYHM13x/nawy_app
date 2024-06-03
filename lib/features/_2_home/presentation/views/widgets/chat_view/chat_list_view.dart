@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'bubble_chat_item.dart';
 
@@ -15,15 +16,12 @@ class ChatListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      // physics: const NeverScrollableScrollPhysics(),
-      // shrinkWrap: true,
-      // clipBehavior: Clip.none,
       controller: scrollController,
       itemCount: messages.length,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.only(
-            bottom: 30,
+          padding: EdgeInsets.only(
+            bottom: 20.h,
           ),
           child: BubbleChatItem(
             text: messages[index],

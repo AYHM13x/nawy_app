@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
@@ -14,10 +15,9 @@ class LeftButtonsMapView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: DimensionsOfScreen.dimensionsOfHeight(context, 70),
+      height: DimensionsOfScreen.dimensionsOfHeight(context, 70).h,
       child: Column(
         children: [
-          // const Gap(430),
           const Expanded(
             flex: 9,
             child: SizedBox(),
@@ -27,7 +27,7 @@ class LeftButtonsMapView extends StatelessWidget {
               S.of(context).searchProperty,
               textAlign: TextAlign.center,
               style: FontStyles.textStyle14Reg.copyWith(
-                fontSize: 10,
+                fontSize: 10.sp,
                 color: Colors.black,
               ),
             ),

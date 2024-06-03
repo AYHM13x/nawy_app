@@ -75,7 +75,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   Gap(8.w),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: sendImageCameraMessage,
                     child: CustomSvgPicAsset(
                       image: AppImages.cameraIcon,
                       color: Colors.black.withOpacity(0.4),
@@ -92,7 +92,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   Gap(8.w),
                   GestureDetector(
-                    onTap: sendImageMessage,
+                    onTap: sendImageGalleryMessage,
                     child: CustomSvgPicAsset(
                       image: AppImages.paperClipIcon,
                       color: Colors.black.withOpacity(0.7),
@@ -171,11 +171,37 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     // text = "";
   }
 
-  void sendImageMessage() async {
+  void sendImageGalleryMessage() async {
     final result = await ImagePicker().pickImage(
       imageQuality: 70,
       maxWidth: 1440,
       source: ImageSource.gallery,
+    );
+
+    if (result != null) {
+      final bytes = await result.readAsBytes();
+      final image = await decodeImageFromList(bytes);
+
+      // final message = types.ImageMessage(
+      //   author: _user,
+      //   createdAt: DateTime.now().millisecondsSinceEpoch,
+      //   height: image.height.toDouble(),
+      //   id:" randomString()",
+      //   name: result.name,
+      //   size: bytes.length,
+      //   uri: result.path,
+      //   width: image.width.toDouble(),
+      // );
+
+      // _addMessage(message);
+    }
+  }
+
+  void sendImageCameraMessage() async {
+    final result = await ImagePicker().pickImage(
+      imageQuality: 70,
+      maxWidth: 1440,
+      source: ImageSource.camera,
     );
 
     if (result != null) {

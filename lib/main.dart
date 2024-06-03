@@ -12,12 +12,10 @@ import 'features/_2_home/presentation/views/home_view.dart';
 import 'generated/l10n.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => NawyApp(), // Wrap your app
-    ),
+    const NawyApp(),
   );
 }
 
@@ -27,13 +25,12 @@ class NawyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690), // التصميم الأصلي للمشروع
+      designSize: Size(393, 852),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) => MaterialApp(
-        // locale: DevicePreview.locale(context),
+        //  locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
-        useInheritedMediaQuery: false,
         locale: Locale("ar"),
 
         localizationsDelegates: const [

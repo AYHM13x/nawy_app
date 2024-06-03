@@ -7,24 +7,25 @@ class Customspecifications extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
-    return const Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          RowWidgetItem(
-            data: "5x7 m²",
-            icon: Icons.square,
-          ),
-          RowWidgetItem(
-            data: "2 حمام",
-            icon: Icons.bathroom,
-          ),
-          RowWidgetItem(
-            data: "3 غرف",
-            icon: Icons.bed,
-          ),
-        ],
+    return Expanded(
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            RowWidgetItem(
+              data: "5x7 m²",
+              icon: Icons.square,
+            ),
+            RowWidgetItem(
+              data: "2 حمام",
+              icon: Icons.bathroom,
+            ),
+            RowWidgetItem(
+              data: "3 غرف",
+              icon: Icons.bed,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -36,7 +37,6 @@ class RowWidgetItem extends StatelessWidget {
   final IconData icon;
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
     return Row(
       children: [
         Text(

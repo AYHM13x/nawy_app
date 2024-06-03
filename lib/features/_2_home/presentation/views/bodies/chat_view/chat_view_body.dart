@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
+import 'package:image_picker/image_picker.dart';
 import 'package:nawy_app/generated/l10n.dart';
 
 import '../../../../../../core/utlis/assets/app_images.dart';
@@ -68,8 +69,6 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                         if (_textEditingController.text.isNotEmpty) {
                           sendTextMessage(_textEditingController.text);
                         }
-
-                        // _textEditingController.text.
                       });
                     },
                     icon: SvgPicture.asset(AppImages.sendIcon),
@@ -93,6 +92,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   Gap(8.w),
                   GestureDetector(
+                    onTap: sendImageMessage,
                     child: CustomSvgPicAsset(
                       image: AppImages.paperClipIcon,
                       color: Colors.black.withOpacity(0.7),
@@ -169,6 +169,32 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     _listScrollController
         .jumpTo(_listScrollController.position.maxScrollExtent.h + 80);
     // text = "";
+  }
+
+  void sendImageMessage() async {
+    final result = await ImagePicker().pickImage(
+      imageQuality: 70,
+      maxWidth: 1440,
+      source: ImageSource.gallery,
+    );
+
+    if (result != null) {
+      final bytes = await result.readAsBytes();
+      final image = await decodeImageFromList(bytes);
+
+      // final message = types.ImageMessage(
+      //   author: _user,
+      //   createdAt: DateTime.now().millisecondsSinceEpoch,
+      //   height: image.height.toDouble(),
+      //   id:" randomString()",
+      //   name: result.name,
+      //   size: bytes.length,
+      //   uri: result.path,
+      //   width: image.width.toDouble(),
+      // );
+
+      // _addMessage(message);
+    }
   }
 
   OutlineInputBorder border() {

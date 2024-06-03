@@ -68,6 +68,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                         if (_textEditingController.text.isNotEmpty) {
                           sendTextMessage(_textEditingController.text);
                         }
+
+                        // _textEditingController.text.
                       });
                     },
                     icon: SvgPicture.asset(AppImages.sendIcon),

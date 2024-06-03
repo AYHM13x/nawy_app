@@ -1,4 +1,3 @@
-import 'package:chat_bubbles/chat_bubbles.dart';
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,16 +37,11 @@ class BubbleChatItem extends StatelessWidget {
           margin: BubbleEdges.only(
             bottom: 10.h,
           ),
+          padding: const BubbleEdges.all(0),
           nip: isSender ? BubbleNip.rightBottom : BubbleNip.leftBottom,
           radius: const Radius.circular(20),
-          padding: BubbleEdges.only(
-            right: 16.w,
-            left: 29.w,
-            top: 4.h,
-            bottom: 8.h,
-          ),
           child: ChildOfBubbleMessage(
-            messageType: MessageType.voice,
+            messageType: MessageType.text,
             text: text,
           ),
         ),

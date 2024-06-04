@@ -3,8 +3,8 @@ import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/profile_view/Fliter_View_After_Search_Details/Fliter_View_After_Search_Details.dart';
 import 'package:nawy_app/features/_3_filter/bodies/fliter_view_after_search.dart';
 
-class CustomAlMonafilat extends StatelessWidget {
-  const CustomAlMonafilat({super.key});
+class CustomSale extends StatelessWidget {
+  const CustomSale({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CustomAlMonafilat extends StatelessWidget {
           children: [
             Image.asset("assets/images/pngs/Layout.png"),
             Text(
-              "مناقلات 2",
+              "البيع",
               style: FontStyles.textStyle14Reg,
             ),
           ],

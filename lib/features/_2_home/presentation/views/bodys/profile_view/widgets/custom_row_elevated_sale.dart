@@ -40,7 +40,7 @@ class _CustomRowElevatedSaleState extends State<CustomRowElevatedSale> {
           ),
           Expanded(
             child: CustomElevatedBotton(
-              data: 'بيوت',
+              data: 'الشراء',
               onPressed: () {
                 setState(() {
                   isSelected = 1;
@@ -52,7 +52,7 @@ class _CustomRowElevatedSaleState extends State<CustomRowElevatedSale> {
           ),
           Expanded(
             child: CustomElevatedBotton(
-              data: 'فلل',
+              data: 'البيع',
               onPressed: () {
                 setState(() {
                   isSelected = 2;

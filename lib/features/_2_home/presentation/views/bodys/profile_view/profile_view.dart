@@ -14,7 +14,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(child: CustomRowDrawer()),
+        drawer: const Drawer(child: CustomRowDrawer()),
         appBar: AppBar(
           title: Center(
             child: Text(
@@ -24,7 +24,7 @@ class ProfileView extends StatelessWidget {
           ),
           backgroundColor: AppColors.pickColor,
         ),
-        body: ProfileViewBody(),
+        body: const ProfileViewBody(),
       ),
     );
   }

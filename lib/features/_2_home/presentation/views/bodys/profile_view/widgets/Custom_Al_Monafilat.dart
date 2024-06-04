@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/profile_view/Fliter_View_After_Search_Details/Fliter_View_After_Search_Details.dart';
 import 'package:nawy_app/features/_3_filter/bodies/fliter_view_after_search.dart';
 
 class CustomAlMonafilat extends StatelessWidget {
@@ -23,7 +24,16 @@ class CustomAlMonafilat extends StatelessWidget {
         Container(
             width: double.infinity,
             height: 300,
-            child: FliterViewAfterSearch()),
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const FliterViewAfterSearchDetails(),
+                      ));
+                },
+                child: FliterViewAfterSearch())),
       ],
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
+
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 

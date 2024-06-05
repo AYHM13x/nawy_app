@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -5,7 +6,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
+import 'package:image_picker/image_picker.dart';
 import 'package:nawy_app/generated/l10n.dart';
+import 'package:record/record.dart';
 
 import '../../../../../../core/utlis/assets/app_images.dart';
 import '../../../../../../core/utlis/widgets/custom_svg_pic_asset.dart';
@@ -22,12 +25,27 @@ class ChatViewBody extends StatefulWidget {
 }
 
 class _ChatViewBodyState extends State<ChatViewBody> {
+  late AudioRecorder audioRecord;
+  bool isRecording = false;
+  String? pathRecord;
+
   final ScrollController _listScrollController = ScrollController();
   // final ScrollController _textScrollController = ScrollController();
   final TextEditingController _textEditingController = TextEditingController();
   List<String> messages = ["mm", "mm", "mm"];
-  // String text = "";
-  bool emojiIsShow = false;
+  bool isEmojiKeyBoardShow = false;
+
+  @override
+  void initState() {
+    audioRecord = AudioRecorder();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    audioRecord.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +54,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
       child: Padding(
         padding: EdgeInsets.only(
           bottom: getPaddingKeyBoardBottom(
-            emojiIsShow,
+            isEmojiKeyBoardShow,
             mediaQueryData.viewInsets.bottom,
           ),
         ),
@@ -74,7 +92,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   Gap(8.w),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: sendImageCameraMessage,
                     child: CustomSvgPicAsset(
                       image: AppImages.cameraIcon,
                       color: Colors.black.withOpacity(0.4),
@@ -82,8 +100,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   Gap(8.w),
                   GestureDetector(
-                    onLongPress: () {},
-                    onLongPressCancel: () {},
+                    onLongPress: startRecording,
+                    onLongPressCancel: stopRecording,
                     child: CustomSvgPicAsset(
                       image: AppImages.recordIcon,
                       color: Colors.black.withOpacity(0.7),
@@ -91,6 +109,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                   ),
                   Gap(8.w),
                   GestureDetector(
+                    onTap: sendImageGalleryMessage,
                     child: CustomSvgPicAsset(
                       image: AppImages.paperClipIcon,
                       color: Colors.black.withOpacity(0.7),
@@ -104,8 +123,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                       // scrollController: _textScrollController,
                       onTap: () {
                         setState(() {
-                          if (emojiIsShow) {
-                            emojiIsShow = false;
+                          if (isEmojiKeyBoardShow) {
+                            isEmojiKeyBoardShow = false;
                           }
                         });
                       },
@@ -127,16 +146,16 @@ class _ChatViewBodyState extends State<ChatViewBody> {
                         errorBorder: border(),
                         suffixIcon: IconButton(
                           onPressed: () async {
-                            if (!emojiIsShow) {
+                            if (!isEmojiKeyBoardShow) {
                               FocusManager.instance.primaryFocus?.unfocus();
                               setState(() {});
                               await Future.delayed(
                                   const Duration(milliseconds: 200), () {
-                                emojiIsShow = !emojiIsShow;
+                                isEmojiKeyBoardShow = !isEmojiKeyBoardShow;
                               });
                               setState(() {});
                             } else {
-                              emojiIsShow = !emojiIsShow;
+                              isEmojiKeyBoardShow = !isEmojiKeyBoardShow;
                               setState(() {});
                             }
                           },
@@ -149,7 +168,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
               ),
             ),
             EmojiPickerKeyboardView(
-              emojiIsShow: emojiIsShow,
+              emojiIsShow: isEmojiKeyBoardShow,
               controller: _textEditingController,
               // onEmojiSelected: _onEmojiSelected(emoji),
               // onBackspacePressed: _onBackspacePressed,
@@ -169,6 +188,85 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     // text = "";
   }
 
+  void sendImageGalleryMessage() async {
+    final result = await ImagePicker().pickImage(
+      imageQuality: 70,
+      maxWidth: 1440,
+      source: ImageSource.gallery,
+    );
+
+    if (result != null) {
+      final bytes = await result.readAsBytes();
+      final image = await decodeImageFromList(bytes);
+
+      // final message = types.ImageMessage(
+      //   author: _user,
+      //   createdAt: DateTime.now().millisecondsSinceEpoch,
+      //   height: image.height.toDouble(),
+      //   id:" randomString()",
+      //   name: result.name,
+      //   size: bytes.length,
+      //   uri: result.path,
+      //   width: image.width.toDouble(),
+      // );
+
+      // _addMessage(message);
+    }
+  }
+
+  void sendImageCameraMessage() async {
+    final result = await ImagePicker().pickImage(
+      imageQuality: 70,
+      maxWidth: 1440,
+      source: ImageSource.camera,
+    );
+
+    if (result != null) {
+      final bytes = await result.readAsBytes();
+      final image = await decodeImageFromList(bytes);
+
+      // final message = types.ImageMessage(
+      //   author: _user,
+      //   createdAt: DateTime.now().millisecondsSinceEpoch,
+      //   height: image.height.toDouble(),
+      //   id:" randomString()",
+      //   name: result.name,
+      //   size: bytes.length,
+      //   uri: result.path,
+      //   width: image.width.toDouble(),
+      // );
+
+      // _addMessage(message);
+    }
+  }
+
+  Future<void> startRecording() async {
+    try {
+      if (await audioRecord.hasPermission()) {
+        audioRecord.start(
+          const RecordConfig(),
+          path: "assets/records/my_record.mp3",
+        );
+        setState(() {
+          isRecording = true;
+        });
+      }
+    } catch (e) {
+      debugPrint("error start recording: $e");
+    }
+  }
+
+  Future<void> stopRecording() async {
+    try {
+      pathRecord = await audioRecord.stop();
+      setState(() {
+        isRecording = false;
+      });
+    } catch (e) {
+      debugPrint("error stop recording: $e");
+    }
+  }
+
   OutlineInputBorder border() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(20),
@@ -183,7 +281,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     double keyBoardBottom,
   ) {
     if (keyBoardBottom != 0) {
-      if (emojiIsShow) {
+      if (isEmojiKeyBoardShow) {
         return keyBoardBottom;
       } else {
         return keyBoardBottom;

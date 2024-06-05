@@ -34,7 +34,7 @@ class CustomAlMonafilat extends StatelessWidget {
                             const FliterViewAfterSearchDetails(),
                       ));
                 },
-                child: FliterViewAfterSearch())),
+                child: const FliterViewAfterSearch())),
       ],
     );
   }

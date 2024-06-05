@@ -16,10 +16,7 @@ class CustomImage extends StatelessWidget {
               builder: (context) => const ProfileView(),
             ));
       },
-      child: CircleAvatar(
-        backgroundImage: AssetImage(AppImages.profileheade),
-        radius: 25.r,
-      ),
+      child: Image.asset("assets/images/pngs/Ellipse.png"),
     );
   }
 }

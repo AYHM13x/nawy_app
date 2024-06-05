@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/profile_view/Archives_View/Archives_View.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/profile_view/Setting_View/Setting_View.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/profile_view/widgets/Row_Drawer.dart';
 
 class CustomRowDrawer extends StatelessWidget {
@@ -19,15 +20,20 @@ class CustomRowDrawer extends StatelessWidget {
                   builder: (context) => const ArchivesView(),
                 ));
           },
-          child: RowDrawer(
+          child: const RowDrawer(
             data: "المحفوظات",
             icon: Icons.memory,
           ),
         ),
-        Gap(20),
+        const Gap(20),
         GestureDetector(
           onTap: () {
-            print("================");
+            print("=================");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingView(),
+                ));
           },
           child: RowDrawer(
             data: "الاعدادات",

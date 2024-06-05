@@ -18,25 +18,20 @@ class FliterViewAfterSearch extends StatelessWidget {
           return Material(
             elevation: 10,
             // borderRadius: BorderRadius.circular(15),
-            child: Padding(
-              padding: EdgeInsets.only(
-                bottom: 17.h,
+            child: Container(
+              width: 353.w,
+              height: 130.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
               ),
-              child: Container(
-                width: 353.w,
-                height: 111.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Row(
-                  // mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const DetailsPropertyItem(),
-                    Gap(10.w),
-                    const ImagePrepertyItem(),
-                  ],
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                // crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const DetailsPropertyItem(),
+                  Gap(10.w),
+                  const ImagePrepertyItem(),
+                ],
               ),
             ),
           );

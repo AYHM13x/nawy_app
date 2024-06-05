@@ -15,6 +15,10 @@ class FirstPagebody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(
+      context,
+      designSize: Size(393, 852),
+    );
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -43,7 +47,42 @@ class FirstPagebody extends StatelessWidget {
               const CustomListViewItem(
                 name: AppImages.dillon,
               ),
-              Gap(20.h),
+              Gap(16.h),
+              Text(
+                "اهم الاماكن :",
+                style: FontStyles.textStyle16Bold,
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              CustomPlaces(
+                name: "assets/images/pngs/rowplaces.png",
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              Text(
+                "اهم المؤثرين :",
+                style: FontStyles.textStyle16Bold,
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              CustomInfluencers(),
+              SizedBox(
+                height: 20.h,
+              ),
+              Text(
+                "اهم العقارات القريبة :",
+                style: FontStyles.textStyle16Bold,
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              const CustomListViewItem(
+                name:
+                    "assets/images/pngs/dillon-kydd-XGvwt544g8k-unsplash 1.png",
+              ),
             ],
           )
         ],

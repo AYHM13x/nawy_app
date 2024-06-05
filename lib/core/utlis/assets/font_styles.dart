@@ -6,6 +6,11 @@ abstract class FontStyles {
     fontSize: 9.sp,
     fontWeight: FontWeight.w400,
   );
+  static final textStyle12Reg = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
+
   static final textStyle14Reg = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,

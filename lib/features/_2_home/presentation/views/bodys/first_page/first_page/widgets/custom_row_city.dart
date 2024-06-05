@@ -18,20 +18,18 @@ class _CustomRowCityState extends State<CustomRowCity> {
   ];
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
-
     return Container(
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius:
-              BorderRadius.all(Radius.circular(ScreenUtil().setWidth(25)))),
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(25.r)),
+      ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: ScreenUtil().setWidth(10)),
+        padding: EdgeInsets.symmetric(horizontal: 10.w),
         child: Row(
           children: [
             SizedBox(
-              width: ScreenUtil().setWidth(140), // تحديد العرض بوحدات متناسقة
-              height: ScreenUtil().setHeight(48),
+              width: 140.w, // استخدم .w للوحدات المتناسقة
+              height: 48.h,
               child: DropdownButtonFormField(
                   hint: const Text("اختر البلد"),
                   // value: selectedMethod,

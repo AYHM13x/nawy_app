@@ -6,7 +6,6 @@ class customSearsh extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
     return Container(
       width: double.infinity,
       height: ScreenUtil().setHeight(64),

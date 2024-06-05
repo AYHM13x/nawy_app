@@ -9,7 +9,6 @@ class CustomRowitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
     return Row(
       children: [
         Text("شقة للايجار",

@@ -15,7 +15,6 @@
 
 //   @override
 //   Widget build(BuildContext context) {
-//     ScreenUtil.init(context, designSize: Size(360, 690));
 
 //     return Row(
 //       mainAxisAlignment: MainAxisAlignment.spaceAround,

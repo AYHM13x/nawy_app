@@ -8,10 +8,16 @@ class CustomRowStreet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
     return Row(
       children: [
-        Icon(Icons.location_off),
+        Container(
+          height: 7.h, // تحديد الارتفاع بوحدات متناسقة
+          width: 6.w, // تحديد العرض بوحدات متناسقة
+          child: Icon(
+            Icons.location_off,
+            size: 6.w, // ضبط الحجم ليكون متناسقاً مع العرض المحدد
+          ),
+        ),
         Gap(8.w),
         Text(
           "الرياض-شارع الملك سلمان",

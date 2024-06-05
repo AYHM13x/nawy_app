@@ -15,42 +15,37 @@ class CustomListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
-
     return GestureDetector(
       onTap: () {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const ItemView()));
       },
       child: Container(
-        width: 254.w,
-        height: 268.h, // تحديد الارتفاع باستخدام screenutil
+        width: double.infinity,
+        height: 290.h, // تحديد الارتفاع باستخدام screenutil
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 5,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: EdgeInsets.all(
-                  ScreenUtil().setWidth(8)), // تحديد التباعد بوحدات متناسقة
-              child: Container(
-                decoration: BoxDecoration(border: Border.all()),
-                child: Column(
-                  children: [
-                    Expanded(child: Image.asset(name)),
-                    const CustomRowitem(),
-                    const CustomRowStreet(),
-                    Text(
-                      "انقر لعرض التفاصيل0",
-                      style: FontStyles.textStyle9Reg,
-                    ),
-                    Divider(
-                      endIndent: 100.w, // استخدام ScreenUtil
-                      indent: 100.w, // استخدام ScreenUtil
-                      thickness: 2.h, // استخدام ScreenUtil
-                      height: 20.h, // استخدام screenutil
-                    ),
-                    Customspecifications()
-                  ],
+            return Container(
+              width: 244.w,
+              child: Padding(
+                padding: EdgeInsets.all(
+                    ScreenUtil().setWidth(8)), // تحديد التباعد بوحدات متناسقة
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all()),
+                  child: Column(
+                    children: [
+                      Image.asset(name, fit: BoxFit.cover),
+                      const CustomRowitem(),
+                      const CustomRowStreet(),
+                      Text(
+                        "انقر لعرض التفاصيل0",
+                        style: FontStyles.textStyle9Reg,
+                      ),
+                      Customspecifications()
+                    ],
+                  ),
                 ),
               ),
             );

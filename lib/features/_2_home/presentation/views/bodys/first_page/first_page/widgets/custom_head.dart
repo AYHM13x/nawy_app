@@ -9,25 +9,21 @@ class CustomHead extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(360, 690));
-
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(ScreenUtil().setWidth(100)),
-          bottomRight: Radius.circular(ScreenUtil().setWidth(100)),
+          bottomLeft: Radius.circular(100.r),
+          bottomRight: Radius.circular(100.r),
         ),
         color: AppColors.pickColor,
       ),
-      // width: 411,
-      height: ScreenUtil().setHeight(150), // تحديد الارتفاع بوحدات متناsقة
+
+      height: 150.h, // تحديد الارتفاع بوحدات متناsقة
       child: Padding(
         padding: EdgeInsets.only(
-          top: ScreenUtil()
-              .setHeight(50), // تحديد المسافة العلوية بوحدات متناسقة
-          left:
-              ScreenUtil().setWidth(30), // تحديد المسافة اليسرى بوحدات متناسقة
-          right: ScreenUtil().setWidth(30),
+          top: 50.h,
+          left: 40.w,
+          right: 40.w,
         ),
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

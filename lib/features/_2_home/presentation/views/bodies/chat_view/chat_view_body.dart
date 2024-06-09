@@ -28,7 +28,7 @@ class _ChatViewBodyState extends State<ChatViewBody> {
   bool isEmojiKeyBoardShow = false;
   //path audio file
   String filePath = "";
-  bool isRecording = false;
+  // bool isRecording = false;
   bool isRecordingCompleted = false;
   //widget audio Recording
   late AudioRecoder audioRecoder;
@@ -38,25 +38,25 @@ class _ChatViewBodyState extends State<ChatViewBody> {
   @override
   void initState() {
     super.initState();
-    //initlized widget
-    audioRecoder = AudioRecoder(
-      key: audioRecorderKey,
-      willRecording: true,
-      checkMic: (isRecordingCompleted1, isRecording1, filePath1) {
-        setState(() {
-          isRecordingCompleted = isRecordingCompleted1;
-          isRecording = isRecording1;
-          filePath = filePath1;
-        });
-      },
-    );
   }
 
-  Widget _textEditAndTool() {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Container(
-        padding: const EdgeInsets.only(bottom: 5, left: 5, right: 5),
+  @override
+  void dispose() {
+    audioRecord.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    return SafeArea(
+      child: Padding(
+        padding: EdgeInsets.only(
+          bottom: getPaddingKeyBoardBottom(
+            isEmojiKeyBoardShow,
+            mediaQueryData.viewInsets.bottom,
+          ),
+        ),
         child: Column(
           children: [
             Row(
@@ -90,8 +90,8 @@ class _ChatViewBodyState extends State<ChatViewBody> {
       child: TextField(
         controller: _textEditingController,
         // scrollController: _textScrollController,
-        onTap: eventOnTap,
-        onSubmitted: eventOnSubmitted,
+        // onTap: eventOnTap,
+        // onSubmitted: eventOnSubmitted,
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
@@ -102,10 +102,10 @@ class _ChatViewBodyState extends State<ChatViewBody> {
           errorBorder: border(),
           constraints: BoxConstraints(maxHeight: 50),
           prefixIcon: _toolMessagePrefixIcon(),
-          suffixIcon: IconButton(
-            onPressed: eventBtnEmoji,
-            icon: SvgPicture.asset(AppImages.emojiIcon),
-          ),
+          // suffixIcon: IconButton(
+          //   onPressed: eventBtnEmoji,
+          //   icon: SvgPicture.asset(AppImages.emojiIcon),
+          // ),
         ),
       ),
     );
@@ -164,25 +164,25 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  // }
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Column(
-        children: [
-          const ChatViewAppbar(),
-          Gap(11.h),
-          //const AccountInfoView(),
-          _buidMessgageWidget(),
-          _textEditAndTool()
-        ],
-      ),
-    );
-  }
+  // @override
+  // Widget build(BuildContext context) {
+  //   return SafeArea(
+  //     child: Column(
+  //       children: [
+  //         const ChatViewAppbar(),
+  //         Gap(11.h),
+  //         //const AccountInfoView(),
+  //         _buidMessgageWidget(),
+  //         // _textEditAndTool()
+  //       ],
+  //     ),
+  //   );
+  // }
 
   Future<void> closeRecorder() async {
     if (audioRecorderKey.currentState != null) {

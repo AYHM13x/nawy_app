@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_svg_pic_asset.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
+// import 'package:permission_handler/permission_handler.dart';
 
 import 'audio_Player.dart';
 
@@ -36,7 +36,7 @@ class AudioRecoderState extends State<AudioRecoder> {
 
   @override
   void initState() {
-    _askMicPermission();
+    // _askMicPermission();
     _initialiseControllers();
 
     super.initState();
@@ -63,9 +63,9 @@ class AudioRecoderState extends State<AudioRecoder> {
       ..bitRate = 48000;
   }
 
-  _askMicPermission() async {
-    await Permission.microphone.request();
-  }
+  // _askMicPermission() async {
+  //   await Permission.microphone.request();
+  // }
 
   AudioPlayerState? _currentlyPlaying;
 

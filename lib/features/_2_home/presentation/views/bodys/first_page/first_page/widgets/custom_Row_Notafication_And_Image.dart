@@ -7,6 +7,7 @@ import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/first_page/widgets/Custom_Image.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/profile_view/profile_view.dart';
+import 'package:nawy_app/features/notifications/notifications_screen.dart';
 
 class customRowNotaficationAndImage extends StatelessWidget {
   const customRowNotaficationAndImage({super.key});
@@ -20,7 +21,11 @@ class customRowNotaficationAndImage extends StatelessWidget {
         IconButton(
             style: const ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(Colors.white)),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => NotificationList(),
+              ));
+            },
             icon: Icon(
               Icons.notifications,
               size: 30.h,

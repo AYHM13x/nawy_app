@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 
 import 'widgets/category.dart';
@@ -13,7 +14,7 @@ class NotificationList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.purple,
+        backgroundColor: AppColors.pickColor,
         title: const Text(
           'الاشعارات',
           style: TextStyle(

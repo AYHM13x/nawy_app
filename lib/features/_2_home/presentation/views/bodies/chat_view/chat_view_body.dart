@@ -4,10 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/widgets/chat_view/account_info_view.dart';
 import 'package:nawy_app/generated/l10n.dart';
-import 'package:record/record.dart';
-
 import '../../../../../../core/utlis/assets/app_images.dart';
 import '../../../../../../core/utlis/widgets/custom_svg_pic_asset.dart';
 import '../../appbars/chat_view/chat_view_appbar.dart';
@@ -23,159 +20,56 @@ class ChatViewBody extends StatefulWidget {
 }
 
 class _ChatViewBodyState extends State<ChatViewBody> {
-  late AudioRecorder audioRecord;
-  bool isRecording = false;
-  String? pathRecord;
-
   final ScrollController _listScrollController = ScrollController();
-
   // final ScrollController _textScrollController = ScrollController();
   final TextEditingController _textEditingController = TextEditingController();
   List<String> messages = ["mm", "mm", "mm"];
   bool isEmojiKeyBoardShow = false;
-
   //path audio file
   String filePath = "";
-
-  // bool isRecording = false;
+  bool isRecording = false;
   bool isRecordingCompleted = false;
-
   //widget audio Recording
   late AudioRecoder audioRecoder;
-
   //key widget audio Recording to can stop audio Recording when click btn send without stop Recording
   final GlobalKey<AudioRecoderState> audioRecorderKey = GlobalKey();
 
   @override
   void initState() {
-    audioRecord = AudioRecorder();
     super.initState();
+    //initlized widget
+    audioRecoder = AudioRecoder(
+      key: audioRecorderKey,
+      willRecording: true,
+      checkMic: (isRecordingCompleted1, isRecording1, filePath1) {
+        setState(() {
+          isRecordingCompleted = isRecordingCompleted1;
+          isRecording = isRecording1;
+          filePath = filePath1;
+        });
+      },
+    );
   }
 
-  // @override
-  // void dispose() {
-  //   audioRecord.dispose();
-  //   super.dispose();
-  // }
-
-  @override
-  Widget build(BuildContext context) {
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
-    return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.only(
-            // bottom: getPaddingKeyBoardBottom(
-            //   isEmojiKeyBoardShow,
-            //   mediaQueryData.viewInsets.bottom,
-            // ),
-            ),
+  Widget _textEditAndTool() {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        padding: const EdgeInsets.only(bottom: 5, left: 5, right: 5),
         child: Column(
           children: [
-            const ChatViewAppbar(),
-            Gap(11.h),
-            const AccountInfoView(),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 21.w),
-                child: ChatListView(
-                  messages: messages,
-                  scrollController: _listScrollController,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: eventBtnSend,
+                  icon: SvgPicture.asset(AppImages.sendIcon),
                 ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 25.w,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        if (_textEditingController.text.isNotEmpty) {
-                          sendTextMessage(_textEditingController.text);
-                        }
-                      });
-                    },
-                    icon: SvgPicture.asset(AppImages.sendIcon),
-                  ),
-                  Gap(8.w),
-                  GestureDetector(
-                    onTap: sendImageCameraMessage,
-                    child: CustomSvgPicAsset(
-                      image: AppImages.cameraIcon,
-                      color: Colors.black.withOpacity(0.4),
-                    ),
-                  ),
-                  Gap(8.w),
-                  GestureDetector(
-                    onLongPress: startRecording,
-                    onLongPressCancel: stopRecording,
-                    child: CustomSvgPicAsset(
-                      image: AppImages.recordIcon,
-                      color: Colors.black.withOpacity(0.7),
-                    ),
-                  ),
-                  Gap(8.w),
-                  GestureDetector(
-                    onTap: sendImageGalleryMessage,
-                    child: CustomSvgPicAsset(
-                      image: AppImages.paperClipIcon,
-                      color: Colors.black.withOpacity(0.7),
-                    ),
-                  ),
-                  Gap(8.w),
-                  Expanded(
-                    // width: DimensionsOfScreen.dimensionsOfWidth(context, 67),
-                    child: TextField(
-                      controller: _textEditingController,
-                      // scrollController: _textScrollController,
-                      onTap: () {
-                        setState(() {
-                          if (isEmojiKeyBoardShow) {
-                            isEmojiKeyBoardShow = false;
-                          }
-                        });
-                      },
-                      onSubmitted: (value) {
-                        setState(() {
-                          if (_textEditingController.text.isNotEmpty) {
-                            sendTextMessage(_textEditingController.text);
-                          }
-                        });
-                      },
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: S.of(context).typeHere,
-                        border: border(),
-                        enabledBorder: border(),
-                        focusedBorder: border(),
-                        disabledBorder: border(),
-                        errorBorder: border(),
-                        suffixIcon: IconButton(
-                          onPressed: () async {
-                            if (!isEmojiKeyBoardShow) {
-                              FocusManager.instance.primaryFocus?.unfocus();
-                              setState(() {});
-                              await Future.delayed(
-                                  const Duration(milliseconds: 200), () {
-                                isEmojiKeyBoardShow = !isEmojiKeyBoardShow;
-                              });
-                              setState(() {});
-                            } else {
-                              isEmojiKeyBoardShow = !isEmojiKeyBoardShow;
-                              setState(() {});
-                            }
-                          },
-                          icon: SvgPicture.asset(AppImages.emojiIcon),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                Gap(3.w),
+                isRecording || isRecordingCompleted
+                    ? audioPlayerWidget()
+                    : _textEditForm()
+              ],
             ),
             EmojiPickerKeyboardView(
               emojiIsShow: isEmojiKeyBoardShow,
@@ -195,22 +89,22 @@ class _ChatViewBodyState extends State<ChatViewBody> {
       child: TextField(
         controller: _textEditingController,
         // scrollController: _textScrollController,
-        // onTap: eventOnTap,
-        // onSubmitted: eventOnSubmitted,
+        onTap: eventOnTap,
+        onSubmitted: eventOnSubmitted,
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
           hintText: S.of(context).typeHere,
-          // border: border(),
-          // enabledBorder: border(),
-          // focusedBorder: border(),
-          // errorBorder: border(),
+          border: border(),
+          enabledBorder: border(),
+          focusedBorder: border(),
+          errorBorder: border(),
           constraints: BoxConstraints(maxHeight: 50),
           prefixIcon: _toolMessagePrefixIcon(),
-          // suffixIcon: IconButton(
-          //   onPressed: eventBtnEmoji,
-          //   icon: SvgPicture.asset(AppImages.emojiIcon),
-          // ),
+          suffixIcon: IconButton(
+            onPressed: eventBtnEmoji,
+            icon: SvgPicture.asset(AppImages.emojiIcon),
+          ),
         ),
       ),
     );
@@ -269,25 +163,27 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     );
   }
 
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return SafeArea(
-  //     child: Column(
-  //       children: [
-  //         const ChatViewAppbar(),
-  //         Gap(11.h),
-  //         //const AccountInfoView(),
-  //         _buidMessgageWidget(),
-  //         // _textEditAndTool()
-  //       ],
-  //     ),
-  //   );
-  // }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            const ChatViewAppbar(),
+            Gap(11.h),
+            //const AccountInfoView(),
+            _buidMessgageWidget(),
+            _textEditAndTool()
+          ],
+        ),
+      ),
+    );
+  }
 
   Future<void> closeRecorder() async {
     if (audioRecorderKey.currentState != null) {
@@ -360,30 +256,42 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     }
   }
 
-  Future<void> startRecording() async {
-    try {
-      if (await audioRecord.hasPermission()) {
-        audioRecord.start(
-          const RecordConfig(),
-          path: "assets/records/my_record.mp3",
-        );
-        setState(() {
-          isRecording = true;
-        });
+  void eventBtnSend() {
+    closeRecorder();
+    setState(() {
+      if (_textEditingController.text.isNotEmpty) {
+        sendTextMessage(_textEditingController.text);
       }
-    } catch (e) {
-      debugPrint("error start recording: $e");
-    }
+    });
   }
 
-  Future<void> stopRecording() async {
-    try {
-      pathRecord = await audioRecord.stop();
-      setState(() {
-        isRecording = false;
+  void eventOnTap() {
+    setState(() {
+      if (isEmojiKeyBoardShow) {
+        isEmojiKeyBoardShow = false;
+      }
+    });
+  }
+
+  void eventOnSubmitted(String txt) {
+    setState(() {
+      if (_textEditingController.text.isNotEmpty) {
+        sendTextMessage(_textEditingController.text);
+      }
+    });
+  }
+
+  void eventBtnEmoji() async {
+    if (!isEmojiKeyBoardShow) {
+      FocusManager.instance.primaryFocus?.unfocus();
+      setState(() {});
+      await Future.delayed(const Duration(milliseconds: 200), () {
+        isEmojiKeyBoardShow = !isEmojiKeyBoardShow;
       });
-    } catch (e) {
-      debugPrint("error stop recording: $e");
+      setState(() {});
+    } else {
+      isEmojiKeyBoardShow = !isEmojiKeyBoardShow;
+      setState(() {});
     }
   }
 

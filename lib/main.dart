@@ -8,7 +8,6 @@ import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 import 'package:nawy_app/generated/l10n.dart';
 
 import 'core/utlis/assets/app_font_families.dart';
-
 import 'features/_2_home/presentation/views/home_view.dart';
 import 'generated/l10n.dart';
 

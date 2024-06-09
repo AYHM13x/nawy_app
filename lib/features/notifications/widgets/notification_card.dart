@@ -8,7 +8,7 @@ class NotificationCard extends StatelessWidget {
   final String time;
   final String imageUrl;
 
-  NotificationCard(
+  const NotificationCard(
       {required this.name,
       required this.message,
       required this.time,

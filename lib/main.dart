@@ -27,8 +27,9 @@ class NawyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return ScreenUtilInit(
-      designSize: const Size(360, 690), // التصميم الأصلي للمشروع
+      designSize: size, // التصميم الأصلي للمشروع
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) => MaterialApp(

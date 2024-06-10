@@ -8,13 +8,16 @@ class CustomTextformfiled extends StatefulWidget {
     required this.keyboardType,
     this.isPassword = false,
     this.suffixIcon,
+    this.controlle,
+    this.validator,
   });
   final String hintText;
   final IconData icon;
   final TextInputType keyboardType;
   final bool isPassword;
   final Widget? suffixIcon;
-
+  final TextEditingController? controlle;
+  final String? Function(String?)? validator;
   @override
   State<CustomTextformfiled> createState() => _CustomTextformfiledState();
 }
@@ -23,15 +26,11 @@ class _CustomTextformfiledState extends State<CustomTextformfiled> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      controller: widget.controlle,
       obscureText: widget.isPassword,
       keyboardType: widget.keyboardType,
-      validator: (value) {
-        if (value!.isEmpty) {
-          return "field is required";
-        } else {
-          return "";
-        }
-      },
+      validator: widget.validator,
       decoration: InputDecoration(
           suffixIcon: widget.suffixIcon,
           focusColor: Colors.white,

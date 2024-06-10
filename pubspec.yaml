@@ -34,27 +34,28 @@ dependencies:
   cupertino_icons: ^1.0.2
   device_preview: ^1.2.0
   dio: ^5.4.3+1
+  email_validator: ^2.1.17
   emoji_picker_flutter: ^2.2.0
   file_picker: ^8.0.3
+  fl_chart: ^0.68.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.5
   flutter_chat_types: ^3.6.2
   flutter_localizations:
     sdk: flutter
   flutter_map: ^6.1.0
   flutter_screenutil: ^5.9.3
+  flutter_slidable: ^3.1.0
   flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   image_picker: ^1.1.1
   latlong2: ^0.9.1
   modal_progress_hud_nsn: ^0.5.1
-  #record: 5.0.4
   shimmer: ^3.0.0
   syncfusion_flutter_sliders: ^25.2.4
   uuid: ^4.4.0
   voice_message_package: ^2.2.1
-  flutter_slidable: ^3.1.0
-  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_lints: ^4.0.0

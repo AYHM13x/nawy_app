@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nawy_app/features/_1_auth/presentation/manger/cubit/auth_cubit.dart';
 // import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'package:nawy_app/features/_1_auth/presentation/views/widgets/costum_row_text_login.dart';
@@ -26,7 +28,7 @@ class _SignInBodyState extends State<SignInBody> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formKey,
+      key: context.read<AuthCubit>().signInFormKey,
       child: Padding(
         padding: const EdgeInsets.only(top: 50),
         child: SizedBox(
@@ -58,7 +60,11 @@ class _SignInBodyState extends State<SignInBody> {
                         backgroundtext: Colors.white,
                         AppColors.yellowColor,
                         data: "تسجيل الدخول", onPressed: () {
-                      if (formKey.currentState!.validate()) {
+                      if (context
+                          .read<AuthCubit>()
+                          .signInFormKey
+                          .currentState!
+                          .validate()) {
                         Navigator.push(
                           context,
                           MaterialPageRoute(

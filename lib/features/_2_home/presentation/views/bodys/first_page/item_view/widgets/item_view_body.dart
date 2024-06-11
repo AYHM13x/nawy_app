@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:gap/gap.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/item_view/widgets/Custom_Row_Call_With_User.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/item_view/widgets/custom_item_image.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/item_view/widgets/custom_row_text.dart';
 import 'package:nawy_app/features/_3_filter/bodies/fliter_view_after_search.dart';
@@ -32,6 +33,7 @@ class ItemViewBody extends StatelessWidget {
                   height: 500,
                   child: FliterViewAfterSearch(),
                 ),
+                CustomRowCallWithUser()
               ],
             ),
           ),

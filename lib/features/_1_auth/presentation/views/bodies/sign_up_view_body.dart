@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nawy_app/features/_1_auth/presentation/manger/cubit/auth_cubit.dart';
+import 'package:nawy_app/features/_1_auth/presentation/views/widgets/Custom_Row_Elevated_Google_And_apple.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/widgets/costum_row_text_login.dart';
+import 'package:nawy_app/features/_1_auth/presentation/views/widgets/custom_divider.dart';
 
 import '../../../../../core/utlis/assets/app_colors.dart';
 import '../../../../../core/utlis/assets/app_images.dart';
@@ -17,70 +20,74 @@ class SignUpViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 50),
-      child: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: SingleChildScrollView(
-          child: SafeArea(
-            child: Form(
-              key: context.read<AuthCubit>().signUpFormKey,
-              child: Column(
-                children: [
-                  SvgPicture.asset(AppImages.signUpImage),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    "تسجيل الدخول ",
-                    style: FontStyles.textStyle22Bold,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const CustomColumnTextFromFiledSignUp(),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  SizedBox(
-                    width: 278,
-                    height: 60,
-                    child: CustomElevatedBotton(
-                        backgroundtext: Colors.white,
-                        AppColors.yellowColor,
-                        data: "تسجيل الان", onPressed: () {
-                      if (context
-                          .read<AuthCubit>()
-                          .signUpFormKey
-                          .currentState!
-                          .validate()) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignInView(),
-                          ),
-                        );
-                      }
-                    }),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  CustomRowtextlogin(
-                    onTap: () {
+    return SingleChildScrollView(
+      child: SafeArea(
+        child: Form(
+          key: context.read<AuthCubit>().signUpFormKey,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: Column(
+              children: [
+                SvgPicture.asset(AppImages.signUpImage),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Text(
+                  "إنشاء حساب",
+                  style: FontStyles.textStyle22Bold,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                const CustomColumnTextFromFiledSignUp(),
+                SizedBox(
+                  height: 20.h,
+                ),
+                SizedBox(
+                  width: 278.w,
+                  height: 60.h,
+                  child: CustomElevatedBotton(
+                      backgroundtext: Colors.white,
+                      AppColors.yellowColor,
+                      data: "إنشاء", onPressed: () {
+                    if (context
+                        .read<AuthCubit>()
+                        .signUpFormKey
+                        .currentState!
+                        .validate()) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeView(),
+                          builder: (context) => const SignInView(),
                         ),
                       );
-                    },
-                    data: "اليس لديك حساب؟ ",
-                    datatext: "سجل الان",
-                  )
-                ],
-              ),
+                    }
+                  }),
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                const CustomDivider(),
+                SizedBox(
+                  height: 20.h,
+                ),
+                CustomRowElevatedGoogleAndApple(),
+                SizedBox(
+                  height: 20.h,
+                ),
+                CustomRowtextlogin(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignInView(),
+                      ),
+                    );
+                  },
+                  data: "لديك حساب؟",
+                  datatext: "تسجيل الدخول",
+                )
+              ],
             ),
           ),
         ),

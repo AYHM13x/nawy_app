@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:dio/dio.dart';
 import 'package:nawy_app/core/utlis/enums/action_type.dart';
 import 'package:nawy_app/core/utlis/enums/entity_type.dart';
@@ -11,6 +13,8 @@ class AdminControlApiService extends ApiService {
   Future<List<Map<String, dynamic>>> getAdmins({
     required String token,
   }) async {
+    // ignore: duplicate_ignore
+    // ignore: unused_local_variable
     var response = await dio.get(
       "$baseUrl/admin/users",
       options: Options(
@@ -65,7 +69,6 @@ class AdminControlApiService extends ApiService {
       ),
     );
 
-    //AuthResponse authResponse = AuthResponse.fromJson(response.toString());
     Map<String, dynamic> adminsData = {};
 
     return adminsData;

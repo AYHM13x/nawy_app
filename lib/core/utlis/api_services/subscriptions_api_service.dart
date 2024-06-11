@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:dio/dio.dart';
 import 'package:nawy_app/core/utlis/api_services/api_service.dart';
 

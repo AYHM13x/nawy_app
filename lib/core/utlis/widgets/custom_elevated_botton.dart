@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 
 class CustomElevatedBotton extends StatelessWidget {
   const CustomElevatedBotton(
@@ -19,10 +20,10 @@ class CustomElevatedBotton extends StatelessWidget {
         backgroundColor: WidgetStatePropertyAll(colorelevated),
       ),
       onPressed: onPressed,
-      child: Text(
-        data,
-        style: TextStyle(color: backgroundtext),
-      ),
+      child: Text(data,
+          style: FontStyles.textStyle16Bold.copyWith(
+            color: backgroundtext,
+          )),
     );
   }
 }

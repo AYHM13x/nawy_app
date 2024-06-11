@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nawy_app/features/_1_auth/presentation/manger/cubit/auth_cubit.dart';
 // import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -23,8 +24,6 @@ class SignInBody extends StatefulWidget {
 }
 
 class _SignInBodyState extends State<SignInBody> {
-  GlobalKey<FormState> formKey = GlobalKey();
-
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -39,23 +38,23 @@ class _SignInBodyState extends State<SignInBody> {
               child: Column(
                 children: [
                   SvgPicture.asset(AppImages.signin),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   Text(
                     "تسجيل الدخول ",
                     style: FontStyles.textStyle22Bold,
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   const CustomColumnTextFromFiled(),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   SizedBox(
-                    width: 278,
-                    height: 60,
+                    width: 278.w,
+                    height: 60.h,
                     child: CustomElevatedBotton(
                         backgroundtext: Colors.white,
                         AppColors.yellowColor,
@@ -74,8 +73,8 @@ class _SignInBodyState extends State<SignInBody> {
                       }
                     }),
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   CustomRowtextlogin(
                     onTap: () {

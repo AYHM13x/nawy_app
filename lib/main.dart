@@ -17,12 +17,11 @@ import 'generated/l10n.dart';
 void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(
-    // DevicePreview(
-    //   enabled: !kReleaseMode,
-    //   builder: (context) => // Wrap your app
-    // ),
-    const NawyApp(),
-  );
+      //   DevicePreview(
+      //   enabled: !kReleaseMode,
+      //   builder: (context) => ,
+      // )
+      const NawyApp());
 }
 
 class NawyApp extends StatelessWidget {
@@ -32,7 +31,7 @@ class NawyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return ScreenUtilInit(
-      designSize: size, // التصميم الأصلي للمشروع
+      designSize: Size(360, 690), // التصميم الأصلي للمشروع
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) => MultiBlocProvider(
@@ -56,7 +55,7 @@ class NawyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: AppFontFamilies.cairoFont,
           ),
-          home: const HomeView(),
+          home: const SignInView(),
         ),
       ),
     );

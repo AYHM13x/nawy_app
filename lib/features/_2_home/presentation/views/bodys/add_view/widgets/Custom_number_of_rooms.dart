@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
-import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 
 class CustomNumberOfRooms extends StatefulWidget {
   const CustomNumberOfRooms({super.key});
@@ -24,7 +22,7 @@ class _CustomNumberOfRoomsState extends State<CustomNumberOfRooms> {
           "اجمالي الغرف :",
           style: FontStyles.textStyle14Reg,
         ),
-        Gap(10),
+        Gap(10.h),
         Row(
           children: [
             GusterNumbeerOfRoom(

@@ -1,6 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_text_form_filed.dart';
 import 'package:nawy_app/features/_1_auth/presentation/manger/cubit/auth_cubit.dart';
 
@@ -21,9 +22,12 @@ class _CustomColumnTextFromFiledSignUpState
     return Column(
       children: [
         Container(
-            color: const Color(0xffF5F4F8),
-            width: 353,
-            height: 48,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(55.r),
+              color: const Color(0xffF5F4F8),
+            ),
+            width: 353.w,
+            height: 48.h,
             child: CustomTextformfiled(
               validator: (value) {
                 return value != null && !EmailValidator.validate(value)
@@ -35,31 +39,38 @@ class _CustomColumnTextFromFiledSignUpState
               hintText: "البريد الالكتروني",
               icon: Icons.email,
             )),
-        const SizedBox(
-          height: 10,
+        SizedBox(
+          height: 10.h,
         ),
         Container(
-            color: const Color(0xffF5F4F8),
-            width: 353,
-            height: 48,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(55.r),
+              color: const Color(0xffF5F4F8),
+            ),
+            width: 353.w,
+            height: 48.h,
             child: CustomTextformfiled(
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'This field is required';
                 }
+                return null;
               },
               controlle: context.read<AuthCubit>().signUpPhoneNumber,
               keyboardType: TextInputType.number,
               hintText: "رقم الهاتف",
               icon: Icons.phone,
             )),
-        const SizedBox(
-          height: 10,
+        SizedBox(
+          height: 10.h,
         ),
         Container(
-            color: const Color(0xffF5F4F8),
-            width: 353,
-            height: 48,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(55.r),
+              color: const Color(0xffF5F4F8),
+            ),
+            width: 353.w,
+            height: 48.h,
             child: CustomTextformfiled(
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -68,6 +79,7 @@ class _CustomColumnTextFromFiledSignUpState
                 if (value.length < 6) {
                   return 'Password must be at least 6 characters';
                 }
+                return null;
               },
               controlle: context.read<AuthCubit>().signUpPassword,
               isPassword: !isShowPassword1,
@@ -84,13 +96,16 @@ class _CustomColumnTextFromFiledSignUpState
               hintText: "كلمة المرور",
               icon: Icons.lock,
             )),
-        const SizedBox(
-          height: 10,
+        SizedBox(
+          height: 10.h,
         ),
         Container(
-            color: const Color(0xffF5F4F8),
-            width: 353,
-            height: 48,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(55.r),
+              color: const Color(0xffF5F4F8),
+            ),
+            width: 353.w,
+            height: 48.h,
             child: CustomTextformfiled(
               validator: (value) {
                 final password = context.read<AuthCubit>().signUpPassword.text;

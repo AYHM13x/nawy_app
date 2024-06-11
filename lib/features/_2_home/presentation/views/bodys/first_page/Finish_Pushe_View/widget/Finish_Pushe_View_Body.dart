@@ -5,12 +5,10 @@ import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
-import 'package:nawy_app/core/utlis/widgets/custom_text_form_filed.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodys/add_view/widgets/Add_Botton_sheet_Scusess.dart';
-import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/Finish_Pushe_View/Finish_Pushe_View.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/Finish_Pushe_View/widget/Custom_Row_Code.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/Finish_Pushe_View/widget/Custom_Row_Text_Field.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/Finish_Pushe_View/widget/Custom_Row_Time.dart';
+import 'package:nawy_app/features/_2_home/presentation/views/bodys/first_page/status_push/status_push.dart';
 
 class FinishPusheViewBody extends StatelessWidget {
   const FinishPusheViewBody({super.key});
@@ -45,12 +43,15 @@ class FinishPusheViewBody extends StatelessWidget {
                 backgroundtext: Colors.white,
                 AppColors.goldColor,
                 data: "تأكيد", onPressed: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (context) {
-                  return const BottonsheetScusesspush();
-                },
-              );
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const BookTourScreen(),
+              ));
+              // showModalBottomSheet(
+              //   context: context,
+              //   builder: (context) {
+              //     return const BottonsheetScusesspush();
+              //   },
+              // );
             }),
           ),
         ],

@@ -9,8 +9,8 @@ import 'package:nawy_app/features/_1_auth/presentation/manger/cubit/auth_cubit.d
 import 'package:nawy_app/features/_1_auth/presentation/views/sign_in_view.dart';
 import 'package:nawy_app/features/_2_home/presentation/views/home_view.dart';
 import 'package:nawy_app/generated/l10n.dart';
-
 import 'core/utlis/assets/app_font_families.dart';
+import 'core/utlis/assets/app_images.dart';
 import 'features/_2_home/presentation/views/home_view.dart';
 import 'generated/l10n.dart';
 
@@ -31,7 +31,7 @@ class NawyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return ScreenUtilInit(
-      designSize: Size(360, 690), // التصميم الأصلي للمشروع
+      designSize: size, // التصميم الأصلي للمشروع
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) => MultiBlocProvider(

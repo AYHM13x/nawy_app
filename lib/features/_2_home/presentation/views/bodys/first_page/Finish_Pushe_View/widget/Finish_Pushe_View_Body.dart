@@ -30,6 +30,9 @@ class FinishPusheViewBody extends StatelessWidget {
             "ادخل الكود المكون من 4 ارقام",
             style: FontStyles.textStyle14Reg,
           ),
+          SizedBox(
+            height: 20,
+          ),
           CustomRowTextField(),
           Gap(28),
           CustomRowTime(),

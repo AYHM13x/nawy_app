@@ -84,9 +84,12 @@ class SignUpViewBody extends StatelessWidget {
                       ),
                     );
                   },
-                  data: "لديك حساب؟",
+                  data: "  لديك حساب؟",
                   datatext: "تسجيل الدخول",
-                )
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
               ],
             ),
           ),

@@ -31,68 +31,67 @@ class _SignInBodyState extends State<SignInBody> {
       child: Padding(
         padding: const EdgeInsets.only(top: 50),
         child: SizedBox(
-          height: double.infinity,
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: SafeArea(
-              child: Column(
-                children: [
-                  SvgPicture.asset(AppImages.signin),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  Text(
-                    "تسجيل الدخول ",
-                    style: FontStyles.textStyle22Bold,
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  const CustomColumnTextFromFiled(),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  SizedBox(
-                    width: 278.w,
-                    height: 60.h,
-                    child: CustomElevatedBotton(
-                        backgroundtext: Colors.white,
-                        AppColors.yellowColor,
-                        data: "تسجيل الدخول", onPressed: () {
-                      if (context
-                          .read<AuthCubit>()
-                          .signInFormKey
-                          .currentState!
-                          .validate()) {
+            height: double.infinity,
+            width: double.infinity,
+            child: SingleChildScrollView(
+              child: SafeArea(
+                child: Column(
+                  children: [
+                    SvgPicture.asset(AppImages.signin),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    Text(
+                      "تسجيل الدخول ",
+                      style: FontStyles.textStyle22Bold,
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    const CustomColumnTextFromFiled(),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    SizedBox(
+                      width: 278.w,
+                      height: 60.h,
+                      child: CustomElevatedBotton(
+                          backgroundtext: Colors.white,
+                          AppColors.yellowColor,
+                          data: "تسجيل الدخول", onPressed: () {
+                        if (context
+                            .read<AuthCubit>()
+                            .signInFormKey
+                            .currentState!
+                            .validate()) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeView(),
+                            ),
+                          );
+                        }
+                      }),
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    CustomRowtextlogin(
+                      onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeView(),
+                            builder: (context) => const SignUpView(),
                           ),
                         );
-                      }
-                    }),
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  CustomRowtextlogin(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignUpView(),
-                        ),
-                      );
-                    },
-                    data: "اليس لديك حساب؟ ",
-                    datatext: "سجل الان",
-                  )
-                ],
+                      },
+                      data: "اليس لديك حساب؟ ",
+                      datatext: "سجل الان",
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ),
-        ),
+            )),
       ),
     );
   }

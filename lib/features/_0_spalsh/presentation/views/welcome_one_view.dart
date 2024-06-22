@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
+import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
 import 'package:nawy_app/features/_0_spalsh/presentation/views/welcome_tow_view.dart';
@@ -15,86 +17,71 @@ class WelcomeOneView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+// Size(width, height)
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(30),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CustomAppBar(),
-                SvgPicture.asset("assets/images/pana.svg"),
-                const SizedBox(
-                  height: 40,
-                ),
-                RichText(
-                  text: TextSpan(
-                    children: <TextSpan>[
-                      TextSpan(
-                        text:
-                            " ابحث عن افضل السيارات وارقامها للشراءاو للايجار او كوسيط",
-                        style: FontStyles.textStyle18Reg
-                            .copyWith(color: Colors.black),
-                      ),
-                      TextSpan(
-                          text: ("   بأفضل الأسعار    "),
-                          style: FontStyles.textStyle14Reg
-                              .copyWith(color: Colors.blue))
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                Text(
-                  "شارك ممتلكاتك وروج لها عن طريق تطبيقنا وعن طريق المسوقين",
-                  style: FontStyles.textStyle14Reg,
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                const CustomRowElevatedBottom(
-                  opacity2: .1,
-                  opacity: 1,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  width: 150,
-                  height: 60,
-                  child: CustomElevatedBotton(
-                    data: "التالي ",
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const WelcometowView(),
-                        ),
-                      );
-                    },
-                    AppColors.yellowColor,
-                    backgroundtext: Colors.white,
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  width: 97,
-                  height: 42,
-                  child: CustomElevatedBotton(data: "تخطي ", onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignInView()));
-                  }, Colors.white),
-                ),
-              ],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const CustomAppBar(),
+            SvgPicture.asset(AppImages.welcomOneImage),
+            SizedBox(
+              height: 40.h,
             ),
-          ),
+            Text(
+              "اهلا بك",
+              style: FontStyles.textStyle18Bold,
+            ),
+            Text(
+                ("ناوي , منصة متكاملة توفر لكم مجموعة واسعة من المنتجات والخدمات"),
+                style: FontStyles.textStyle18Bold),
+            Expanded(
+              flex: 2,
+              child: SizedBox(
+                height: 40.h,
+              ),
+            ),
+            const CustomRowElevatedBottom(
+              opacity2: .1,
+              opacity: 1,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            SizedBox(
+              width: 150.w,
+              height: 60.h,
+              child: CustomElevatedBotton(
+                data: "التالي ",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WelcometowView(),
+                    ),
+                  );
+                },
+                AppColors.yellowColor,
+                backgroundtext: Colors.white,
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            SizedBox(
+              width: 97.w,
+              height: 42.h,
+              child: CustomElevatedBotton(
+                  backgroundtext: Colors.black, data: "تخطي ", onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignInView()));
+              }, AppColors.backgroundGrayColor),
+            ),
+            Expanded(flex: 1, child: SizedBox())
+          ],
         ),
       ),
     );

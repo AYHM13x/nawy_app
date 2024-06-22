@@ -55,7 +55,7 @@ class NawyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: AppFontFamilies.cairoFont,
           ),
-          home: const SignInView(),
+          home: const SplashView(),
         ),
       ),
     );

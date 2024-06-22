@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
         ),
         IconButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pop(
                 context,
                 MaterialPageRoute(builder: (context) => const SplashView()),
               );

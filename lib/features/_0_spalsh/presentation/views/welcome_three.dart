@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:nawy_app/core/utlis/assets/app_colors.dart';
 import 'package:nawy_app/core/utlis/assets/app_images.dart';
 import 'package:nawy_app/core/utlis/assets/font_styles.dart';
 import 'package:nawy_app/core/utlis/widgets/custom_elevated_botton.dart';
-import 'package:nawy_app/features/_0_spalsh/presentation/views/welcome_three.dart';
+import 'package:nawy_app/features/_0_spalsh/presentation/views/appbars/custom_app_bar.dart';
+import 'package:nawy_app/features/_0_spalsh/presentation/views/widgets/custom_row_elevated.dart';
 import 'package:nawy_app/features/_1_auth/presentation/views/sign_in_view.dart';
 
-import 'appbars/custom_app_bar.dart';
-import 'widgets/custom_row_elevated.dart';
-
-class WelcometowView extends StatelessWidget {
-  const WelcometowView({super.key});
+class WelcomeThree extends StatelessWidget {
+  const WelcomeThree({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +23,17 @@ class WelcometowView extends StatelessWidget {
           child: Column(
             children: [
               const CustomAppBar(),
-              SvgPicture.asset(AppImages.pana),
+              // SvgPicture.asset(AppImages.pana),
               SizedBox(
                 height: 40.h,
               ),
               Text(
-                " قم ببيع وشراء او ايجار السياؤات والعقارات عبر تطبيقنا بكل سهولة بمساعدة المسوقين والمشاهير\r",
-                style: FontStyles.textStyle18Bold,
+                "يمكنك حجز رحلتك وتحديد الفندق بناء على وجهتك  \n ونطاق الأسعار المناسبة لك مع ناوي ",
+                style: FontStyles.textStyle16Bold,
               ),
               const Expanded(flex: 2, child: SizedBox()),
               const CustomRowElevatedBottom(
-                opacity2: .1,
+                opacity2: 1,
                 opacity: 1,
               ),
               Gap(15.h),
@@ -49,7 +46,7 @@ class WelcometowView extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const WelcomeThree(),
+                        builder: (context) => const SignInView(),
                       ),
                     );
                   },

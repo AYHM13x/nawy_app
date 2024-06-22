@@ -17,7 +17,7 @@ abstract class AppImages {
   static const filterIcon = "$_svgPath/filter_icon.svg";
   static const cameraIcon = "$_svgPath/camera_icon.svg";
   static const micIcon = "$_svgPath/mic_icon.svg";
-  static const welcomTowImage = "$_svgPath/cuate.svg";
+  static const welcomOneImage = "$_svgPath/cuate.svg";
   static const signin = "$_svgPath/log_in.svg";
   static const signUpImage = "$_svgPath/Sign_up.svg";
   static const profileheade = "$_svgPath/profileheade.svg";

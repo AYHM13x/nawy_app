@@ -11,7 +11,7 @@ class CustomRowCallWithUser extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         CustomElevatedBotton(
             backgroundtext: Colors.white,

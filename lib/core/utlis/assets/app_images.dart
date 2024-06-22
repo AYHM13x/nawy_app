@@ -37,8 +37,8 @@ abstract class AppImages {
   static const paperClipIcon = "$_svgPath/paper_clip_icon.svg";
   static const emojiIcon = "$_svgPath/emoji_icon.svg";
   static const unsplash_y3_AHHrxUBY = "$_svgPath/unsplash_y3_AHHrxUBY.svg";
-  static const googleIcon = "$_svgPath/google_icon.svg";
-  static const appleIcon = "$_svgPath/apple_id.svg";
+  static const googleIcon = "$_svgPath/google-color-icon.svg";
+  static const appleIcon = "$_svgPath/apple-logo-svgrepo-com.svg";
   static const pushimage = "$_svgPath/pushimage.svg";
   static const Vector = "$_svgPath/Vector.svg";
   static const rowPlace = "$_pngPath/rowplaces.png";

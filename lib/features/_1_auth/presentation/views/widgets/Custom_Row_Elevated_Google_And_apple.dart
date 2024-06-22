@@ -22,7 +22,10 @@ class CustomRowElevatedGoogleAndApple extends StatelessWidget {
               child: Expanded(
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: SvgPicture.asset(AppImages.googleIcon)),
+                    child: SvgPicture.asset(
+                      AppImages.googleIcon,
+                      height: 40,
+                    )),
               ),
             ),
             SizedBox(
@@ -36,7 +39,7 @@ class CustomRowElevatedGoogleAndApple extends StatelessWidget {
               child: Expanded(
                 child: ElevatedButton(
                     onPressed: () {},
-                    child: SvgPicture.asset(AppImages.googleIcon)),
+                    child: SvgPicture.asset(height: 40, AppImages.appleIcon)),
               ),
             ),
           ],
